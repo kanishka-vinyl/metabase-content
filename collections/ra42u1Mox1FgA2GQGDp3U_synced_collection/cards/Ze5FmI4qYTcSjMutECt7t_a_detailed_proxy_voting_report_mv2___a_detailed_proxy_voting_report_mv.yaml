@@ -1,0 +1,2431 @@
+name: A Detailed Proxy Voting Report Mv2 + A Detailed Proxy Voting Report Mv
+description: Datamart Public
+entity_id: Ze5FmI4qYTcSjMutECt7t
+created_at: '2026-01-30T05:35:40.293107Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: table
+archived: false
+collection_id: ra42u1Mox1FgA2GQGDp3U
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Sandbox
+table_id:
+- Sandbox
+- public
+- a_detailed_proxy_voting_report_mv2
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Sandbox
+  query:
+    joins:
+    - alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+      condition:
+      - =
+      - - field
+        - - Sandbox
+          - public
+          - a_detailed_proxy_voting_report_mv2
+          - issuer_legal_name
+        - base-type: type/Text
+      - - field
+        - - Sandbox
+          - public
+          - a_detailed_proxy_voting_report_mv
+          - participant_id
+        - base-type: type/Text
+          join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+      fields: all
+      source-table:
+      - Sandbox
+      - public
+      - a_detailed_proxy_voting_report_mv
+      strategy: left-join
+    source-table:
+    - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+  type: query
+result_metadata:
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - issuer_legal_name
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - issuer_legal_name
+  name: issuer_legal_name
+  position: 0
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: issuer_legal_name
+  lib/desired-column-alias: issuer_legal_name
+  lib/original-display-name: Issuer Legal Name
+  lib/original-name: issuer_legal_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_legal_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issue Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - issue_name
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - issue_name
+  name: issue_name
+  position: 1
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: issue_name
+  lib/desired-column-alias: issue_name
+  lib/original-display-name: Issue Name
+  lib/original-name: issue_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: issue_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/PostgresEnum
+  database_type: meeting_type
+  display_name: Type
+  effective_type: type/PostgresEnum
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - type
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - type
+  name: type
+  position: 2
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: type
+  lib/desired-column-alias: type
+  lib/original-display-name: Type
+  lib/original-name: type
+  lib/source: source/table-defaults
+  lib/source-column-alias: type
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Date
+  database_type: date
+  display_name: Meeting Date
+  effective_type: type/Date
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - meeting_date
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - meeting_date
+  name: meeting_date
+  position: 3
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: meeting_date
+  lib/desired-column-alias: meeting_date
+  lib/original-display-name: Meeting Date
+  lib/original-name: meeting_date
+  lib/source: source/table-defaults
+  lib/source-column-alias: meeting_date
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Type Date
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - type_date
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - type_date
+  name: type_date
+  position: 4
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: type_date
+  lib/desired-column-alias: type_date
+  lib/original-display-name: Type Date
+  lib/original-name: type_date
+  lib/source: source/table-defaults
+  lib/source-column-alias: type_date
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Tasp Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - tasp_name
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - tasp_name
+  name: tasp_name
+  position: 5
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: tasp_name
+  lib/desired-column-alias: tasp_name
+  lib/original-display-name: Tasp Name
+  lib/original-name: tasp_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: tasp_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/PostgresEnum
+  database_type: voter_type
+  display_name: Voter Type
+  effective_type: type/PostgresEnum
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - voter_type
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - voter_type
+  name: voter_type
+  position: 6
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: voter_type
+  lib/desired-column-alias: voter_type
+  lib/original-display-name: Voter Type
+  lib/original-name: voter_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: voter_type
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Hor Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - hor_legal_name
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - hor_legal_name
+  name: hor_legal_name
+  position: 7
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: hor_legal_name
+  lib/desired-column-alias: hor_legal_name
+  lib/original-display-name: Hor Legal Name
+  lib/original-name: hor_legal_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: hor_legal_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/UUID
+  database_type: uuid
+  display_name: Hor ID
+  effective_type: type/UUID
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - hor_id
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - hor_id
+  name: hor_id
+  position: 8
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: hor_id
+  lib/desired-column-alias: hor_id
+  lib/original-display-name: Hor ID
+  lib/original-name: hor_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: hor_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Registered Holder
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - registered_holder
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - registered_holder
+  name: registered_holder
+  position: 9
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: registered_holder
+  lib/desired-column-alias: registered_holder
+  lib/original-display-name: Registered Holder
+  lib/original-name: registered_holder
+  lib/source: source/table-defaults
+  lib/source-column-alias: registered_holder
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Participant ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - participant_id
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - participant_id
+  name: participant_id
+  position: 10
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: participant_id
+  lib/desired-column-alias: participant_id
+  lib/original-display-name: Participant ID
+  lib/original-name: participant_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: participant_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Participant Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - participant_name
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - participant_name
+  name: participant_name
+  position: 11
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: participant_name
+  lib/desired-column-alias: participant_name
+  lib/original-display-name: Participant Name
+  lib/original-name: participant_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: participant_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Plans Holder
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - plans_holder
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - plans_holder
+  name: plans_holder
+  position: 12
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: plans_holder
+  lib/desired-column-alias: plans_holder
+  lib/original-display-name: Plans Holder
+  lib/original-name: plans_holder
+  lib/source: source/table-defaults
+  lib/source-column-alias: plans_holder
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Legal Proxy
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - legal_proxy
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - legal_proxy
+  name: legal_proxy
+  position: 13
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: legal_proxy
+  lib/desired-column-alias: legal_proxy
+  lib/original-display-name: Legal Proxy
+  lib/original-name: legal_proxy
+  lib/source: source/table-defaults
+  lib/source-column-alias: legal_proxy
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issue
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - issue
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - issue
+  name: issue
+  position: 14
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: issue
+  lib/desired-column-alias: issue
+  lib/original-display-name: Issue
+  lib/original-name: issue
+  lib/source: source/table-defaults
+  lib/source-column-alias: issue
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Shares Held
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - shares_held
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - shares_held
+  name: shares_held
+  position: 15
+  semantic_type: type/Share
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: shares_held
+  lib/desired-column-alias: shares_held
+  lib/original-display-name: Shares Held
+  lib/original-name: shares_held
+  lib/source: source/table-defaults
+  lib/source-column-alias: shares_held
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Voting Entitlement
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - voting_entitlement
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - voting_entitlement
+  name: voting_entitlement
+  position: 16
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: voting_entitlement
+  lib/desired-column-alias: voting_entitlement
+  lib/original-display-name: Voting Entitlement
+  lib/original-name: voting_entitlement
+  lib/source: source/table-defaults
+  lib/source-column-alias: voting_entitlement
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Proposal 1a For
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - proposal_1a_for
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - proposal_1a_for
+  name: proposal_1a_for
+  position: 17
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: proposal_1a_for
+  lib/desired-column-alias: proposal_1a_for
+  lib/original-display-name: Proposal 1a For
+  lib/original-name: proposal_1a_for
+  lib/source: source/table-defaults
+  lib/source-column-alias: proposal_1a_for
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Proposal 1a Against
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - proposal_1a_against
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - proposal_1a_against
+  name: proposal_1a_against
+  position: 18
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: proposal_1a_against
+  lib/desired-column-alias: proposal_1a_against
+  lib/original-display-name: Proposal 1a Against
+  lib/original-name: proposal_1a_against
+  lib/source: source/table-defaults
+  lib/source-column-alias: proposal_1a_against
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Proposal 1a Abstain
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - proposal_1a_abstain
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - proposal_1a_abstain
+  name: proposal_1a_abstain
+  position: 19
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: proposal_1a_abstain
+  lib/desired-column-alias: proposal_1a_abstain
+  lib/original-display-name: Proposal 1a Abstain
+  lib/original-name: proposal_1a_abstain
+  lib/source: source/table-defaults
+  lib/source-column-alias: proposal_1a_abstain
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Proposal 1b For
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - proposal_1b_for
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - proposal_1b_for
+  name: proposal_1b_for
+  position: 20
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: proposal_1b_for
+  lib/desired-column-alias: proposal_1b_for
+  lib/original-display-name: Proposal 1b For
+  lib/original-name: proposal_1b_for
+  lib/source: source/table-defaults
+  lib/source-column-alias: proposal_1b_for
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Proposal 1b Against
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - proposal_1b_against
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - proposal_1b_against
+  name: proposal_1b_against
+  position: 21
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: proposal_1b_against
+  lib/desired-column-alias: proposal_1b_against
+  lib/original-display-name: Proposal 1b Against
+  lib/original-name: proposal_1b_against
+  lib/source: source/table-defaults
+  lib/source-column-alias: proposal_1b_against
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Proposal 1b Abstain
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - proposal_1b_abstain
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - proposal_1b_abstain
+  name: proposal_1b_abstain
+  position: 22
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: proposal_1b_abstain
+  lib/desired-column-alias: proposal_1b_abstain
+  lib/original-display-name: Proposal 1b Abstain
+  lib/original-name: proposal_1b_abstain
+  lib/source: source/table-defaults
+  lib/source-column-alias: proposal_1b_abstain
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Proposal 1c For
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - proposal_1c_for
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - proposal_1c_for
+  name: proposal_1c_for
+  position: 23
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: proposal_1c_for
+  lib/desired-column-alias: proposal_1c_for
+  lib/original-display-name: Proposal 1c For
+  lib/original-name: proposal_1c_for
+  lib/source: source/table-defaults
+  lib/source-column-alias: proposal_1c_for
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Proposal 1c Against
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - proposal_1c_against
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - proposal_1c_against
+  name: proposal_1c_against
+  position: 24
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: proposal_1c_against
+  lib/desired-column-alias: proposal_1c_against
+  lib/original-display-name: Proposal 1c Against
+  lib/original-name: proposal_1c_against
+  lib/source: source/table-defaults
+  lib/source-column-alias: proposal_1c_against
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Proposal 1c Abstain
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - proposal_1c_abstain
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - proposal_1c_abstain
+  name: proposal_1c_abstain
+  position: 25
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: proposal_1c_abstain
+  lib/desired-column-alias: proposal_1c_abstain
+  lib/original-display-name: Proposal 1c Abstain
+  lib/original-name: proposal_1c_abstain
+  lib/source: source/table-defaults
+  lib/source-column-alias: proposal_1c_abstain
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Proposal 1d For
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - proposal_1d_for
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - proposal_1d_for
+  name: proposal_1d_for
+  position: 26
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: proposal_1d_for
+  lib/desired-column-alias: proposal_1d_for
+  lib/original-display-name: Proposal 1d For
+  lib/original-name: proposal_1d_for
+  lib/source: source/table-defaults
+  lib/source-column-alias: proposal_1d_for
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Proposal 1d Against
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - proposal_1d_against
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - proposal_1d_against
+  name: proposal_1d_against
+  position: 27
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: proposal_1d_against
+  lib/desired-column-alias: proposal_1d_against
+  lib/original-display-name: Proposal 1d Against
+  lib/original-name: proposal_1d_against
+  lib/source: source/table-defaults
+  lib/source-column-alias: proposal_1d_against
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Proposal 1d Abstain
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv2
+    - proposal_1d_abstain
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  - proposal_1d_abstain
+  name: proposal_1d_abstain
+  position: 28
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: proposal_1d_abstain
+  lib/desired-column-alias: proposal_1d_abstain
+  lib/original-display-name: Proposal 1d Abstain
+  lib/original-name: proposal_1d_abstain
+  lib/source: source/table-defaults
+  lib/source-column-alias: proposal_1d_abstain
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Issuer Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - issuer_legal_name
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - issuer_legal_name
+  name: issuer_legal_name_2
+  options:
+    qp/ignore-coercion: true
+  position: 0
+  semantic_type: type/Category
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: issuer_legal_name_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_2eeb63cc
+  lib/original-display-name: Issuer Legal Name
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: issuer_legal_name
+  lib/source: source/joins
+  lib/source-column-alias: issuer_legal_name
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Issue Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - issue_name
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - issue_name
+  name: issue_name_2
+  options:
+    qp/ignore-coercion: true
+  position: 1
+  semantic_type: type/Category
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: issue_name_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_e4673ffa
+  lib/original-display-name: Issue Name
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: issue_name
+  lib/source: source/joins
+  lib/source-column-alias: issue_name
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/PostgresEnum
+  database_type: meeting_type
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Type
+  effective_type: type/PostgresEnum
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - type
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - type
+  name: type_2
+  options:
+    qp/ignore-coercion: true
+  position: 2
+  semantic_type: type/Category
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: type_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name__type
+  lib/original-display-name: Type
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: type
+  lib/source: source/joins
+  lib/source-column-alias: type
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Date
+  database_type: date
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Meeting Date
+  effective_type: type/Date
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - meeting_date
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - meeting_date
+  name: meeting_date_2
+  options:
+    qp/ignore-coercion: true
+  position: 3
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: meeting_date_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_0d4d207c
+  lib/original-display-name: Meeting Date
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: meeting_date
+  lib/source: source/joins
+  lib/source-column-alias: meeting_date
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Type Date
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - type_date
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - type_date
+  name: type_date_2
+  options:
+    qp/ignore-coercion: true
+  position: 4
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: type_date_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_6662d6bb
+  lib/original-display-name: Type Date
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: type_date
+  lib/source: source/joins
+  lib/source-column-alias: type_date
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Tasp Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - tasp_name
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - tasp_name
+  name: tasp_name_2
+  options:
+    qp/ignore-coercion: true
+  position: 5
+  semantic_type: type/Category
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: tasp_name_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_5f723cec
+  lib/original-display-name: Tasp Name
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: tasp_name
+  lib/source: source/joins
+  lib/source-column-alias: tasp_name
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/PostgresEnum
+  database_type: voter_type
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Voter Type
+  effective_type: type/PostgresEnum
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - voter_type
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - voter_type
+  name: voter_type_2
+  options:
+    qp/ignore-coercion: true
+  position: 6
+  semantic_type: type/Category
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: voter_type_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_d903da21
+  lib/original-display-name: Voter Type
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: voter_type
+  lib/source: source/joins
+  lib/source-column-alias: voter_type
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Hor Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - hor_legal_name
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - hor_legal_name
+  name: hor_legal_name_2
+  options:
+    qp/ignore-coercion: true
+  position: 7
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: hor_legal_name_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_21b89d2d
+  lib/original-display-name: Hor Legal Name
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: hor_legal_name
+  lib/source: source/joins
+  lib/source-column-alias: hor_legal_name
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/UUID
+  database_type: uuid
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Hor ID
+  effective_type: type/UUID
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - hor_id
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - hor_id
+  name: hor_id_2
+  options:
+    qp/ignore-coercion: true
+  position: 8
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: hor_id_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_c721f9b5
+  lib/original-display-name: Hor ID
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: hor_id
+  lib/source: source/joins
+  lib/source-column-alias: hor_id
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Registered Holder
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - registered_holder
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - registered_holder
+  name: registered_holder_2
+  options:
+    qp/ignore-coercion: true
+  position: 9
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: registered_holder_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_1809b64b
+  lib/original-display-name: Registered Holder
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: registered_holder
+  lib/source: source/joins
+  lib/source-column-alias: registered_holder
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Participant ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - participant_id
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - participant_id
+  name: participant_id_2
+  options:
+    qp/ignore-coercion: true
+  position: 10
+  semantic_type: type/Category
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: participant_id_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_48fd84c9
+  lib/original-display-name: Participant ID
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: participant_id
+  lib/source: source/joins
+  lib/source-column-alias: participant_id
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Participant Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - participant_name
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - participant_name
+  name: participant_name_2
+  options:
+    qp/ignore-coercion: true
+  position: 11
+  semantic_type: type/Category
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: participant_name_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_c7a30b53
+  lib/original-display-name: Participant Name
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: participant_name
+  lib/source: source/joins
+  lib/source-column-alias: participant_name
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Plans Holder
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - plans_holder
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - plans_holder
+  name: plans_holder_2
+  options:
+    qp/ignore-coercion: true
+  position: 12
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: plans_holder_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_74df5ffb
+  lib/original-display-name: Plans Holder
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: plans_holder
+  lib/source: source/joins
+  lib/source-column-alias: plans_holder
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Legal Proxy
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - legal_proxy
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - legal_proxy
+  name: legal_proxy_2
+  options:
+    qp/ignore-coercion: true
+  position: 13
+  semantic_type: type/Category
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: legal_proxy_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_0061075a
+  lib/original-display-name: Legal Proxy
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: legal_proxy
+  lib/source: source/joins
+  lib/source-column-alias: legal_proxy
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Issue
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - issue
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - issue
+  name: issue_2
+  options:
+    qp/ignore-coercion: true
+  position: 14
+  semantic_type: type/Category
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: issue_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name__issue
+  lib/original-display-name: Issue
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: issue
+  lib/source: source/joins
+  lib/source-column-alias: issue
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Shares Held
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - shares_held
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - shares_held
+  name: shares_held_2
+  options:
+    qp/ignore-coercion: true
+  position: 15
+  semantic_type: type/Share
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: shares_held_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_9043424f
+  lib/original-display-name: Shares Held
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: shares_held
+  lib/source: source/joins
+  lib/source-column-alias: shares_held
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Voting Entitlement
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - voting_entitlement
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - voting_entitlement
+  name: voting_entitlement_2
+  options:
+    qp/ignore-coercion: true
+  position: 16
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: voting_entitlement_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_9446d7f5
+  lib/original-display-name: Voting Entitlement
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: voting_entitlement
+  lib/source: source/joins
+  lib/source-column-alias: voting_entitlement
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Integer
+  database_type: int4
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Group ID
+  effective_type: type/Integer
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - group_id
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - group_id
+  name: group_id
+  options:
+    qp/ignore-coercion: true
+  position: 17
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: group_id
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_0cd56b12
+  lib/original-display-name: Group ID
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: group_id
+  lib/source: source/joins
+  lib/source-column-alias: group_id
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Integer
+  database_type: int4
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Serial
+  effective_type: type/Integer
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - serial
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - serial
+  name: serial
+  options:
+    qp/ignore-coercion: true
+  position: 18
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: serial
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_02648854
+  lib/original-display-name: Serial
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: serial
+  lib/source: source/joins
+  lib/source-column-alias: serial
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Value
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - value
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - value
+  name: value
+  options:
+    qp/ignore-coercion: true
+  position: 19
+  semantic_type: type/Category
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: value
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name__value
+  lib/original-display-name: Value
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: value
+  lib/source: source/joins
+  lib/source-column-alias: value
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Cast Votes
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - cast_votes
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - cast_votes
+  name: cast_votes
+  options:
+    qp/ignore-coercion: true
+  position: 20
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: cast_votes
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_20689e69
+  lib/original-display-name: Cast Votes
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: cast_votes
+  lib/source: source/joins
+  lib/source-column-alias: cast_votes
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 1a For
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_1a_for
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_1a_for
+  name: proposal_1a_for_2
+  options:
+    qp/ignore-coercion: true
+  position: 21
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_1a_for_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_7efcb39f
+  lib/original-display-name: Proposal 1a For
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_1a_for
+  lib/source: source/joins
+  lib/source-column-alias: proposal_1a_for
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 1a Against
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_1a_against
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_1a_against
+  name: proposal_1a_against_2
+  options:
+    qp/ignore-coercion: true
+  position: 22
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_1a_against_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_55620c2f
+  lib/original-display-name: Proposal 1a Against
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_1a_against
+  lib/source: source/joins
+  lib/source-column-alias: proposal_1a_against
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 1a Abstain
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_1a_abstain
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_1a_abstain
+  name: proposal_1a_abstain_2
+  options:
+    qp/ignore-coercion: true
+  position: 23
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_1a_abstain_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_fbef92a0
+  lib/original-display-name: Proposal 1a Abstain
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_1a_abstain
+  lib/source: source/joins
+  lib/source-column-alias: proposal_1a_abstain
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 1b For
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_1b_for
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_1b_for
+  name: proposal_1b_for_2
+  options:
+    qp/ignore-coercion: true
+  position: 24
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_1b_for_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_395cc94f
+  lib/original-display-name: Proposal 1b For
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_1b_for
+  lib/source: source/joins
+  lib/source-column-alias: proposal_1b_for
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 1b Against
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_1b_against
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_1b_against
+  name: proposal_1b_against_2
+  options:
+    qp/ignore-coercion: true
+  position: 25
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_1b_against_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_6cef30ea
+  lib/original-display-name: Proposal 1b Against
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_1b_against
+  lib/source: source/joins
+  lib/source-column-alias: proposal_1b_against
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 1b Abstain
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_1b_abstain
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_1b_abstain
+  name: proposal_1b_abstain_2
+  options:
+    qp/ignore-coercion: true
+  position: 26
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_1b_abstain_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_c262ae65
+  lib/original-display-name: Proposal 1b Abstain
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_1b_abstain
+  lib/source: source/joins
+  lib/source-column-alias: proposal_1b_abstain
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 1c For
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_1c_for
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_1c_for
+  name: proposal_1c_for_2
+  options:
+    qp/ignore-coercion: true
+  position: 27
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_1c_for_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_043ce0ff
+  lib/original-display-name: Proposal 1c For
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_1c_for
+  lib/source: source/joins
+  lib/source-column-alias: proposal_1c_for
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 1c Against
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_1c_against
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_1c_against
+  name: proposal_1c_against_2
+  options:
+    qp/ignore-coercion: true
+  position: 28
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_1c_against_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_7b9424a9
+  lib/original-display-name: Proposal 1c Against
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_1c_against
+  lib/source: source/joins
+  lib/source-column-alias: proposal_1c_against
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 1c Abstain
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_1c_abstain
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_1c_abstain
+  name: proposal_1c_abstain_2
+  options:
+    qp/ignore-coercion: true
+  position: 29
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_1c_abstain_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_d519ba26
+  lib/original-display-name: Proposal 1c Abstain
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_1c_abstain
+  lib/source: source/joins
+  lib/source-column-alias: proposal_1c_abstain
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 1d For
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_1d_for
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_1d_for
+  name: proposal_1d_for_2
+  options:
+    qp/ignore-coercion: true
+  position: 30
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_1d_for_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_b61c3cef
+  lib/original-display-name: Proposal 1d For
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_1d_for
+  lib/source: source/joins
+  lib/source-column-alias: proposal_1d_for
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 1d Against
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_1d_against
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_1d_against
+  name: proposal_1d_against_2
+  options:
+    qp/ignore-coercion: true
+  position: 31
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_1d_against_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_1ff54960
+  lib/original-display-name: Proposal 1d Against
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_1d_against
+  lib/source: source/joins
+  lib/source-column-alias: proposal_1d_against
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 1d Abstain
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_1d_abstain
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_1d_abstain
+  name: proposal_1d_abstain_2
+  options:
+    qp/ignore-coercion: true
+  position: 32
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_1d_abstain_2
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_b178d7ef
+  lib/original-display-name: Proposal 1d Abstain
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_1d_abstain
+  lib/source: source/joins
+  lib/source-column-alias: proposal_1d_abstain
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 2a For
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_2a_for
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_2a_for
+  name: proposal_2a_for
+  options:
+    qp/ignore-coercion: true
+  position: 33
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_2a_for
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_f868c131
+  lib/original-display-name: Proposal 2a For
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_2a_for
+  lib/source: source/joins
+  lib/source-column-alias: proposal_2a_for
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 2a Against
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_2a_against
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_2a_against
+  name: proposal_2a_against
+  options:
+    qp/ignore-coercion: true
+  position: 34
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_2a_against
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_be55b72c
+  lib/original-display-name: Proposal 2a Against
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_2a_against
+  lib/source: source/joins
+  lib/source-column-alias: proposal_2a_against
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: A Detailed Proxy Voting Report Mv - Issuer Legal Name → Proposal 2a Abstain
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_detailed_proxy_voting_report_mv
+    - proposal_2a_abstain
+  - join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  - proposal_2a_abstain
+  name: proposal_2a_abstain
+  options:
+    qp/ignore-coercion: true
+  position: 35
+  semantic_type: null
+  source: fields
+  source_alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  table_id:
+  - Sandbox
+  - public
+  - a_detailed_proxy_voting_report_mv
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: proposal_2a_abstain
+  lib/desired-column-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Na_10d829a3
+  lib/original-display-name: Proposal 2a Abstain
+  lib/original-join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  lib/original-name: proposal_2a_abstain
+  lib/source: source/joins
+  lib/source-column-alias: proposal_2a_abstain
+  metabase.lib.join/join-alias: A Detailed Proxy Voting Report Mv - Issuer Legal Name
+  qp/implicit-field?: true
+visualization_settings:
+  column_settings: null
+  table.cell_column: shares_held
+  table.pivot_column: type
+card_schema: 23
+serdes/meta:
+- id: Ze5FmI4qYTcSjMutECt7t
+  label: a_detailed_proxy_voting_report_mv2___a_detailed_proxy_voting_report_mv
+  model: Card
+archived_directly: false
+dashboard_id: null
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question
