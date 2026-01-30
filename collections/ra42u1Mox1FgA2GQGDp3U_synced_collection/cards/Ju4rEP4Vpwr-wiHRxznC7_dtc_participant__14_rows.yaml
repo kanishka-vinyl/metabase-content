@@ -1,0 +1,246 @@
+name: Dtc Participant, 14 rows
+description: null
+entity_id: Ju4rEP4Vpwr-wiHRxznC7
+created_at: '2026-01-30T05:03:23.716694Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: table
+archived: false
+collection_id: ra42u1Mox1FgA2GQGDp3U
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Datamart
+table_id:
+- Datamart
+- dev_datamart
+- dtc_participant
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Datamart
+  query:
+    limit: 14
+    source-table:
+    - Datamart
+    - dev_datamart
+    - dtc_participant
+  type: query
+result_metadata:
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - dtc_participant
+    - id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - dtc_participant
+  - id
+  name: id
+  position: 0
+  semantic_type: type/PK
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - dtc_participant
+  visibility_type: normal
+  lib/deduplicated-name: id
+  lib/desired-column-alias: id
+  lib/original-display-name: ID
+  lib/original-name: id
+  lib/source: source/table-defaults
+  lib/source-column-alias: id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - dtc_participant
+    - legal_name
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - dtc_participant
+  - legal_name
+  name: legal_name
+  position: 1
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - dtc_participant
+  visibility_type: normal
+  lib/deduplicated-name: legal_name
+  lib/desired-column-alias: legal_name
+  lib/original-display-name: Legal Name
+  lib/original-name: legal_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: legal_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Participant ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - dtc_participant
+    - participant_id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - dtc_participant
+  - participant_id
+  name: participant_id
+  position: 2
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - dtc_participant
+  visibility_type: normal
+  lib/deduplicated-name: participant_id
+  lib/desired-column-alias: participant_id
+  lib/original-display-name: Participant ID
+  lib/original-name: participant_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: participant_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/DateTimeWithLocalTZ
+  database_type: timestamptz
+  display_name: Created At
+  effective_type: type/DateTimeWithLocalTZ
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - dtc_participant
+    - created_at
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - dtc_participant
+  - created_at
+  name: created_at
+  position: 3
+  semantic_type: type/CreationTimestamp
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - dtc_participant
+  visibility_type: normal
+  lib/deduplicated-name: created_at
+  lib/desired-column-alias: created_at
+  lib/original-display-name: Created At
+  lib/original-name: created_at
+  lib/source: source/table-defaults
+  lib/source-column-alias: created_at
+  qp/implicit-field?: true
+- active: true
+  base_type: type/DateTimeWithLocalTZ
+  database_type: timestamptz
+  display_name: Updated At
+  effective_type: type/DateTimeWithLocalTZ
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - dtc_participant
+    - updated_at
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - dtc_participant
+  - updated_at
+  name: updated_at
+  position: 4
+  semantic_type: type/UpdatedTimestamp
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - dtc_participant
+  visibility_type: normal
+  lib/deduplicated-name: updated_at
+  lib/desired-column-alias: updated_at
+  lib/original-display-name: Updated At
+  lib/original-name: updated_at
+  lib/source: source/table-defaults
+  lib/source-column-alias: updated_at
+  qp/implicit-field?: true
+- active: true
+  base_type: type/JSON
+  database_type: jsonb
+  display_name: Operators
+  effective_type: type/JSON
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - dtc_participant
+    - operators
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - dtc_participant
+  - operators
+  name: operators
+  position: 5
+  semantic_type: type/SerializedJSON
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - dtc_participant
+  visibility_type: details-only
+  lib/deduplicated-name: operators
+  lib/desired-column-alias: operators
+  lib/original-display-name: Operators
+  lib/original-name: operators
+  lib/source: source/table-defaults
+  lib/source-column-alias: operators
+  qp/implicit-field?: true
+visualization_settings:
+  column_settings: null
+  table.cell_column: updated_at
+  table.pivot_column: operators
+card_schema: 23
+serdes/meta:
+- id: Ju4rEP4Vpwr-wiHRxznC7
+  label: dtc_participant__14_rows
+  model: Card
+archived_directly: false
+dashboard_id: null
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question
