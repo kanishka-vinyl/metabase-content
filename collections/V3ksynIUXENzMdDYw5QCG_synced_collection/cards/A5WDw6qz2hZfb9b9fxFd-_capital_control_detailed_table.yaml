@@ -1,0 +1,484 @@
+name: Capital Control Detailed Table
+description: Detailed Report
+entity_id: A5WDw6qz2hZfb9b9fxFd-
+created_at: '2026-01-28T11:24:45.349524Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: table
+archived: false
+collection_id: V3ksynIUXENzMdDYw5QCG
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Sandbox
+table_id:
+- Sandbox
+- public
+- a_capital_control_detailed_report_mv__mbarchiv__1762500783
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Sandbox
+  query:
+    expressions:
+      logo:
+      - concat
+      - '![logo](https://raw.githubusercontent.com/harshaf87/Images/main/'
+      - - lower
+        - - field
+          - - Sandbox
+            - public
+            - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+            - issuer_legal_name
+          - base-type: type/Text
+      - .png)
+    fields:
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issuer_legal_name
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - created_at
+      - base-type: type/DateTimeWithLocalTZ
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - effective_date
+      - base-type: type/Date
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - transaction_type
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - reason_description
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - quantity
+      - base-type: type/Decimal
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issued_and_outstanding
+      - base-type: type/Decimal
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - available_for_issuance
+      - base-type: type/Decimal
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - authorized_capital
+      - base-type: type/Decimal
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - reserved_capital
+      - base-type: type/Decimal
+    - - expression
+      - logo
+      - base-type: type/Text
+    source-table:
+    - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  type: query
+result_metadata:
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+    - issuer_legal_name
+  - base-type: type/Text
+  id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  - issuer_legal_name
+  name: issuer_legal_name
+  position: 0
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: issuer_legal_name
+  lib/desired-column-alias: issuer_legal_name
+  lib/original-display-name: Issuer Legal Name
+  lib/original-name: issuer_legal_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_legal_name
+- active: true
+  base_type: type/DateTimeWithLocalTZ
+  database_type: timestamptz
+  display_name: Created At
+  effective_type: type/DateTimeWithLocalTZ
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+    - created_at
+  - base-type: type/DateTimeWithLocalTZ
+  id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  - created_at
+  name: created_at
+  position: 48
+  semantic_type: type/CreationTimestamp
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: created_at
+  lib/desired-column-alias: created_at
+  lib/original-display-name: Created At
+  lib/original-name: created_at
+  lib/source: source/table-defaults
+  lib/source-column-alias: created_at
+- active: true
+  base_type: type/Date
+  database_type: date
+  display_name: Effective Date
+  effective_type: type/Date
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+    - effective_date
+  - base-type: type/Date
+  id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  - effective_date
+  name: effective_date
+  position: 39
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: effective_date
+  lib/desired-column-alias: effective_date
+  lib/original-display-name: Effective Date
+  lib/original-name: effective_date
+  lib/source: source/table-defaults
+  lib/source-column-alias: effective_date
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Transaction Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+    - transaction_type
+  - base-type: type/Text
+  id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  - transaction_type
+  name: transaction_type
+  position: 40
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: transaction_type
+  lib/desired-column-alias: transaction_type
+  lib/original-display-name: Transaction Type
+  lib/original-name: transaction_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: transaction_type
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Reason Description
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+    - reason_description
+  - base-type: type/Text
+  id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  - reason_description
+  name: reason_description
+  position: 41
+  semantic_type: type/Description
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: reason_description
+  lib/desired-column-alias: reason_description
+  lib/original-display-name: Reason Description
+  lib/original-name: reason_description
+  lib/source: source/table-defaults
+  lib/source-column-alias: reason_description
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Quantity
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+    - quantity
+  - base-type: type/Decimal
+  id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  - quantity
+  name: quantity
+  position: 49
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: quantity
+  lib/desired-column-alias: quantity
+  lib/original-display-name: Quantity
+  lib/original-name: quantity
+  lib/source: source/table-defaults
+  lib/source-column-alias: quantity
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Issued And Outstanding
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+    - issued_and_outstanding
+  - base-type: type/Decimal
+  id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  - issued_and_outstanding
+  name: issued_and_outstanding
+  position: 44
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: issued_and_outstanding
+  lib/desired-column-alias: issued_and_outstanding
+  lib/original-display-name: Issued And Outstanding
+  lib/original-name: issued_and_outstanding
+  lib/source: source/table-defaults
+  lib/source-column-alias: issued_and_outstanding
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Available For Issuance
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+    - available_for_issuance
+  - base-type: type/Decimal
+  id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  - available_for_issuance
+  name: available_for_issuance
+  position: 47
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: available_for_issuance
+  lib/desired-column-alias: available_for_issuance
+  lib/original-display-name: Available For Issuance
+  lib/original-name: available_for_issuance
+  lib/source: source/table-defaults
+  lib/source-column-alias: available_for_issuance
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Authorized Capital
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+    - authorized_capital
+  - base-type: type/Decimal
+  id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  - authorized_capital
+  name: authorized_capital
+  position: 46
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: authorized_capital
+  lib/desired-column-alias: authorized_capital
+  lib/original-display-name: Authorized Capital
+  lib/original-name: authorized_capital
+  lib/source: source/table-defaults
+  lib/source-column-alias: authorized_capital
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Reserved Capital
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+    - reserved_capital
+  - base-type: type/Decimal
+  id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  - reserved_capital
+  name: reserved_capital
+  position: 45
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: reserved_capital
+  lib/desired-column-alias: reserved_capital
+  lib/original-display-name: Reserved Capital
+  lib/original-name: reserved_capital
+  lib/source: source/table-defaults
+  lib/source-column-alias: reserved_capital
+- base_type: type/Text
+  database_type: text
+  display_name: logo
+  effective_type: type/Text
+  field_ref:
+  - expression
+  - logo
+  name: logo
+  semantic_type: null
+  source: fields
+  lib/deduplicated-name: logo
+  lib/desired-column-alias: logo
+  lib/expression-name: logo
+  lib/original-name: logo
+  lib/source: source/expressions
+  lib/source-column-alias: logo
+visualization_settings:
+  column_settings:
+    '["name","logo"]':
+      view_as: auto
+  table.cell_column: quantity
+  table.columns:
+  - enabled: true
+    name: issuer_legal_name
+  - enabled: true
+    name: created_at
+  - enabled: true
+    name: effective_date
+  - enabled: true
+    name: transaction_type
+  - enabled: true
+    name: logo
+  - enabled: true
+    name: reason_description
+  - enabled: true
+    name: quantity
+  - enabled: true
+    name: issued_and_outstanding
+  - enabled: true
+    name: available_for_issuance
+  - enabled: true
+    name: authorized_capital
+  - enabled: true
+    name: reserved_capital
+  table.pivot_column: issuer_legal_name
+card_schema: 23
+serdes/meta:
+- id: A5WDw6qz2hZfb9b9fxFd-
+  label: capital_control_detailed_table
+  model: Card
+archived_directly: false
+dashboard_id: cfKuVv37jteTJB_5GoBiA
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question

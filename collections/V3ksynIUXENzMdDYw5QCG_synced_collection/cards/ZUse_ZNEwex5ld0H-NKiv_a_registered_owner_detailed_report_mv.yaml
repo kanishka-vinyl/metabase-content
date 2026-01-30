@@ -1,0 +1,1400 @@
+name: A Registered Owner Detailed Report Mv
+description: null
+entity_id: ZUse_ZNEwex5ld0H-NKiv
+created_at: '2026-01-28T10:58:08.007696Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: table
+archived: false
+collection_id: V3ksynIUXENzMdDYw5QCG
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Datamart
+table_id:
+- Datamart
+- dev_datamart
+- a_registered_owner_detailed_report_mv
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Datamart
+  query:
+    source-table:
+    - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+  type: query
+result_metadata:
+- active: true
+  base_type: type/BigInteger
+  database_type: int8
+  display_name: ID
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - id
+  name: id
+  position: 0
+  semantic_type: type/PK
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: id
+  lib/desired-column-alias: id
+  lib/original-display-name: ID
+  lib/original-name: id
+  lib/source: source/table-defaults
+  lib/source-column-alias: id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Registered Owner ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - registered_owner_id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - registered_owner_id
+  name: registered_owner_id
+  position: 1
+  semantic_type: type/Owner
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: registered_owner_id
+  lib/desired-column-alias: registered_owner_id
+  lib/original-display-name: Registered Owner ID
+  lib/original-name: registered_owner_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: registered_owner_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - legal_name
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - legal_name
+  name: legal_name
+  position: 2
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: legal_name
+  lib/desired-column-alias: legal_name
+  lib/original-display-name: Legal Name
+  lib/original-name: legal_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: legal_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Holder Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - holder_type
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - holder_type
+  name: holder_type
+  position: 3
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: holder_type
+  lib/desired-column-alias: holder_type
+  lib/original-display-name: Holder Type
+  lib/original-name: holder_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: holder_type
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Registered Owner Tin
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - registered_owner_tin
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - registered_owner_tin
+  name: registered_owner_tin
+  position: 4
+  semantic_type: type/Owner
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: registered_owner_tin
+  lib/desired-column-alias: registered_owner_tin
+  lib/original-display-name: Registered Owner Tin
+  lib/original-name: registered_owner_tin
+  lib/source: source/table-defaults
+  lib/source-column-alias: registered_owner_tin
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Holding Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - holding_type
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - holding_type
+  name: holding_type
+  position: 5
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: holding_type
+  lib/desired-column-alias: holding_type
+  lib/original-display-name: Holding Type
+  lib/original-name: holding_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: holding_type
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Drs Or Certificate
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - drs_or_certificate
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - drs_or_certificate
+  name: drs_or_certificate
+  position: 6
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: drs_or_certificate
+  lib/desired-column-alias: drs_or_certificate
+  lib/original-display-name: Drs Or Certificate
+  lib/original-name: drs_or_certificate
+  lib/source: source/table-defaults
+  lib/source-column-alias: drs_or_certificate
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Date
+  database_type: date
+  display_name: Issue Date
+  effective_type: type/Date
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - issue_date
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - issue_date
+  name: issue_date
+  position: 7
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: issue_date
+  lib/desired-column-alias: issue_date
+  lib/original-display-name: Issue Date
+  lib/original-name: issue_date
+  lib/source: source/table-defaults
+  lib/source-column-alias: issue_date
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Quantity
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - quantity
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - quantity
+  name: quantity
+  position: 8
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: quantity
+  lib/desired-column-alias: quantity
+  lib/original-display-name: Quantity
+  lib/original-name: quantity
+  lib/source: source/table-defaults
+  lib/source-column-alias: quantity
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Legend Or Stop
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - legend_or_stop
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - legend_or_stop
+  name: legend_or_stop
+  position: 9
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: legend_or_stop
+  lib/desired-column-alias: legend_or_stop
+  lib/original-display-name: Legend Or Stop
+  lib/original-name: legend_or_stop
+  lib/source: source/table-defaults
+  lib/source-column-alias: legend_or_stop
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Acquisition Date
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - acquisition_date
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - acquisition_date
+  name: acquisition_date
+  position: 10
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: acquisition_date
+  lib/desired-column-alias: acquisition_date
+  lib/original-display-name: Acquisition Date
+  lib/original-name: acquisition_date
+  lib/source: source/table-defaults
+  lib/source-column-alias: acquisition_date
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Cost Basis
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - cost_basis
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - cost_basis
+  name: cost_basis
+  position: 11
+  semantic_type: type/Cost
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: cost_basis
+  lib/desired-column-alias: cost_basis
+  lib/original-display-name: Cost Basis
+  lib/original-name: cost_basis
+  lib/source: source/table-defaults
+  lib/source-column-alias: cost_basis
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Inheritance And Or Gifted
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - inheritance_and_or_gifted
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - inheritance_and_or_gifted
+  name: inheritance_and_or_gifted
+  position: 12
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: inheritance_and_or_gifted
+  lib/desired-column-alias: inheritance_and_or_gifted
+  lib/original-display-name: Inheritance And Or Gifted
+  lib/original-name: inheritance_and_or_gifted
+  lib/source: source/table-defaults
+  lib/source-column-alias: inheritance_and_or_gifted
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Gift Fmv
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - gift_fmv
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - gift_fmv
+  name: gift_fmv
+  position: 13
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: gift_fmv
+  lib/desired-column-alias: gift_fmv
+  lib/original-display-name: Gift Fmv
+  lib/original-name: gift_fmv
+  lib/source: source/table-defaults
+  lib/source-column-alias: gift_fmv
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Address
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - address
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - address
+  name: address
+  position: 14
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: address
+  lib/desired-column-alias: address
+  lib/original-display-name: Address
+  lib/original-name: address
+  lib/source: source/table-defaults
+  lib/source-column-alias: address
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Country
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - country
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - country
+  name: country
+  position: 15
+  semantic_type: type/State
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: country
+  lib/desired-column-alias: country
+  lib/original-display-name: Country
+  lib/original-name: country
+  lib/source: source/table-defaults
+  lib/source-column-alias: country
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: State
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - state
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - state
+  name: state
+  position: 16
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: state
+  lib/desired-column-alias: state
+  lib/original-display-name: State
+  lib/original-name: state
+  lib/source: source/table-defaults
+  lib/source-column-alias: state
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Email Address
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - email_address
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - email_address
+  name: email_address
+  position: 17
+  semantic_type: type/Email
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: email_address
+  lib/desired-column-alias: email_address
+  lib/original-display-name: Email Address
+  lib/original-name: email_address
+  lib/source: source/table-defaults
+  lib/source-column-alias: email_address
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Phone Number
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - phone_number
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - phone_number
+  name: phone_number
+  position: 18
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: phone_number
+  lib/desired-column-alias: phone_number
+  lib/original-display-name: Phone Number
+  lib/original-name: phone_number
+  lib/source: source/table-defaults
+  lib/source-column-alias: phone_number
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Lost Holder
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - lost_holder
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - lost_holder
+  name: lost_holder
+  position: 19
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: lost_holder
+  lib/desired-column-alias: lost_holder
+  lib/original-display-name: Lost Holder
+  lib/original-name: lost_holder
+  lib/source: source/table-defaults
+  lib/source-column-alias: lost_holder
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Date Of Last Contact
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - date_of_last_contact
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - date_of_last_contact
+  name: date_of_last_contact
+  position: 20
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: date_of_last_contact
+  lib/desired-column-alias: date_of_last_contact
+  lib/original-display-name: Date Of Last Contact
+  lib/original-name: date_of_last_contact
+  lib/source: source/table-defaults
+  lib/source-column-alias: date_of_last_contact
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Affiliate
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - affiliate
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - affiliate
+  name: affiliate
+  position: 21
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: affiliate
+  lib/desired-column-alias: affiliate
+  lib/original-display-name: Affiliate
+  lib/original-name: affiliate
+  lib/source: source/table-defaults
+  lib/source-column-alias: affiliate
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Section 16 Officer
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - section_16_officer
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - section_16_officer
+  name: section_16_officer
+  position: 22
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: section_16_officer
+  lib/desired-column-alias: section_16_officer
+  lib/original-display-name: Section 16 Officer
+  lib/original-name: section_16_officer
+  lib/source: source/table-defaults
+  lib/source-column-alias: section_16_officer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Holder Stop
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - holder_stop
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - holder_stop
+  name: holder_stop
+  position: 23
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: holder_stop
+  lib/desired-column-alias: holder_stop
+  lib/original-display-name: Holder Stop
+  lib/original-name: holder_stop
+  lib/source: source/table-defaults
+  lib/source-column-alias: holder_stop
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Associated User Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - associated_user_name
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - associated_user_name
+  name: associated_user_name
+  position: 24
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_name
+  lib/desired-column-alias: associated_user_name
+  lib/original-display-name: Associated User Name
+  lib/original-name: associated_user_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Associated User Tin
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - associated_user_tin
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - associated_user_tin
+  name: associated_user_tin
+  position: 25
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_tin
+  lib/desired-column-alias: associated_user_tin
+  lib/original-display-name: Associated User Tin
+  lib/original-name: associated_user_tin
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_tin
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Associated User Name 1
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - associated_user_name_1
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - associated_user_name_1
+  name: associated_user_name_1
+  position: 26
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_name_1
+  lib/desired-column-alias: associated_user_name_1
+  lib/original-display-name: Associated User Name 1
+  lib/original-name: associated_user_name_1
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_name_1
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Associated User Tin 1
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - associated_user_tin_1
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - associated_user_tin_1
+  name: associated_user_tin_1
+  position: 27
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_tin_1
+  lib/desired-column-alias: associated_user_tin_1
+  lib/original-display-name: Associated User Tin 1
+  lib/original-name: associated_user_tin_1
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_tin_1
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Associated User Name 2
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - associated_user_name_2
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - associated_user_name_2
+  name: associated_user_name_2
+  position: 28
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_name_2
+  lib/desired-column-alias: associated_user_name_2
+  lib/original-display-name: Associated User Name 2
+  lib/original-name: associated_user_name_2
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_name_2
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Associated User Tin 2
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - associated_user_tin_2
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - associated_user_tin_2
+  name: associated_user_tin_2
+  position: 29
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_tin_2
+  lib/desired-column-alias: associated_user_tin_2
+  lib/original-display-name: Associated User Tin 2
+  lib/original-name: associated_user_tin_2
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_tin_2
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Associated User Name 3
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - associated_user_name_3
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - associated_user_name_3
+  name: associated_user_name_3
+  position: 30
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_name_3
+  lib/desired-column-alias: associated_user_name_3
+  lib/original-display-name: Associated User Name 3
+  lib/original-name: associated_user_name_3
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_name_3
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Associated User Tin 3
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - associated_user_tin_3
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - associated_user_tin_3
+  name: associated_user_tin_3
+  position: 31
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_tin_3
+  lib/desired-column-alias: associated_user_tin_3
+  lib/original-display-name: Associated User Tin 3
+  lib/original-name: associated_user_tin_3
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_tin_3
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issue Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - issue_name
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - issue_name
+  name: issue_name
+  position: 32
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: issue_name
+  lib/desired-column-alias: issue_name
+  lib/original-display-name: Issue Name
+  lib/original-name: issue_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: issue_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Cusip
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - cusip
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - cusip
+  name: cusip
+  position: 33
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: cusip
+  lib/desired-column-alias: cusip
+  lib/original-display-name: Cusip
+  lib/original-name: cusip
+  lib/source: source/table-defaults
+  lib/source-column-alias: cusip
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Ticker
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - ticker
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - ticker
+  name: ticker
+  position: 34
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: ticker
+  lib/desired-column-alias: ticker
+  lib/original-display-name: Ticker
+  lib/original-name: ticker
+  lib/source: source/table-defaults
+  lib/source-column-alias: ticker
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - issuer_legal_name
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - issuer_legal_name
+  name: issuer_legal_name
+  position: 35
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: issuer_legal_name
+  lib/desired-column-alias: issuer_legal_name
+  lib/original-display-name: Issuer Legal Name
+  lib/original-name: issuer_legal_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_legal_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Issuer Logo Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - issuer_logo_name
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - issuer_logo_name
+  name: issuer_logo_name
+  position: 36
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: issuer_logo_name
+  lib/desired-column-alias: issuer_logo_name
+  lib/original-display-name: Issuer Logo Name
+  lib/original-name: issuer_logo_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_logo_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Tasp Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - tasp_name
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - tasp_name
+  name: tasp_name
+  position: 37
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: tasp_name
+  lib/desired-column-alias: tasp_name
+  lib/original-display-name: Tasp Name
+  lib/original-name: tasp_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: tasp_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Stakeholder ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - stakeholder_id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - stakeholder_id
+  name: stakeholder_id
+  position: 38
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: stakeholder_id
+  lib/desired-column-alias: stakeholder_id
+  lib/original-display-name: Stakeholder ID
+  lib/original-name: stakeholder_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: stakeholder_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Issuer ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - issuer_id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - issuer_id
+  name: issuer_id
+  position: 39
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: issuer_id
+  lib/desired-column-alias: issuer_id
+  lib/original-display-name: Issuer ID
+  lib/original-name: issuer_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Tasp ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - a_registered_owner_detailed_report_mv
+    - tasp_id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  - tasp_id
+  name: tasp_id
+  position: 40
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - a_registered_owner_detailed_report_mv
+  visibility_type: normal
+  lib/deduplicated-name: tasp_id
+  lib/desired-column-alias: tasp_id
+  lib/original-display-name: Tasp ID
+  lib/original-name: tasp_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: tasp_id
+  qp/implicit-field?: true
+visualization_settings:
+  column_settings: null
+  table.cell_column: quantity
+  table.pivot_column: inheritance_and_or_gifted
+card_schema: 23
+serdes/meta:
+- id: ZUse_ZNEwex5ld0H-NKiv
+  label: a_registered_owner_detailed_report_mv
+  model: Card
+archived_directly: false
+dashboard_id: null
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question

@@ -1,0 +1,439 @@
+name: Capital Control Detailed Report - Duplicate
+description: null
+entity_id: cfKuVv37jteTJB_5GoBiA
+created_at: '2026-01-28T11:24:45.349524Z'
+creator_id: kanishka.shetty@vinylequity.com
+archived: false
+collection_id: V3ksynIUXENzMdDYw5QCG
+auto_apply_filters: true
+collection_position: null
+position: null
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+show_in_getting_started: false
+caveats: null
+points_of_interest: null
+parameters:
+- id: 8eb4f4aa
+  name: Issuer Name
+  sectionId: string
+  slug: issuer_name
+  type: string/=
+  values_query_type: search
+- filteringParameters:
+  - 8eb4f4aa
+  id: a6d5e675
+  name: Issue Name
+  sectionId: string
+  slug: issue_name
+  type: string/=
+  values_query_type: search
+- id: 45fe4f94
+  name: Date
+  sectionId: date
+  slug: date
+  type: date/all-options
+- id: 1442c0d3
+  name: Transaction Type
+  sectionId: string
+  slug: transaction_type
+  type: string/=
+- id: ad014859
+  name: Issuance or Cancellation
+  sectionId: string
+  slug: issuance_or_cancellation
+  type: string/=
+- id: e0c656db
+  name: Issuance and Cancellation Reason
+  sectionId: string
+  slug: issuance_and_cancellation_reason
+  type: string/=
+serdes/meta:
+- id: cfKuVv37jteTJB_5GoBiA
+  label: capital_control_detailed_report___duplicate
+  model: Dashboard
+archived_directly: false
+dashcards:
+- entity_id: aauESKkKH_tnpwBpIdbyV
+  card_id: A5WDw6qz2hZfb9b9fxFd-
+  created_at: '2026-01-28T11:24:45.349524Z'
+  row: 2
+  col: 0
+  size_x: 24
+  size_y: 6
+  action_id: null
+  dashboard_tab_id:
+  - cfKuVv37jteTJB_5GoBiA
+  - bYupdHu2LeMtCifYb4kIT
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: A5WDw6qz2hZfb9b9fxFd-
+    parameter_id: 8eb4f4aa
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: A5WDw6qz2hZfb9b9fxFd-
+    parameter_id: a6d5e675
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issue_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: A5WDw6qz2hZfb9b9fxFd-
+    parameter_id: 45fe4f94
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - effective_date
+      - base-type: type/Date
+    - stage-number: 0
+  - card_id: A5WDw6qz2hZfb9b9fxFd-
+    parameter_id: 1442c0d3
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - transaction_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: A5WDw6qz2hZfb9b9fxFd-
+    parameter_id: ad014859
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issuance_or_cancellation
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: A5WDw6qz2hZfb9b9fxFd-
+    parameter_id: e0c656db
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - reason_description
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings:
+      '["name","authorized_capital"]': {}
+      '["name","available_for_issuance"]': {}
+      '["name","created_at"]':
+        date_style: D MMMM, YYYY
+        time_enabled: null
+      '["name","effective_date"]':
+        date_style: D MMMM, YYYY
+      '["name","issued_and_outstanding"]': {}
+      '["name","issuer_legal_name"]': {}
+      '["name","logo"]':
+        view_as: image
+      '["name","quantity"]': {}
+      '["name","reason_description"]':
+        column_title: Issuance and Cancellation Reason
+      '["name","reserved_capital"]': {}
+      '["name","transaction_type"]':
+        column_title: Type
+    table.cell_column: quantity
+    table.column_formatting:
+    - color: '#F7C4C4'
+      columns:
+      - transaction_type
+      highlight_row: true
+      operator: contains
+      type: single
+      value: CANCELLATION
+    - color: '#A7D07C'
+      columns:
+      - transaction_type
+      highlight_row: true
+      operator: contains
+      type: single
+      value: ISSUANCE
+    table.columns:
+    - enabled: false
+      name: issuer_legal_name
+    - enabled: true
+      name: created_at
+    - enabled: true
+      name: effective_date
+    - enabled: true
+      name: transaction_type
+    - enabled: true
+      name: reason_description
+    - enabled: true
+      name: quantity
+    - enabled: true
+      name: issued_and_outstanding
+    - enabled: true
+      name: available_for_issuance
+    - enabled: true
+      name: logo
+    - enabled: true
+      name: authorized_capital
+    - enabled: true
+      name: reserved_capital
+    table.pagination: true
+    table.pivot_column: issuer_legal_name
+    table.row_index: false
+  serdes/meta:
+  - id: cfKuVv37jteTJB_5GoBiA
+    model: Dashboard
+  - id: bYupdHu2LeMtCifYb4kIT
+    model: DashboardTab
+  - id: aauESKkKH_tnpwBpIdbyV
+    model: DashboardCard
+- entity_id: VgU1E6MzwBEHoS1xS16Sl
+  card_id: null
+  created_at: '2026-01-28T11:24:45.349524Z'
+  row: 0
+  col: 5
+  size_x: 14
+  size_y: 2
+  action_id: null
+  dashboard_tab_id:
+  - cfKuVv37jteTJB_5GoBiA
+  - bYupdHu2LeMtCifYb4kIT
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: '# **Capital Control Detailed Report**'
+    text.align_horizontal: center
+    text.align_vertical: middle
+    virtual_card:
+      archived: false
+      display: text
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: cfKuVv37jteTJB_5GoBiA
+    model: Dashboard
+  - id: bYupdHu2LeMtCifYb4kIT
+    model: DashboardTab
+  - id: VgU1E6MzwBEHoS1xS16Sl
+    model: DashboardCard
+- entity_id: n2Ty7F1g5vZyUXT4Y8otz
+  card_id: tqn-DxiVluca6KpRuPNiY
+  created_at: '2026-01-28T11:24:45.349524Z'
+  row: 0
+  col: 0
+  size_x: 5
+  size_y: 2
+  action_id: null
+  dashboard_tab_id:
+  - cfKuVv37jteTJB_5GoBiA
+  - bYupdHu2LeMtCifYb4kIT
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: tqn-DxiVluca6KpRuPNiY
+    parameter_id: 8eb4f4aa
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: tqn-DxiVluca6KpRuPNiY
+    parameter_id: 45fe4f94
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - effective_date
+      - base-type: type/Date
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    card.title: Issuer Name
+    column_settings: null
+  serdes/meta:
+  - id: cfKuVv37jteTJB_5GoBiA
+    model: Dashboard
+  - id: bYupdHu2LeMtCifYb4kIT
+    model: DashboardTab
+  - id: n2Ty7F1g5vZyUXT4Y8otz
+    model: DashboardCard
+- entity_id: I2o--azXnfcruHj0mngHk
+  card_id: pGu_lB--0czW1j-BZ9KhX
+  created_at: '2026-01-28T11:24:45.349524Z'
+  row: 0
+  col: 19
+  size_x: 5
+  size_y: 2
+  action_id: null
+  dashboard_tab_id:
+  - cfKuVv37jteTJB_5GoBiA
+  - bYupdHu2LeMtCifYb4kIT
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: pGu_lB--0czW1j-BZ9KhX
+    parameter_id: 45fe4f94
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - effective_date
+      - base-type: type/Date
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    card.title: Issue Name
+    column_settings: null
+  serdes/meta:
+  - id: cfKuVv37jteTJB_5GoBiA
+    model: Dashboard
+  - id: bYupdHu2LeMtCifYb4kIT
+    model: DashboardTab
+  - id: I2o--azXnfcruHj0mngHk
+    model: DashboardCard
+- entity_id: OTOjRgfeKwp1HJzvuSt2l
+  card_id: null
+  created_at: '2026-01-28T11:24:45.349524Z'
+  row: 9
+  col: 0
+  size_x: 12
+  size_y: 8
+  action_id: null
+  dashboard_tab_id:
+  - cfKuVv37jteTJB_5GoBiA
+  - bYupdHu2LeMtCifYb4kIT
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    iframe: <iframe src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AMercedes-Logo.svg&psig=AOvVaw3_ifUGIN4FlHBZdk7ANvWQ&ust=1760090601542000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJj7qsrulpADFQAAAAAdAAAAABAE"/>
+    virtual_card:
+      archived: false
+      display: iframe
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: cfKuVv37jteTJB_5GoBiA
+    model: Dashboard
+  - id: bYupdHu2LeMtCifYb4kIT
+    model: DashboardTab
+  - id: OTOjRgfeKwp1HJzvuSt2l
+    model: DashboardCard
+- entity_id: 062Ruz7QEsiO6eJw5oQbu
+  card_id: 7_xlSyQ0vcvhyQfeneaQD
+  created_at: '2026-01-28T11:24:45.349524Z'
+  row: 9
+  col: 12
+  size_x: 12
+  size_y: 9
+  action_id: null
+  dashboard_tab_id:
+  - cfKuVv37jteTJB_5GoBiA
+  - bYupdHu2LeMtCifYb4kIT
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings:
+      '["name","logo"]':
+        view_as: image
+    table.cell_column: quantity
+    table.columns:
+    - enabled: true
+      name: issuer_legal_name
+    - enabled: true
+      name: created_at
+    - enabled: true
+      name: effective_date
+    - enabled: true
+      name: transaction_type
+    - enabled: true
+      name: logo
+    - enabled: true
+      name: reason_description
+    - enabled: true
+      name: quantity
+    - enabled: true
+      name: issued_and_outstanding
+    - enabled: true
+      name: available_for_issuance
+    - enabled: true
+      name: authorized_capital
+    - enabled: true
+      name: reserved_capital
+    table.pivot_column: issuer_legal_name
+  serdes/meta:
+  - id: cfKuVv37jteTJB_5GoBiA
+    model: Dashboard
+  - id: bYupdHu2LeMtCifYb4kIT
+    model: DashboardTab
+  - id: 062Ruz7QEsiO6eJw5oQbu
+    model: DashboardCard
+- entity_id: FUAwxA4iI9aBKTNtXi5yK
+  card_id: null
+  created_at: '2026-01-28T11:24:45.349524Z'
+  row: 17
+  col: 0
+  size_x: 12
+  size_y: 8
+  action_id: null
+  dashboard_tab_id:
+  - cfKuVv37jteTJB_5GoBiA
+  - bYupdHu2LeMtCifYb4kIT
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    iframe: <iframe src="https://github.com/harshaf87/Images/main/stark%20industries.png"/>
+    virtual_card:
+      archived: false
+      display: iframe
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: cfKuVv37jteTJB_5GoBiA
+    model: Dashboard
+  - id: bYupdHu2LeMtCifYb4kIT
+    model: DashboardTab
+  - id: FUAwxA4iI9aBKTNtXi5yK
+    model: DashboardCard
+embedding_type: null
+initially_published_at: null
+tabs:
+- created_at: '2026-01-28T11:24:45.349524Z'
+  entity_id: bYupdHu2LeMtCifYb4kIT
+  name: Capital Control Detailed Report
+  position: 0
+  serdes/meta:
+  - id: cfKuVv37jteTJB_5GoBiA
+    model: Dashboard
+  - id: bYupdHu2LeMtCifYb4kIT
+    model: DashboardTab
+width: full

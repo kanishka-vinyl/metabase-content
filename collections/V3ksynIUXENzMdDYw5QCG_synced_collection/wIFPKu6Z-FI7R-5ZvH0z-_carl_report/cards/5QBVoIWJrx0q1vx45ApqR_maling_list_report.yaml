@@ -1,0 +1,238 @@
+name: Maling List Report
+description: null
+entity_id: 5QBVoIWJrx0q1vx45ApqR
+created_at: '2026-01-28T11:45:25.941341Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: table
+archived: false
+collection_id: wIFPKu6Z-FI7R-5ZvH0z-
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Sandbox
+table_id:
+- Sandbox
+- public
+- mailing_list_report_mv_final__mbarchiv__1762500783
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Sandbox
+  query:
+    aggregation:
+    - - sum
+      - - field
+        - - Sandbox
+          - public
+          - mailing_list_report_mv_final__mbarchiv__1762500783
+          - shares_held
+        - base-type: type/Decimal
+    breakout:
+    - - field
+      - - Sandbox
+        - public
+        - mailing_list_report_mv_final__mbarchiv__1762500783
+        - stakeholder_legal_name
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - mailing_list_report_mv_final__mbarchiv__1762500783
+        - email_address
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - mailing_list_report_mv_final__mbarchiv__1762500783
+        - house_holding
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - mailing_list_report_mv_final__mbarchiv__1762500783
+        - full_package
+      - base-type: type/Text
+    source-table:
+    - Sandbox
+    - public
+    - mailing_list_report_mv_final__mbarchiv__1762500783
+  type: query
+result_metadata:
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Stakeholder Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - mailing_list_report_mv_final__mbarchiv__1762500783
+    - stakeholder_legal_name
+  - base-type: type/Text
+  id:
+  - Sandbox
+  - public
+  - mailing_list_report_mv_final__mbarchiv__1762500783
+  - stakeholder_legal_name
+  name: stakeholder_legal_name
+  position: 9
+  semantic_type: null
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - mailing_list_report_mv_final__mbarchiv__1762500783
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: stakeholder_legal_name
+  lib/desired-column-alias: stakeholder_legal_name
+  lib/original-display-name: Stakeholder Legal Name
+  lib/original-name: stakeholder_legal_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: stakeholder_legal_name
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Email Address
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - mailing_list_report_mv_final__mbarchiv__1762500783
+    - email_address
+  - base-type: type/Text
+  id:
+  - Sandbox
+  - public
+  - mailing_list_report_mv_final__mbarchiv__1762500783
+  - email_address
+  name: email_address
+  position: 11
+  semantic_type: type/Email
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - mailing_list_report_mv_final__mbarchiv__1762500783
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: email_address
+  lib/desired-column-alias: email_address
+  lib/original-display-name: Email Address
+  lib/original-name: email_address
+  lib/source: source/table-defaults
+  lib/source-column-alias: email_address
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: House Holding
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - mailing_list_report_mv_final__mbarchiv__1762500783
+    - house_holding
+  - base-type: type/Text
+  id:
+  - Sandbox
+  - public
+  - mailing_list_report_mv_final__mbarchiv__1762500783
+  - house_holding
+  name: house_holding
+  position: 18
+  semantic_type: null
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - mailing_list_report_mv_final__mbarchiv__1762500783
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: house_holding
+  lib/desired-column-alias: house_holding
+  lib/original-display-name: House Holding
+  lib/original-name: house_holding
+  lib/source: source/table-defaults
+  lib/source-column-alias: house_holding
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Full Package
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - mailing_list_report_mv_final__mbarchiv__1762500783
+    - full_package
+  - base-type: type/Text
+  id:
+  - Sandbox
+  - public
+  - mailing_list_report_mv_final__mbarchiv__1762500783
+  - full_package
+  name: full_package
+  position: 19
+  semantic_type: null
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - mailing_list_report_mv_final__mbarchiv__1762500783
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: full_package
+  lib/desired-column-alias: full_package
+  lib/original-display-name: Full Package
+  lib/original-name: full_package
+  lib/source: source/table-defaults
+  lib/source-column-alias: full_package
+- base_type: type/Decimal
+  database_type: numeric
+  display_name: Sum of Shares Held
+  effective_type: type/Decimal
+  field_ref:
+  - aggregation
+  - 0
+  name: sum
+  semantic_type: type/Share
+  source: aggregation
+  lib/deduplicated-name: sum
+  lib/desired-column-alias: sum
+  lib/original-name: sum
+  lib/source: source/aggregations
+  lib/source-column-alias: sum
+visualization_settings:
+  column_settings: null
+  table.cell_column: sum
+  table.columns:
+  - enabled: true
+    name: stakeholder_legal_name
+  - enabled: true
+    name: sum
+  - enabled: true
+    name: email_address
+  - enabled: true
+    name: house_holding
+  - enabled: true
+    name: full_package
+  table.pivot_column: house_holding
+card_schema: 23
+serdes/meta:
+- id: 5QBVoIWJrx0q1vx45ApqR
+  label: maling_list_report
+  model: Card
+archived_directly: false
+dashboard_id: cPOrOyyjYqdW8Wgo3yD7P
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question

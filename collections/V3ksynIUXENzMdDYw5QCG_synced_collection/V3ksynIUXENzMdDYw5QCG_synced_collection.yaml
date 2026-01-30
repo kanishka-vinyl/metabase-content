@@ -1,0 +1,19 @@
+name: Synced Collection
+description: null
+entity_id: V3ksynIUXENzMdDYw5QCG
+slug: synced_collection
+created_at: '2026-01-28T10:36:47.504024Z'
+archived: false
+type: null
+parent_id: null
+personal_owner_id: null
+namespace: null
+authority_level: null
+serdes/meta:
+- id: V3ksynIUXENzMdDYw5QCG
+  label: synced_collection
+  model: Collection
+archive_operation_id: null
+archived_directly: null
+is_remote_synced: true
+is_sample: false

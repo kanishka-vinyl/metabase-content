@@ -1,0 +1,186 @@
+name: Mailing List Report - Duplicate
+description: null
+entity_id: cPOrOyyjYqdW8Wgo3yD7P
+created_at: '2026-01-28T11:45:25.941341Z'
+creator_id: kanishka.shetty@vinylequity.com
+archived: false
+collection_id: wIFPKu6Z-FI7R-5ZvH0z-
+auto_apply_filters: true
+collection_position: null
+position: null
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+show_in_getting_started: false
+caveats: null
+points_of_interest: null
+parameters:
+- id: 88dea793
+  isMultiSelect: false
+  name: Issuer Name
+  sectionId: string
+  slug: issuer_name
+  type: string/=
+- filteringParameters:
+  - 88dea793
+  id: ba20a2b7
+  isMultiSelect: true
+  name: Issue Name
+  sectionId: string
+  slug: issue_name
+  type: string/=
+- id: 964a186e
+  name: As of Date
+  sectionId: date
+  slug: as_of_date
+  type: date/range
+serdes/meta:
+- id: cPOrOyyjYqdW8Wgo3yD7P
+  label: mailing_list_report___duplicate
+  model: Dashboard
+archived_directly: false
+dashcards:
+- entity_id: uZTwsU6LaimEVVDHZSXA5
+  card_id: 5QBVoIWJrx0q1vx45ApqR
+  created_at: '2026-01-28T11:45:25.941341Z'
+  row: 2
+  col: 0
+  size_x: 24
+  size_y: 22
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 5QBVoIWJrx0q1vx45ApqR
+    parameter_id: 88dea793
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - mailing_list_report_mv_final__mbarchiv__1762500783
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 5QBVoIWJrx0q1vx45ApqR
+    parameter_id: ba20a2b7
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - mailing_list_report_mv_final__mbarchiv__1762500783
+        - issue_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 5QBVoIWJrx0q1vx45ApqR
+    parameter_id: 964a186e
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - mailing_list_report_mv_final__mbarchiv__1762500783
+        - issue_date
+      - base-type: type/Date
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: cPOrOyyjYqdW8Wgo3yD7P
+    model: Dashboard
+  - id: uZTwsU6LaimEVVDHZSXA5
+    model: DashboardCard
+- entity_id: XURkl_1Gufc8l_wIDNjki
+  card_id: AC7Jt938nA4P7cm7-_cen
+  created_at: '2026-01-28T11:45:25.941341Z'
+  row: 0
+  col: 17
+  size_x: 7
+  size_y: 2
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: AC7Jt938nA4P7cm7-_cen
+    parameter_id: ba20a2b7
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - mailing_list_report_mv_final__mbarchiv__1762500783
+        - issue_name
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: cPOrOyyjYqdW8Wgo3yD7P
+    model: Dashboard
+  - id: XURkl_1Gufc8l_wIDNjki
+    model: DashboardCard
+- entity_id: krDMhySVoR3Fl5-eiOFLV
+  card_id: null
+  created_at: '2026-01-28T11:45:25.941341Z'
+  row: 0
+  col: 7
+  size_x: 10
+  size_y: 2
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: '# Mailing List Report'
+    text.align_horizontal: center
+    text.align_vertical: middle
+    virtual_card:
+      archived: false
+      display: text
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: cPOrOyyjYqdW8Wgo3yD7P
+    model: Dashboard
+  - id: krDMhySVoR3Fl5-eiOFLV
+    model: DashboardCard
+- entity_id: pHp1MxcibrvSXMgEif2Ul
+  card_id: 7vEnAkFeQ044snNFR4Ipp
+  created_at: '2026-01-28T11:45:25.941341Z'
+  row: 0
+  col: 0
+  size_x: 7
+  size_y: 2
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 7vEnAkFeQ044snNFR4Ipp
+    parameter_id: 88dea793
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - mailing_list_report_mv_final__mbarchiv__1762500783
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: cPOrOyyjYqdW8Wgo3yD7P
+    model: Dashboard
+  - id: pHp1MxcibrvSXMgEif2Ul
+    model: DashboardCard
+embedding_type: null
+initially_published_at: null
+tabs: []
+width: full

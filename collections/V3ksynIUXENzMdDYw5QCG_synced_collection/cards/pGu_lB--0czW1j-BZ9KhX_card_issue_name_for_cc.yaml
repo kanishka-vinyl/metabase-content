@@ -1,0 +1,86 @@
+name: card issue name for cc
+description: null
+entity_id: pGu_lB--0czW1j-BZ9KhX
+created_at: '2026-01-28T11:24:45.349524Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: scalar
+archived: false
+collection_id: V3ksynIUXENzMdDYw5QCG
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Sandbox
+table_id:
+- Sandbox
+- public
+- a_capital_control_detailed_report_mv__mbarchiv__1762500783
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Sandbox
+  query:
+    breakout:
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issue_name
+      - base-type: type/Text
+    limit: 1
+    source-table:
+    - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  type: query
+result_metadata:
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issue Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+    - issue_name
+  - base-type: type/Text
+  id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  - issue_name
+  name: issue_name
+  position: 4
+  semantic_type: type/Category
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: issue_name
+  lib/desired-column-alias: issue_name
+  lib/original-display-name: Issue Name
+  lib/original-name: issue_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: issue_name
+visualization_settings:
+  column_settings: null
+card_schema: 23
+serdes/meta:
+- id: pGu_lB--0czW1j-BZ9KhX
+  label: card_issue_name_for_cc
+  model: Card
+archived_directly: false
+dashboard_id: cfKuVv37jteTJB_5GoBiA
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question

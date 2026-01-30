@@ -1,0 +1,3710 @@
+name: Issue + Issuer, 10 rows
+description: null
+entity_id: Di15vPGSJoSAxG_k00Ci7
+created_at: '2026-01-28T10:50:01.107369Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: table
+archived: false
+collection_id: V3ksynIUXENzMdDYw5QCG
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Datamart
+table_id:
+- Datamart
+- dev_datamart
+- issue
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Datamart
+  query:
+    joins:
+    - alias: Issuer
+      condition:
+      - =
+      - - field
+        - - Datamart
+          - dev_datamart
+          - issue
+          - issuer_id
+        - base-type: type/Text
+      - - field
+        - - Datamart
+          - dev_datamart
+          - issuer
+          - id
+        - base-type: type/Text
+          join-alias: Issuer
+      fields: all
+      source-table:
+      - Datamart
+      - dev_datamart
+      - issuer
+      strategy: left-join
+    limit: 10
+    source-table:
+    - Datamart
+    - dev_datamart
+    - issue
+  type: query
+result_metadata:
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - id
+  name: id
+  position: 0
+  semantic_type: type/PK
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: id
+  lib/desired-column-alias: id
+  lib/original-display-name: ID
+  lib/original-name: id
+  lib/source: source/table-defaults
+  lib/source-column-alias: id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Comments
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - comments
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - comments
+  name: comments
+  position: 1
+  semantic_type: type/SerializedJSON
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: comments
+  lib/desired-column-alias: comments
+  lib/original-display-name: Comments
+  lib/original-name: comments
+  lib/source: source/table-defaults
+  lib/source-column-alias: comments
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Object Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - object_type
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - object_type
+  name: object_type
+  position: 2
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: object_type
+  lib/desired-column-alias: object_type
+  lib/original-display-name: Object Type
+  lib/original-name: object_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: object_type
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - name
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - name
+  name: name
+  position: 3
+  semantic_type: type/Name
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: name
+  lib/desired-column-alias: name
+  lib/original-display-name: Name
+  lib/original-name: name
+  lib/source: source/table-defaults
+  lib/source-column-alias: name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Class Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - class_type
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - class_type
+  name: class_type
+  position: 4
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: class_type
+  lib/desired-column-alias: class_type
+  lib/original-display-name: Class Type
+  lib/original-name: class_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: class_type
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Default ID Prefix
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - default_id_prefix
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - default_id_prefix
+  name: default_id_prefix
+  position: 5
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: default_id_prefix
+  lib/desired-column-alias: default_id_prefix
+  lib/original-display-name: Default ID Prefix
+  lib/original-name: default_id_prefix
+  lib/source: source/table-defaults
+  lib/source-column-alias: default_id_prefix
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Initial Shares Authorized
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - initial_shares_authorized
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - initial_shares_authorized
+  name: initial_shares_authorized
+  position: 6
+  semantic_type: type/Author
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: initial_shares_authorized
+  lib/desired-column-alias: initial_shares_authorized
+  lib/original-display-name: Initial Shares Authorized
+  lib/original-name: initial_shares_authorized
+  lib/source: source/table-defaults
+  lib/source-column-alias: initial_shares_authorized
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Board Approval Date
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - board_approval_date
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - board_approval_date
+  name: board_approval_date
+  position: 7
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: board_approval_date
+  lib/desired-column-alias: board_approval_date
+  lib/original-display-name: Board Approval Date
+  lib/original-name: board_approval_date
+  lib/source: source/table-defaults
+  lib/source-column-alias: board_approval_date
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Votes Per Share
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - votes_per_share
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - votes_per_share
+  name: votes_per_share
+  position: 8
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: votes_per_share
+  lib/desired-column-alias: votes_per_share
+  lib/original-display-name: Votes Per Share
+  lib/original-name: votes_per_share
+  lib/source: source/table-defaults
+  lib/source-column-alias: votes_per_share
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Par Value Amount
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - par_value_amount
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - par_value_amount
+  name: par_value_amount
+  position: 9
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: par_value_amount
+  lib/desired-column-alias: par_value_amount
+  lib/original-display-name: Par Value Amount
+  lib/original-name: par_value_amount
+  lib/source: source/table-defaults
+  lib/source-column-alias: par_value_amount
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Par Value Currency
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - par_value_currency
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - par_value_currency
+  name: par_value_currency
+  position: 10
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: par_value_currency
+  lib/desired-column-alias: par_value_currency
+  lib/original-display-name: Par Value Currency
+  lib/original-name: par_value_currency
+  lib/source: source/table-defaults
+  lib/source-column-alias: par_value_currency
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Price Per Share Amount
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - price_per_share_amount
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - price_per_share_amount
+  name: price_per_share_amount
+  position: 11
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: price_per_share_amount
+  lib/desired-column-alias: price_per_share_amount
+  lib/original-display-name: Price Per Share Amount
+  lib/original-name: price_per_share_amount
+  lib/source: source/table-defaults
+  lib/source-column-alias: price_per_share_amount
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Price Per Share Currency
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - price_per_share_currency
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - price_per_share_currency
+  name: price_per_share_currency
+  position: 12
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: price_per_share_currency
+  lib/desired-column-alias: price_per_share_currency
+  lib/original-display-name: Price Per Share Currency
+  lib/original-name: price_per_share_currency
+  lib/source: source/table-defaults
+  lib/source-column-alias: price_per_share_currency
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Seniority
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - seniority
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - seniority
+  name: seniority
+  position: 13
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: seniority
+  lib/desired-column-alias: seniority
+  lib/original-display-name: Seniority
+  lib/original-name: seniority
+  lib/source: source/table-defaults
+  lib/source-column-alias: seniority
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Conversion Rights
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - conversion_rights
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - conversion_rights
+  name: conversion_rights
+  position: 14
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: conversion_rights
+  lib/desired-column-alias: conversion_rights
+  lib/original-display-name: Conversion Rights
+  lib/original-name: conversion_rights
+  lib/source: source/table-defaults
+  lib/source-column-alias: conversion_rights
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Liquidation Preference Multiple
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - liquidation_preference_multiple
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - liquidation_preference_multiple
+  name: liquidation_preference_multiple
+  position: 15
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: liquidation_preference_multiple
+  lib/desired-column-alias: liquidation_preference_multiple
+  lib/original-display-name: Liquidation Preference Multiple
+  lib/original-name: liquidation_preference_multiple
+  lib/source: source/table-defaults
+  lib/source-column-alias: liquidation_preference_multiple
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Participation Cap Multiple
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - participation_cap_multiple
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - participation_cap_multiple
+  name: participation_cap_multiple
+  position: 16
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: participation_cap_multiple
+  lib/desired-column-alias: participation_cap_multiple
+  lib/original-display-name: Participation Cap Multiple
+  lib/original-name: participation_cap_multiple
+  lib/source: source/table-defaults
+  lib/source-column-alias: participation_cap_multiple
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Issuer ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_id
+  name: issuer_id
+  position: 17
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_id
+  lib/desired-column-alias: issuer_id
+  lib/original-display-name: Issuer ID
+  lib/original-name: issuer_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Class State
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - class_state
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - class_state
+  name: class_state
+  position: 18
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: class_state
+  lib/desired-column-alias: class_state
+  lib/original-display-name: Class State
+  lib/original-name: class_state
+  lib/source: source/table-defaults
+  lib/source-column-alias: class_state
+  qp/implicit-field?: true
+- active: true
+  base_type: type/*
+  database_type: _varchar
+  display_name: Corporate Action Ids
+  effective_type: type/*
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - corporate_action_ids
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - corporate_action_ids
+  name: corporate_action_ids
+  position: 19
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: corporate_action_ids
+  lib/desired-column-alias: corporate_action_ids
+  lib/original-display-name: Corporate Action Ids
+  lib/original-name: corporate_action_ids
+  lib/source: source/table-defaults
+  lib/source-column-alias: corporate_action_ids
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Primary Listing ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - primary_listing_id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - primary_listing_id
+  name: primary_listing_id
+  position: 20
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: primary_listing_id
+  lib/desired-column-alias: primary_listing_id
+  lib/original-display-name: Primary Listing ID
+  lib/original-name: primary_listing_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: primary_listing_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Cusip
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - cusip
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - cusip
+  name: cusip
+  position: 21
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: cusip
+  lib/desired-column-alias: cusip
+  lib/original-display-name: Cusip
+  lib/original-name: cusip
+  lib/source: source/table-defaults
+  lib/source-column-alias: cusip
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Isin
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - isin
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - isin
+  name: isin
+  position: 22
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: isin
+  lib/desired-column-alias: isin
+  lib/original-display-name: Isin
+  lib/original-name: isin
+  lib/source: source/table-defaults
+  lib/source-column-alias: isin
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  display_name: Dtc Eligible
+  effective_type: type/Boolean
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - dtc_eligible
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - dtc_eligible
+  name: dtc_eligible
+  position: 23
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: dtc_eligible
+  lib/desired-column-alias: dtc_eligible
+  lib/original-display-name: Dtc Eligible
+  lib/original-name: dtc_eligible
+  lib/source: source/table-defaults
+  lib/source-column-alias: dtc_eligible
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  display_name: Fast Eligible
+  effective_type: type/Boolean
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - fast_eligible
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - fast_eligible
+  name: fast_eligible
+  position: 24
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: fast_eligible
+  lib/desired-column-alias: fast_eligible
+  lib/original-display-name: Fast Eligible
+  lib/original-name: fast_eligible
+  lib/source: source/table-defaults
+  lib/source-column-alias: fast_eligible
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Authorized Capital ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - authorized_capital_id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - authorized_capital_id
+  name: authorized_capital_id
+  position: 25
+  semantic_type: type/Author
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: authorized_capital_id
+  lib/desired-column-alias: authorized_capital_id
+  lib/original-display-name: Authorized Capital ID
+  lib/original-name: authorized_capital_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: authorized_capital_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  display_name: Dividend
+  effective_type: type/Boolean
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - dividend
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - dividend
+  name: dividend
+  position: 26
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: dividend
+  lib/desired-column-alias: dividend
+  lib/original-display-name: Dividend
+  lib/original-name: dividend
+  lib/source: source/table-defaults
+  lib/source-column-alias: dividend
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  display_name: Accept Sales
+  effective_type: type/Boolean
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - accept_sales
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - accept_sales
+  name: accept_sales
+  position: 27
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: accept_sales
+  lib/desired-column-alias: accept_sales
+  lib/original-display-name: Accept Sales
+  lib/original-name: accept_sales
+  lib/source: source/table-defaults
+  lib/source-column-alias: accept_sales
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  display_name: Fractional Shares
+  effective_type: type/Boolean
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - fractional_shares
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - fractional_shares
+  name: fractional_shares
+  position: 28
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: fractional_shares
+  lib/desired-column-alias: fractional_shares
+  lib/original-display-name: Fractional Shares
+  lib/original-name: fractional_shares
+  lib/source: source/table-defaults
+  lib/source-column-alias: fractional_shares
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Integer
+  database_type: int2
+  display_name: Allowable Decimals
+  effective_type: type/Integer
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - allowable_decimals
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - allowable_decimals
+  name: allowable_decimals
+  position: 29
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: allowable_decimals
+  lib/desired-column-alias: allowable_decimals
+  lib/original-display-name: Allowable Decimals
+  lib/original-name: allowable_decimals
+  lib/source: source/table-defaults
+  lib/source-column-alias: allowable_decimals
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Stock Class Restriction ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - stock_class_restriction_id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - stock_class_restriction_id
+  name: stock_class_restriction_id
+  position: 30
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: stock_class_restriction_id
+  lib/desired-column-alias: stock_class_restriction_id
+  lib/original-display-name: Stock Class Restriction ID
+  lib/original-name: stock_class_restriction_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: stock_class_restriction_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/DateTimeWithLocalTZ
+  database_type: timestamptz
+  display_name: Created At
+  effective_type: type/DateTimeWithLocalTZ
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - created_at
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - created_at
+  name: created_at
+  position: 31
+  semantic_type: type/CreationTimestamp
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: created_at
+  lib/desired-column-alias: created_at
+  lib/original-display-name: Created At
+  lib/original-name: created_at
+  lib/source: source/table-defaults
+  lib/source-column-alias: created_at
+  qp/implicit-field?: true
+- active: true
+  base_type: type/DateTimeWithLocalTZ
+  database_type: timestamptz
+  display_name: Updated At
+  effective_type: type/DateTimeWithLocalTZ
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - updated_at
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - updated_at
+  name: updated_at
+  position: 32
+  semantic_type: type/UpdatedTimestamp
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: updated_at
+  lib/desired-column-alias: updated_at
+  lib/original-display-name: Updated At
+  lib/original-name: updated_at
+  lib/source: source/table-defaults
+  lib/source-column-alias: updated_at
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  display_name: Allow Certificates
+  effective_type: type/Boolean
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - allow_certificates
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - allow_certificates
+  name: allow_certificates
+  position: 33
+  semantic_type: null
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: allow_certificates
+  lib/desired-column-alias: allow_certificates
+  lib/original-display-name: Allow Certificates
+  lib/original-name: allow_certificates
+  lib/source: source/table-defaults
+  lib/source-column-alias: allow_certificates
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Transfer Agent Service Provider Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - transfer_agent_service_provider_name
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - transfer_agent_service_provider_name
+  name: transfer_agent_service_provider_name
+  position: 34
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: transfer_agent_service_provider_name
+  lib/desired-column-alias: transfer_agent_service_provider_name
+  lib/original-display-name: Transfer Agent Service Provider Name
+  lib/original-name: transfer_agent_service_provider_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: transfer_agent_service_provider_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Transfer Agent Service Provider Lpa
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - transfer_agent_service_provider_lpa
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - transfer_agent_service_provider_lpa
+  name: transfer_agent_service_provider_lpa
+  position: 35
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: transfer_agent_service_provider_lpa
+  lib/desired-column-alias: transfer_agent_service_provider_lpa
+  lib/original-display-name: Transfer Agent Service Provider Lpa
+  lib/original-name: transfer_agent_service_provider_lpa
+  lib/source: source/table-defaults
+  lib/source-column-alias: transfer_agent_service_provider_lpa
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Dba
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_dba
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_dba
+  name: issuer_dba
+  position: 36
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_dba
+  lib/desired-column-alias: issuer_dba
+  lib/original-display-name: Issuer Dba
+  lib/original-name: issuer_dba
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_dba
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_legal_name
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_legal_name
+  name: issuer_legal_name
+  position: 37
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_legal_name
+  lib/desired-column-alias: issuer_legal_name
+  lib/original-display-name: Issuer Legal Name
+  lib/original-name: issuer_legal_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_legal_name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Email Email Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_email_email_type
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_email_email_type
+  name: issuer_email_email_type
+  position: 38
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_email_email_type
+  lib/desired-column-alias: issuer_email_email_type
+  lib/original-display-name: Issuer Email Email Type
+  lib/original-name: issuer_email_email_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_email_email_type
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Email Email Address
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_email_email_address
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_email_email_address
+  name: issuer_email_email_address
+  position: 39
+  semantic_type: type/Email
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_email_email_address
+  lib/desired-column-alias: issuer_email_email_address
+  lib/original-display-name: Issuer Email Email Address
+  lib/original-name: issuer_email_email_address
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_email_email_address
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Phone Phone Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_phone_phone_type
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_phone_phone_type
+  name: issuer_phone_phone_type
+  position: 40
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_phone_phone_type
+  lib/desired-column-alias: issuer_phone_phone_type
+  lib/original-display-name: Issuer Phone Phone Type
+  lib/original-name: issuer_phone_phone_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_phone_phone_type
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Phone Phone Number
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_phone_phone_number
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_phone_phone_number
+  name: issuer_phone_phone_number
+  position: 41
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_phone_phone_number
+  lib/desired-column-alias: issuer_phone_phone_number
+  lib/original-display-name: Issuer Phone Phone Number
+  lib/original-name: issuer_phone_phone_number
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_phone_phone_number
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Address City
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_address_city
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_address_city
+  name: issuer_address_city
+  position: 42
+  semantic_type: type/State
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_address_city
+  lib/desired-column-alias: issuer_address_city
+  lib/original-display-name: Issuer Address City
+  lib/original-name: issuer_address_city
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_address_city
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Address Country
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_address_country
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_address_country
+  name: issuer_address_country
+  position: 43
+  semantic_type: type/Country
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_address_country
+  lib/desired-column-alias: issuer_address_country
+  lib/original-display-name: Issuer Address Country
+  lib/original-name: issuer_address_country
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_address_country
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Address Postal Code
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_address_postal_code
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_address_postal_code
+  name: issuer_address_postal_code
+  position: 44
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_address_postal_code
+  lib/desired-column-alias: issuer_address_postal_code
+  lib/original-display-name: Issuer Address Postal Code
+  lib/original-name: issuer_address_postal_code
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_address_postal_code
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Legal Address City
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_legal_address_city
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_legal_address_city
+  name: issuer_legal_address_city
+  position: 45
+  semantic_type: type/State
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_legal_address_city
+  lib/desired-column-alias: issuer_legal_address_city
+  lib/original-display-name: Issuer Legal Address City
+  lib/original-name: issuer_legal_address_city
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_legal_address_city
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Legal Address Country
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_legal_address_country
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_legal_address_country
+  name: issuer_legal_address_country
+  position: 46
+  semantic_type: type/Country
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_legal_address_country
+  lib/desired-column-alias: issuer_legal_address_country
+  lib/original-display-name: Issuer Legal Address Country
+  lib/original-name: issuer_legal_address_country
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_legal_address_country
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Legal Address Postal Code
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_legal_address_postal_code
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_legal_address_postal_code
+  name: issuer_legal_address_postal_code
+  position: 47
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_legal_address_postal_code
+  lib/desired-column-alias: issuer_legal_address_postal_code
+  lib/original-display-name: Issuer Legal Address Postal Code
+  lib/original-name: issuer_legal_address_postal_code
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_legal_address_postal_code
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Listing Ticker
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - listing_ticker
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - listing_ticker
+  name: listing_ticker
+  position: 48
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: listing_ticker
+  lib/desired-column-alias: listing_ticker
+  lib/original-display-name: Listing Ticker
+  lib/original-name: listing_ticker
+  lib/source: source/table-defaults
+  lib/source-column-alias: listing_ticker
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Issuer Tasp ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issue
+    - issuer_tasp_id
+  - null
+  id:
+  - Datamart
+  - dev_datamart
+  - issue
+  - issuer_tasp_id
+  name: issuer_tasp_id
+  position: 49
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issue
+  visibility_type: normal
+  lib/deduplicated-name: issuer_tasp_id
+  lib/desired-column-alias: issuer_tasp_id
+  lib/original-display-name: Issuer Tasp ID
+  lib/original-name: issuer_tasp_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_tasp_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Issuer → ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - id
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - id
+  name: id_2
+  options:
+    qp/ignore-coercion: true
+  position: 0
+  semantic_type: type/PK
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: id_2
+  lib/desired-column-alias: Issuer__id
+  lib/original-display-name: ID
+  lib/original-join-alias: Issuer
+  lib/original-name: id
+  lib/source: source/joins
+  lib/source-column-alias: id
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/*
+  database_type: _varchar
+  display_name: Issuer → Comments
+  effective_type: type/*
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - comments
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - comments
+  name: comments_2
+  options:
+    qp/ignore-coercion: true
+  position: 1
+  semantic_type: null
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: comments_2
+  lib/desired-column-alias: Issuer__comments
+  lib/original-display-name: Comments
+  lib/original-join-alias: Issuer
+  lib/original-name: comments
+  lib/source: source/joins
+  lib/source-column-alias: comments
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Object Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - object_type
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - object_type
+  name: object_type_2
+  options:
+    qp/ignore-coercion: true
+  position: 2
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: object_type_2
+  lib/desired-column-alias: Issuer__object_type
+  lib/original-display-name: Object Type
+  lib/original-join-alias: Issuer
+  lib/original-name: object_type
+  lib/source: source/joins
+  lib/source-column-alias: object_type
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Dba
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - dba
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - dba
+  name: dba
+  options:
+    qp/ignore-coercion: true
+  position: 3
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: dba
+  lib/desired-column-alias: Issuer__dba
+  lib/original-display-name: Dba
+  lib/original-join-alias: Issuer
+  lib/original-name: dba
+  lib/source: source/joins
+  lib/source-column-alias: dba
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - legal_name
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - legal_name
+  name: legal_name
+  options:
+    qp/ignore-coercion: true
+  position: 4
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: legal_name
+  lib/desired-column-alias: Issuer__legal_name
+  lib/original-display-name: Legal Name
+  lib/original-join-alias: Issuer
+  lib/original-name: legal_name
+  lib/source: source/joins
+  lib/source-column-alias: legal_name
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Formation Date
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - formation_date
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - formation_date
+  name: formation_date
+  options:
+    qp/ignore-coercion: true
+  position: 5
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: formation_date
+  lib/desired-column-alias: Issuer__formation_date
+  lib/original-display-name: Formation Date
+  lib/original-join-alias: Issuer
+  lib/original-name: formation_date
+  lib/source: source/joins
+  lib/source-column-alias: formation_date
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Country Of Formation
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - country_of_formation
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - country_of_formation
+  name: country_of_formation
+  options:
+    qp/ignore-coercion: true
+  position: 6
+  semantic_type: type/Country
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: country_of_formation
+  lib/desired-column-alias: Issuer__country_of_formation
+  lib/original-display-name: Country Of Formation
+  lib/original-join-alias: Issuer
+  lib/original-name: country_of_formation
+  lib/source: source/joins
+  lib/source-column-alias: country_of_formation
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Country Subdivision Of Formation
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - country_subdivision_of_formation
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - country_subdivision_of_formation
+  name: country_subdivision_of_formation
+  options:
+    qp/ignore-coercion: true
+  position: 7
+  semantic_type: type/State
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: country_subdivision_of_formation
+  lib/desired-column-alias: Issuer__country_subdivision_of_formation
+  lib/original-display-name: Country Subdivision Of Formation
+  lib/original-join-alias: Issuer
+  lib/original-name: country_subdivision_of_formation
+  lib/source: source/joins
+  lib/source-column-alias: country_subdivision_of_formation
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Company Website
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - company_website
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - company_website
+  name: company_website
+  options:
+    qp/ignore-coercion: true
+  position: 8
+  semantic_type: type/Company
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: company_website
+  lib/desired-column-alias: Issuer__company_website
+  lib/original-display-name: Company Website
+  lib/original-join-alias: Issuer
+  lib/original-name: company_website
+  lib/source: source/joins
+  lib/source-column-alias: company_website
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Initial Shares Authorized
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - initial_shares_authorized
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - initial_shares_authorized
+  name: initial_shares_authorized_2
+  options:
+    qp/ignore-coercion: true
+  position: 9
+  semantic_type: type/Author
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: initial_shares_authorized_2
+  lib/desired-column-alias: Issuer__initial_shares_authorized
+  lib/original-display-name: Initial Shares Authorized
+  lib/original-join-alias: Issuer
+  lib/original-name: initial_shares_authorized
+  lib/source: source/joins
+  lib/source-column-alias: initial_shares_authorized
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/*
+  database_type: _varchar
+  display_name: Issuer → Issuer Restrictions
+  effective_type: type/*
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - issuer_restrictions
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - issuer_restrictions
+  name: issuer_restrictions
+  options:
+    qp/ignore-coercion: true
+  position: 10
+  semantic_type: null
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: issuer_restrictions
+  lib/desired-column-alias: Issuer__issuer_restrictions
+  lib/original-display-name: Issuer Restrictions
+  lib/original-join-alias: Issuer
+  lib/original-name: issuer_restrictions
+  lib/source: source/joins
+  lib/source-column-alias: issuer_restrictions
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Quorum Requirement
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - quorum_requirement
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - quorum_requirement
+  name: quorum_requirement
+  options:
+    qp/ignore-coercion: true
+  position: 11
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: quorum_requirement
+  lib/desired-column-alias: Issuer__quorum_requirement
+  lib/original-display-name: Quorum Requirement
+  lib/original-join-alias: Issuer
+  lib/original-name: quorum_requirement
+  lib/source: source/joins
+  lib/source-column-alias: quorum_requirement
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Year End
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - year_end
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - year_end
+  name: year_end
+  options:
+    qp/ignore-coercion: true
+  position: 12
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: year_end
+  lib/desired-column-alias: Issuer__year_end
+  lib/original-display-name: Year End
+  lib/original-join-alias: Issuer
+  lib/original-name: year_end
+  lib/source: source/joins
+  lib/source-column-alias: year_end
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Active Date
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - active_date
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - active_date
+  name: active_date
+  options:
+    qp/ignore-coercion: true
+  position: 13
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: active_date
+  lib/desired-column-alias: Issuer__active_date
+  lib/original-display-name: Active Date
+  lib/original-join-alias: Issuer
+  lib/original-name: active_date
+  lib/source: source/joins
+  lib/source-column-alias: active_date
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Term Date
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - term_date
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - term_date
+  name: term_date
+  options:
+    qp/ignore-coercion: true
+  position: 14
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: term_date
+  lib/desired-column-alias: Issuer__term_date
+  lib/original-display-name: Term Date
+  lib/original-join-alias: Issuer
+  lib/original-name: term_date
+  lib/source: source/joins
+  lib/source-column-alias: term_date
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Organization Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - organization_type
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - organization_type
+  name: organization_type
+  options:
+    qp/ignore-coercion: true
+  position: 15
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: organization_type
+  lib/desired-column-alias: Issuer__organization_type
+  lib/original-display-name: Organization Type
+  lib/original-join-alias: Issuer
+  lib/original-name: organization_type
+  lib/source: source/joins
+  lib/source-column-alias: organization_type
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Central Index Key
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - central_index_key
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - central_index_key
+  name: central_index_key
+  options:
+    qp/ignore-coercion: true
+  position: 16
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: central_index_key
+  lib/desired-column-alias: Issuer__central_index_key
+  lib/original-display-name: Central Index Key
+  lib/original-join-alias: Issuer
+  lib/original-name: central_index_key
+  lib/source: source/joins
+  lib/source-column-alias: central_index_key
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Termination Reason
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - termination_reason
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - termination_reason
+  name: termination_reason
+  options:
+    qp/ignore-coercion: true
+  position: 17
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: termination_reason
+  lib/desired-column-alias: Issuer__termination_reason
+  lib/original-display-name: Termination Reason
+  lib/original-join-alias: Issuer
+  lib/original-name: termination_reason
+  lib/source: source/joins
+  lib/source-column-alias: termination_reason
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → New Ta Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - new_ta_name
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - new_ta_name
+  name: new_ta_name
+  options:
+    qp/ignore-coercion: true
+  position: 18
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: new_ta_name
+  lib/desired-column-alias: Issuer__new_ta_name
+  lib/original-display-name: New Ta Name
+  lib/original-join-alias: Issuer
+  lib/original-name: new_ta_name
+  lib/source: source/joins
+  lib/source-column-alias: new_ta_name
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → New Ta Contact Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - new_ta_contact_name
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - new_ta_contact_name
+  name: new_ta_contact_name
+  options:
+    qp/ignore-coercion: true
+  position: 19
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: new_ta_contact_name
+  lib/desired-column-alias: Issuer__new_ta_contact_name
+  lib/original-display-name: New Ta Contact Name
+  lib/original-join-alias: Issuer
+  lib/original-name: new_ta_contact_name
+  lib/source: source/joins
+  lib/source-column-alias: new_ta_contact_name
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → New Ta Contact Email
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - new_ta_contact_email
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - new_ta_contact_email
+  name: new_ta_contact_email
+  options:
+    qp/ignore-coercion: true
+  position: 20
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: new_ta_contact_email
+  lib/desired-column-alias: Issuer__new_ta_contact_email
+  lib/original-display-name: New Ta Contact Email
+  lib/original-join-alias: Issuer
+  lib/original-name: new_ta_contact_email
+  lib/source: source/joins
+  lib/source-column-alias: new_ta_contact_email
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  display_name: Issuer → Is Shell Issuer
+  effective_type: type/Boolean
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - is_shell_issuer
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - is_shell_issuer
+  name: is_shell_issuer
+  options:
+    qp/ignore-coercion: true
+  position: 21
+  semantic_type: null
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: is_shell_issuer
+  lib/desired-column-alias: Issuer__is_shell_issuer
+  lib/original-display-name: Is Shell Issuer
+  lib/original-join-alias: Issuer
+  lib/original-name: is_shell_issuer
+  lib/source: source/joins
+  lib/source-column-alias: is_shell_issuer
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  display_name: Issuer → Is Sec Reporting
+  effective_type: type/Boolean
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - is_sec_reporting
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - is_sec_reporting
+  name: is_sec_reporting
+  options:
+    qp/ignore-coercion: true
+  position: 22
+  semantic_type: null
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: is_sec_reporting
+  lib/desired-column-alias: Issuer__is_sec_reporting
+  lib/original-display-name: Is Sec Reporting
+  lib/original-join-alias: Issuer
+  lib/original-name: is_sec_reporting
+  lib/source: source/joins
+  lib/source-column-alias: is_sec_reporting
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Issuer → Tasp ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - tasp_id
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - tasp_id
+  name: tasp_id
+  options:
+    qp/ignore-coercion: true
+  position: 23
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: tasp_id
+  lib/desired-column-alias: Issuer__tasp_id
+  lib/original-display-name: Tasp ID
+  lib/original-join-alias: Issuer
+  lib/original-name: tasp_id
+  lib/source: source/joins
+  lib/source-column-alias: tasp_id
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/DateTimeWithLocalTZ
+  database_type: timestamptz
+  display_name: Issuer → Created At
+  effective_type: type/DateTimeWithLocalTZ
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - created_at
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - created_at
+  name: created_at_2
+  options:
+    qp/ignore-coercion: true
+  position: 24
+  semantic_type: type/CreationTimestamp
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: created_at_2
+  lib/desired-column-alias: Issuer__created_at
+  lib/original-display-name: Created At
+  lib/original-join-alias: Issuer
+  lib/original-name: created_at
+  lib/source: source/joins
+  lib/source-column-alias: created_at
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/DateTimeWithLocalTZ
+  database_type: timestamptz
+  display_name: Issuer → Updated At
+  effective_type: type/DateTimeWithLocalTZ
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - updated_at
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - updated_at
+  name: updated_at_2
+  options:
+    qp/ignore-coercion: true
+  position: 25
+  semantic_type: type/UpdatedTimestamp
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: updated_at_2
+  lib/desired-column-alias: Issuer__updated_at
+  lib/original-display-name: Updated At
+  lib/original-join-alias: Issuer
+  lib/original-name: updated_at
+  lib/source: source/joins
+  lib/source-column-alias: updated_at
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  display_name: Issuer → Original Medallion Waiver
+  effective_type: type/Boolean
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - original_medallion_waiver
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - original_medallion_waiver
+  name: original_medallion_waiver
+  options:
+    qp/ignore-coercion: true
+  position: 26
+  semantic_type: null
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: original_medallion_waiver
+  lib/desired-column-alias: Issuer__original_medallion_waiver
+  lib/original-display-name: Original Medallion Waiver
+  lib/original-join-alias: Issuer
+  lib/original-name: original_medallion_waiver
+  lib/source: source/joins
+  lib/source-column-alias: original_medallion_waiver
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Issuer → Co Agent ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - co_agent_id
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - co_agent_id
+  name: co_agent_id
+  options:
+    qp/ignore-coercion: true
+  position: 27
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: co_agent_id
+  lib/desired-column-alias: Issuer__co_agent_id
+  lib/original-display-name: Co Agent ID
+  lib/original-join-alias: Issuer
+  lib/original-name: co_agent_id
+  lib/source: source/joins
+  lib/source-column-alias: co_agent_id
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Issuer → Drs Payment Fee
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - drs_payment_fee
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - drs_payment_fee
+  name: drs_payment_fee
+  options:
+    qp/ignore-coercion: true
+  position: 28
+  semantic_type: null
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: drs_payment_fee
+  lib/desired-column-alias: Issuer__drs_payment_fee
+  lib/original-display-name: Drs Payment Fee
+  lib/original-join-alias: Issuer
+  lib/original-name: drs_payment_fee
+  lib/source: source/joins
+  lib/source-column-alias: drs_payment_fee
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Legal Opinion Provider
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - legal_opinion_provider
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - legal_opinion_provider
+  name: legal_opinion_provider
+  options:
+    qp/ignore-coercion: true
+  position: 29
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: legal_opinion_provider
+  lib/desired-column-alias: Issuer__legal_opinion_provider
+  lib/original-display-name: Legal Opinion Provider
+  lib/original-join-alias: Issuer
+  lib/original-name: legal_opinion_provider
+  lib/source: source/joins
+  lib/source-column-alias: legal_opinion_provider
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  display_name: Issuer → Issuer Approval Required For Issuer Legal Counsel
+  effective_type: type/Boolean
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - issuer_approval_required_for_issuer_legal_counsel
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - issuer_approval_required_for_issuer_legal_counsel
+  name: issuer_approval_required_for_issuer_legal_counsel
+  options:
+    qp/ignore-coercion: true
+  position: 30
+  semantic_type: null
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: issuer_approval_required_for_issuer_legal_counsel
+  lib/desired-column-alias: Issuer__issuer_approval_required_for_issuer_legal_counsel
+  lib/original-display-name: Issuer Approval Required For Issuer Legal Counsel
+  lib/original-join-alias: Issuer
+  lib/original-name: issuer_approval_required_for_issuer_legal_counsel
+  lib/source: source/joins
+  lib/source-column-alias: issuer_approval_required_for_issuer_legal_counsel
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  display_name: Issuer → Requires Issuer Approval For Legal Counsel
+  effective_type: type/Boolean
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - requires_issuer_approval_for_legal_counsel
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - requires_issuer_approval_for_legal_counsel
+  name: requires_issuer_approval_for_legal_counsel
+  options:
+    qp/ignore-coercion: true
+  position: 31
+  semantic_type: null
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: requires_issuer_approval_for_legal_counsel
+  lib/desired-column-alias: Issuer__requires_issuer_approval_for_legal_counsel
+  lib/original-display-name: Requires Issuer Approval For Legal Counsel
+  lib/original-join-alias: Issuer
+  lib/original-name: requires_issuer_approval_for_legal_counsel
+  lib/source: source/joins
+  lib/source-column-alias: requires_issuer_approval_for_legal_counsel
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  display_name: Issuer → Is Docuseal
+  effective_type: type/Boolean
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - is_docuseal
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - is_docuseal
+  name: is_docuseal
+  options:
+    qp/ignore-coercion: true
+  position: 32
+  semantic_type: null
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: is_docuseal
+  lib/desired-column-alias: Issuer__is_docuseal
+  lib/original-display-name: Is Docuseal
+  lib/original-join-alias: Issuer
+  lib/original-name: is_docuseal
+  lib/source: source/joins
+  lib/source-column-alias: is_docuseal
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Email Email Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - email_email_type
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - email_email_type
+  name: email_email_type
+  options:
+    qp/ignore-coercion: true
+  position: 33
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: email_email_type
+  lib/desired-column-alias: Issuer__email_email_type
+  lib/original-display-name: Email Email Type
+  lib/original-join-alias: Issuer
+  lib/original-name: email_email_type
+  lib/source: source/joins
+  lib/source-column-alias: email_email_type
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Email Email Address
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - email_email_address
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - email_email_address
+  name: email_email_address
+  options:
+    qp/ignore-coercion: true
+  position: 34
+  semantic_type: type/Email
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: email_email_address
+  lib/desired-column-alias: Issuer__email_email_address
+  lib/original-display-name: Email Email Address
+  lib/original-join-alias: Issuer
+  lib/original-name: email_email_address
+  lib/source: source/joins
+  lib/source-column-alias: email_email_address
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Phone Phone Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - phone_phone_type
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - phone_phone_type
+  name: phone_phone_type
+  options:
+    qp/ignore-coercion: true
+  position: 35
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: phone_phone_type
+  lib/desired-column-alias: Issuer__phone_phone_type
+  lib/original-display-name: Phone Phone Type
+  lib/original-join-alias: Issuer
+  lib/original-name: phone_phone_type
+  lib/source: source/joins
+  lib/source-column-alias: phone_phone_type
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Phone Phone Number
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - phone_phone_number
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - phone_phone_number
+  name: phone_phone_number
+  options:
+    qp/ignore-coercion: true
+  position: 36
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: phone_phone_number
+  lib/desired-column-alias: Issuer__phone_phone_number
+  lib/original-display-name: Phone Phone Number
+  lib/original-join-alias: Issuer
+  lib/original-name: phone_phone_number
+  lib/source: source/joins
+  lib/source-column-alias: phone_phone_number
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Address Address Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - address_address_type
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - address_address_type
+  name: address_address_type
+  options:
+    qp/ignore-coercion: true
+  position: 37
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: address_address_type
+  lib/desired-column-alias: Issuer__address_address_type
+  lib/original-display-name: Address Address Type
+  lib/original-join-alias: Issuer
+  lib/original-name: address_address_type
+  lib/source: source/joins
+  lib/source-column-alias: address_address_type
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Address Street Suite
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - address_street_suite
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - address_street_suite
+  name: address_street_suite
+  options:
+    qp/ignore-coercion: true
+  position: 38
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: address_street_suite
+  lib/desired-column-alias: Issuer__address_street_suite
+  lib/original-display-name: Address Street Suite
+  lib/original-join-alias: Issuer
+  lib/original-name: address_street_suite
+  lib/source: source/joins
+  lib/source-column-alias: address_street_suite
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Address City
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - address_city
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - address_city
+  name: address_city
+  options:
+    qp/ignore-coercion: true
+  position: 39
+  semantic_type: type/State
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: address_city
+  lib/desired-column-alias: Issuer__address_city
+  lib/original-display-name: Address City
+  lib/original-join-alias: Issuer
+  lib/original-name: address_city
+  lib/source: source/joins
+  lib/source-column-alias: address_city
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Address Country Subdivision
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - address_country_subdivision
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - address_country_subdivision
+  name: address_country_subdivision
+  options:
+    qp/ignore-coercion: true
+  position: 40
+  semantic_type: type/State
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: address_country_subdivision
+  lib/desired-column-alias: Issuer__address_country_subdivision
+  lib/original-display-name: Address Country Subdivision
+  lib/original-join-alias: Issuer
+  lib/original-name: address_country_subdivision
+  lib/source: source/joins
+  lib/source-column-alias: address_country_subdivision
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Address Country
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - address_country
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - address_country
+  name: address_country
+  options:
+    qp/ignore-coercion: true
+  position: 41
+  semantic_type: type/Country
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: address_country
+  lib/desired-column-alias: Issuer__address_country
+  lib/original-display-name: Address Country
+  lib/original-join-alias: Issuer
+  lib/original-name: address_country
+  lib/source: source/joins
+  lib/source-column-alias: address_country
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Address Postal Code
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - address_postal_code
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - address_postal_code
+  name: address_postal_code
+  options:
+    qp/ignore-coercion: true
+  position: 42
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: address_postal_code
+  lib/desired-column-alias: Issuer__address_postal_code
+  lib/original-display-name: Address Postal Code
+  lib/original-join-alias: Issuer
+  lib/original-name: address_postal_code
+  lib/source: source/joins
+  lib/source-column-alias: address_postal_code
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Legal Address Address Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - legal_address_address_type
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - legal_address_address_type
+  name: legal_address_address_type
+  options:
+    qp/ignore-coercion: true
+  position: 43
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: legal_address_address_type
+  lib/desired-column-alias: Issuer__legal_address_address_type
+  lib/original-display-name: Legal Address Address Type
+  lib/original-join-alias: Issuer
+  lib/original-name: legal_address_address_type
+  lib/source: source/joins
+  lib/source-column-alias: legal_address_address_type
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Legal Address Street Suite
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - legal_address_street_suite
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - legal_address_street_suite
+  name: legal_address_street_suite
+  options:
+    qp/ignore-coercion: true
+  position: 44
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: legal_address_street_suite
+  lib/desired-column-alias: Issuer__legal_address_street_suite
+  lib/original-display-name: Legal Address Street Suite
+  lib/original-join-alias: Issuer
+  lib/original-name: legal_address_street_suite
+  lib/source: source/joins
+  lib/source-column-alias: legal_address_street_suite
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Legal Address City
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - legal_address_city
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - legal_address_city
+  name: legal_address_city
+  options:
+    qp/ignore-coercion: true
+  position: 45
+  semantic_type: type/State
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: legal_address_city
+  lib/desired-column-alias: Issuer__legal_address_city
+  lib/original-display-name: Legal Address City
+  lib/original-join-alias: Issuer
+  lib/original-name: legal_address_city
+  lib/source: source/joins
+  lib/source-column-alias: legal_address_city
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Legal Address Country Subdivision
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - legal_address_country_subdivision
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - legal_address_country_subdivision
+  name: legal_address_country_subdivision
+  options:
+    qp/ignore-coercion: true
+  position: 46
+  semantic_type: type/State
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: legal_address_country_subdivision
+  lib/desired-column-alias: Issuer__legal_address_country_subdivision
+  lib/original-display-name: Legal Address Country Subdivision
+  lib/original-join-alias: Issuer
+  lib/original-name: legal_address_country_subdivision
+  lib/source: source/joins
+  lib/source-column-alias: legal_address_country_subdivision
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Legal Address Country
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - legal_address_country
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - legal_address_country
+  name: legal_address_country
+  options:
+    qp/ignore-coercion: true
+  position: 47
+  semantic_type: type/Country
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: legal_address_country
+  lib/desired-column-alias: Issuer__legal_address_country
+  lib/original-display-name: Legal Address Country
+  lib/original-join-alias: Issuer
+  lib/original-name: legal_address_country
+  lib/source: source/joins
+  lib/source-column-alias: legal_address_country
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Legal Address Postal Code
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - legal_address_postal_code
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - legal_address_postal_code
+  name: legal_address_postal_code
+  options:
+    qp/ignore-coercion: true
+  position: 48
+  semantic_type: type/Category
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: legal_address_postal_code
+  lib/desired-column-alias: Issuer__legal_address_postal_code
+  lib/original-display-name: Legal Address Postal Code
+  lib/original-join-alias: Issuer
+  lib/original-name: legal_address_postal_code
+  lib/source: source/joins
+  lib/source-column-alias: legal_address_postal_code
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Tax Ids Tax ID
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - tax_ids_tax_id
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - tax_ids_tax_id
+  name: tax_ids_tax_id
+  options:
+    qp/ignore-coercion: true
+  position: 49
+  semantic_type: null
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: tax_ids_tax_id
+  lib/desired-column-alias: Issuer__tax_ids_tax_id
+  lib/original-display-name: Tax Ids Tax ID
+  lib/original-join-alias: Issuer
+  lib/original-name: tax_ids_tax_id
+  lib/source: source/joins
+  lib/source-column-alias: tax_ids_tax_id
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer → Tax Ids Country
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Datamart
+    - dev_datamart
+    - issuer
+    - tax_ids_country
+  - join-alias: Issuer
+  id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  - tax_ids_country
+  name: tax_ids_country
+  options:
+    qp/ignore-coercion: true
+  position: 50
+  semantic_type: type/Country
+  source: fields
+  source_alias: Issuer
+  table_id:
+  - Datamart
+  - dev_datamart
+  - issuer
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: tax_ids_country
+  lib/desired-column-alias: Issuer__tax_ids_country
+  lib/original-display-name: Tax Ids Country
+  lib/original-join-alias: Issuer
+  lib/original-name: tax_ids_country
+  lib/source: source/joins
+  lib/source-column-alias: tax_ids_country
+  metabase.lib.join/join-alias: Issuer
+  qp/implicit-field?: true
+visualization_settings:
+  column_settings: null
+  table.cell_column: allowable_decimals
+  table.pivot_column: object_type
+card_schema: 23
+serdes/meta:
+- id: Di15vPGSJoSAxG_k00Ci7
+  label: issue___issuer__10_rows
+  model: Card
+archived_directly: false
+dashboard_id: null
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question

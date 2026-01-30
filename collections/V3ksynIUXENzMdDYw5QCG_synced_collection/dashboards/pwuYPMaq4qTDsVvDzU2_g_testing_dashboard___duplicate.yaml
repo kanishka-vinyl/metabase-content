@@ -1,0 +1,28 @@
+name: testing dashboard - Duplicate
+description: null
+entity_id: pwuYPMaq4qTDsVvDzU2_g
+created_at: '2026-01-28T12:21:07.701534Z'
+creator_id: kanishka.shetty@vinylequity.com
+archived: false
+collection_id: V3ksynIUXENzMdDYw5QCG
+auto_apply_filters: true
+collection_position: null
+position: null
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+show_in_getting_started: false
+caveats: null
+points_of_interest: null
+parameters: []
+serdes/meta:
+- id: pwuYPMaq4qTDsVvDzU2_g
+  label: testing_dashboard___duplicate
+  model: Dashboard
+archived_directly: false
+dashcards: []
+embedding_type: null
+initially_published_at: null
+tabs: []
+width: fixed

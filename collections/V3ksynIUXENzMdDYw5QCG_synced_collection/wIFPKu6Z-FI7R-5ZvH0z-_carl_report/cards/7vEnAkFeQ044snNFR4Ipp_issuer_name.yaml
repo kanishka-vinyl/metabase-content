@@ -1,0 +1,85 @@
+name: Issuer Name
+description: null
+entity_id: 7vEnAkFeQ044snNFR4Ipp
+created_at: '2026-01-28T11:45:25.941341Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: scalar
+archived: false
+collection_id: wIFPKu6Z-FI7R-5ZvH0z-
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Sandbox
+table_id:
+- Sandbox
+- public
+- mailing_list_report_mv_final__mbarchiv__1762500783
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Sandbox
+  query:
+    fields:
+    - - field
+      - - Sandbox
+        - public
+        - mailing_list_report_mv_final__mbarchiv__1762500783
+        - issuer_legal_name
+      - base-type: type/Text
+    limit: 1
+    source-table:
+    - Sandbox
+    - public
+    - mailing_list_report_mv_final__mbarchiv__1762500783
+  type: query
+result_metadata:
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Issuer Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - mailing_list_report_mv_final__mbarchiv__1762500783
+    - issuer_legal_name
+  - base-type: type/Text
+  id:
+  - Sandbox
+  - public
+  - mailing_list_report_mv_final__mbarchiv__1762500783
+  - issuer_legal_name
+  name: issuer_legal_name
+  position: 0
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - mailing_list_report_mv_final__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: issuer_legal_name
+  lib/desired-column-alias: issuer_legal_name
+  lib/original-display-name: Issuer Legal Name
+  lib/original-name: issuer_legal_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_legal_name
+visualization_settings:
+  column_settings: null
+card_schema: 23
+serdes/meta:
+- id: 7vEnAkFeQ044snNFR4Ipp
+  label: issuer_name
+  model: Card
+archived_directly: false
+dashboard_id: cPOrOyyjYqdW8Wgo3yD7P
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question
