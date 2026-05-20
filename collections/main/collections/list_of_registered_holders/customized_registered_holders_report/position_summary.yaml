@@ -1,0 +1,119 @@
+name: Position Summary
+entity_id: IObfAdXQZpUg6IQWFusx0
+created_at: '2026-01-22T05:11:42.130221Z'
+creator_id: rakeshb@sagasit.com
+display: pivot
+collection_id: -VKTLb5siVc_YRsoik1St
+query_type: query
+database_id: Dev DB
+table_id:
+- Dev DB
+- datamart
+- a_registered_owner_detailed_report
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Dev DB
+  stages:
+  - aggregation:
+    - - sum
+      - {}
+      - - field
+        - base-type: type/Decimal
+          effective-type: type/Decimal
+        - - Dev DB
+          - datamart
+          - a_registered_owner_detailed_report
+          - quantity
+    - - sum
+      - {}
+      - - field
+        - base-type: type/Decimal
+          effective-type: type/Decimal
+        - - Dev DB
+          - datamart
+          - a_registered_owner_detailed_report
+          - cost_basis
+    breakout:
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legal_name
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_type
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - registered_owner_tin
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holding_type
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legends_or_stops
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - email_address
+    source-table:
+    - Dev DB
+    - datamart
+    - a_registered_owner_detailed_report
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  pivot_table.column_split:
+    columns: []
+    rows:
+    - legal_name
+    - holder_type
+    - registered_owner_tin
+    - holding_type
+    - legends_or_stops
+    - email_address
+    values:
+    - sum
+    - sum_2
+  pivot_table.column_widths:
+    leftHeaderWidths:
+    - 266
+    - 183
+    - 200
+    - 155
+    - 191
+    - 281
+    totalLeftHeaderWidths: 1276
+    valueHeaderWidths:
+      '0': 210
+      '1': 167
+card_schema: 23
+serdes/meta:
+- id: IObfAdXQZpUg6IQWFusx0
+  label: position_summary
+  model: Card
+dashboard_id: PYAJKnpZ-El9vq-14-TEC
+metabase_version: v1.58.1 (7fbf305)
+type: question

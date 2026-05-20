@@ -1,0 +1,345 @@
+name: A Registered Owner Detailed Report
+entity_id: hOlqoBRtKJzddNjtPVEaR
+created_at: '2026-03-20T10:11:39.477031Z'
+creator_id: rakeshb@sagasit.com
+display: table
+collection_id: -VKTLb5siVc_YRsoik1St
+query_type: query
+database_id: Dev DB
+table_id:
+- Dev DB
+- datamart
+- a_registered_owner_detailed_report
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Dev DB
+  stages:
+  - fields:
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legal_name
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - status
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_type
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_subtype
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - registered_owner_tin
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holding_type
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - drs_book_account_or_certificate_number
+    - - field
+      - base-type: type/Date
+        effective-type: type/Date
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issue_date
+    - - field
+      - base-type: type/Decimal
+        effective-type: type/Decimal
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - quantity
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legends_or_stops
+    - - field
+      - base-type: type/Date
+        effective-type: type/Date
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - acquisition_date
+    - - field
+      - base-type: type/Decimal
+        effective-type: type/Decimal
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - cost_basis
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - gift_inheritance_indicator
+    - - field
+      - base-type: type/Decimal
+        effective-type: type/Decimal
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - gift_fmv
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - tax_lot_status
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - tax_country
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - street_address
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - country
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - state
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - city
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - postal_code
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - email_address
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - phone_number
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - lost_holder
+    - - field
+      - base-type: type/Date
+        effective-type: type/Date
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - date_of_last_contact
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - affiliate
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - section_16_officer
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - position_stop
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_stop
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - associated_user_name_1
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - associated_user_tin_1
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - associated_user_name_2
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - associated_user_tin_2
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - associated_user_name_3
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - associated_user_tin_3
+    - - field
+      - base-type: type/Date
+        effective-type: type/Date
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - cancel_transaction_date
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - cancel_transaction_type
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - cusip
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - ticker
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issue_name
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_legal_name
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - tasp_name
+    source-table:
+    - Dev DB
+    - datamart
+    - a_registered_owner_detailed_report
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  table.cell_column: quantity
+  table.column_formatting:
+  - color: '#EF8C8C'
+    columns:
+    - status
+    highlight_row: true
+    operator: '!='
+    type: single
+    value: Active
+  - color: '#88BF4D'
+    columns:
+    - status
+    highlight_row: true
+    operator: =
+    type: single
+    value: Active
+  table.pivot_column: holder_subtype
+card_schema: 23
+serdes/meta:
+- id: hOlqoBRtKJzddNjtPVEaR
+  label: a_registered_owner_detailed_report
+  model: Card
+dashboard_id: PYAJKnpZ-El9vq-14-TEC
+metabase_version: v1.58.7 (85988ba)
+type: question

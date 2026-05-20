@@ -1,0 +1,177 @@
+name: A Transaction Report
+entity_id: lEe-RuYFXfNHRCwATWmpV
+created_at: '2026-03-09T11:47:23.465917Z'
+creator_id: rakeshb@sagasit.com
+display: table
+collection_id: LI3V8tBVohcdBITjv6vTx
+query_type: query
+database_id: Dev DB
+table_id:
+- Dev DB
+- datamart
+- a_transaction_canned_report
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Dev DB
+  stages:
+  - fields:
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - transaction_id
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - type
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - reason
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - effective_date
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - sec_category
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - registered_owner_transferor
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - holding_type_debit
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - account_certificate_number_debit
+    - - field
+      - base-type: type/Decimal
+        effective-type: type/Decimal
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - debit_quantity
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - legends_debit
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - registered_owner_transferee
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - holding_type_credit
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - account_certificate_number_credit
+    - - field
+      - base-type: type/Decimal
+        effective-type: type/Decimal
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - credit_quantity
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - legends_credit
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - dtc_participant_number
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - dtc_participant_name
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - drs_transaction_id
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_transaction_canned_report
+        - transaction_control_number
+    source-table:
+    - Dev DB
+    - datamart
+    - a_transaction_canned_report
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings:
+    '["name","drs_transaction_id"]':
+      column_title: DRS Transaction ID
+    '["name","dtc_participant_name"]':
+      column_title: DTC Participant Name
+    '["name","dtc_participant_number"]':
+      column_title: DTC Participant Number
+    '["name","sec_category"]':
+      column_title: SEC Category
+  table.cell_column: debit_quantity
+  table.pivot_column: legends_credit
+card_schema: 23
+serdes/meta:
+- id: lEe-RuYFXfNHRCwATWmpV
+  label: a_transaction_report
+  model: Card
+dashboard_id: nfvUh-14WsCFGP0Sl7_IP
+metabase_version: v1.58.7 (85988ba)
+type: question

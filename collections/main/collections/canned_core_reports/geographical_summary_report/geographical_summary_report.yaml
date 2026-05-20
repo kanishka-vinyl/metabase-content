@@ -1,0 +1,170 @@
+name: Geographical Summary Report
+entity_id: PDHX2in5nXaHITl8G44E9
+created_at: '2026-03-03T12:23:16.523483Z'
+creator_id: rakeshb@sagasit.com
+display: table
+collection_id: LI3V8tBVohcdBITjv6vTx
+query_type: native
+database_id: Canned DB
+parameters:
+- id: 061bbb97-d9e0-4180-b641-64aac7451499
+  isMultiSelect: true
+  name: Tasp ID
+  position: 4
+  slug: tasp_id
+  target:
+  - dimension
+  - - template-tag
+    - tasp_id
+  type: string/=
+- default: null
+  id: 1b44e172-aa61-4eff-8b7d-5761803127b3
+  isMultiSelect: true
+  name: Date Range
+  position: 0
+  slug: Date_Range
+  target:
+  - dimension
+  - - template-tag
+    - Date_Range
+  type: date/all-options
+- id: 72a9643a-7df1-43ba-bef2-e5c951c27088
+  isMultiSelect: true
+  name: Issue Name
+  position: 2
+  slug: Issue_Name
+  target:
+  - dimension
+  - - template-tag
+    - Issue_Name
+  type: string/=
+- id: 7c0d234a-ff80-47f8-aa35-8d0c89381bdf
+  isMultiSelect: true
+  name: Issuer Name
+  position: 1
+  slug: Issuer_Name
+  target:
+  - dimension
+  - - template-tag
+    - Issuer_Name
+  type: string/=
+- id: b607df87-1836-41e0-873d-56add8e1efda
+  isMultiSelect: true
+  name: Issuer ID
+  position: 3
+  slug: Issuer_id
+  target:
+  - dimension
+  - - template-tag
+    - Issuer_id
+  type: string/=
+parameter_mappings: []
+dataset_query:
+  database: Canned DB
+  stages:
+  - native: "WITH as_of_date AS (\n  SELECT MAX(issue_date) AS selected_date\n  FROM datamart.a_geographical_summary_report t\n  WHERE 1=1\n  [[AND {{Date_Range}}]]\n),\nfiltered_holdings AS (\n  SELECT\n    t.tax_lot_id,\n    t.registered_owner_id,\n    t.quantity,\n    t.cancel_transaction_date,\n    t.issue_date,\n    t.issue_id,\n    t.tax_country,\n    t.issue_name,\n    t.issuer_issue,\n    t.issuer_legal_name,\n    t.tasp_name,\n    t.cusip,\n    t.ticker\n  FROM\n    datamart.a_geographical_summary_report t\n  WHERE\n    1=1\n    AND t.reversed_at IS NULL\n    AND t.transaction_type <> 'CANCELLATION'\n    AND t.tax_lot_is_deleted IS NOT TRUE\n    [[AND {{Issuer_Name}}]]\n    [[AND {{Issue_Name}}]]\n    [[AND {{Date_Range}}]]\n\t[[AND {{Issuer_id}}]]\n   [[AND {{tasp_id}}]]\n),\n-- Only keep active lots as of the selected date\nactive_holdings AS (\n  SELECT fh.*\n  FROM filtered_holdings fh\n  CROSS JOIN as_of_date a\n  WHERE\n    fh.cancel_transaction_date IS NULL\n    OR NULLIF(fh.cancel_transaction_date, '')::date > a.selected_date\n)\nSELECT\n  COALESCE(ah.tax_country, 'N/A')          AS \"State/Country\",\n  SUM(ah.quantity)                          AS \"Total Securities Held\",\n  COUNT(DISTINCT ah.registered_owner_id)    AS \"Total Holders\",\n  ah.issue_name                             AS \"Issue Name\",\n  ah.issuer_issue                           AS \"Issuer Issue\",\n  ah.issuer_legal_name                      AS \"Issuer Legal Name\",\n  ah.tasp_name                              AS \"TASP Name\",\n  ah.cusip                                  AS \"CUSIP\",\n  ah.ticker                                 AS \"Ticker\"\nFROM active_holdings ah\nGROUP BY\n  ah.tax_country,\n  ah.issue_name,\n  ah.issuer_issue,\n  ah.issuer_legal_name,\n  ah.tasp_name,\n  ah.cusip,\n  ah.ticker\nORDER BY\n  ah.tax_country ASC,\n  ah.issue_name ASC;"
+    template-tags:
+      Date_Range:
+        alias: t.issue_date
+        default: null
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_geographical_summary_report
+          - issue_date
+        display-name: Date Range
+        id: 1b44e172-aa61-4eff-8b7d-5761803127b3
+        name: Date_Range
+        type: dimension
+        widget-type: date/all-options
+      Issue_Name:
+        alias: t.issuer_issue
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_geographical_summary_report
+          - issuer_issue
+        display-name: Issue Name
+        id: 72a9643a-7df1-43ba-bef2-e5c951c27088
+        name: Issue_Name
+        type: dimension
+        widget-type: string/=
+      Issuer_Name:
+        alias: t.issuer_legal_name
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_geographical_summary_report
+          - issuer_legal_name
+        display-name: Issuer Name
+        id: 7c0d234a-ff80-47f8-aa35-8d0c89381bdf
+        name: Issuer_Name
+        type: dimension
+        widget-type: string/=
+      Issuer_id:
+        alias: t.issuer_id
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_geographical_summary_report
+          - issuer_id
+        display-name: Issuer ID
+        id: b607df87-1836-41e0-873d-56add8e1efda
+        name: Issuer_id
+        type: dimension
+        widget-type: string/=
+      tasp_id:
+        alias: t.tasp_id
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_geographical_summary_report
+          - tasp_id
+        display-name: Tasp ID
+        id: 061bbb97-d9e0-4180-b641-64aac7451499
+        name: tasp_id
+        type: dimension
+        widget-type: string/=
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  table.cell_column: Total Securities Held
+  table.columns:
+  - enabled: true
+    name: Issue Name
+  - enabled: true
+    name: State/Country
+  - enabled: true
+    name: Total Securities Held
+  - enabled: true
+    name: Total Holders
+  - enabled: false
+    name: Issuer Issue
+  - enabled: false
+    name: Issuer Legal Name
+  - enabled: false
+    name: TASP Name
+  - enabled: false
+    name: CUSIP
+  - enabled: false
+    name: Ticker
+  table.pivot_column: TASP Name
+card_schema: 23
+serdes/meta:
+- id: PDHX2in5nXaHITl8G44E9
+  label: geographical_summary_report
+  model: Card
+dashboard_id: ETfY5xvHd3yRtS37v0ohE
+metabase_version: v1.58.7 (85988ba)
+type: question

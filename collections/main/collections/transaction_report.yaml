@@ -1,0 +1,10 @@
+name: Transaction Report
+entity_id: A0yyQFxRX7Oq87bOoUmec
+slug: transaction_report
+created_at: '2025-12-16T05:49:10.085674Z'
+parent_id: NVMSl-ynMzAMY9IGf8DOp
+serdes/meta:
+- id: A0yyQFxRX7Oq87bOoUmec
+  label: transaction_report
+  model: Collection
+is_remote_synced: true

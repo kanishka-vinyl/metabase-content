@@ -1,0 +1,101 @@
+name: Holdings Range Summary Report
+entity_id: 2sz777LfNAlBrA91hcdpB
+created_at: '2026-01-22T05:11:42.130221Z'
+creator_id: rakeshb@sagasit.com
+display: table
+collection_id: -VKTLb5siVc_YRsoik1St
+query_type: query
+database_id: Dev DB
+table_id:
+- Dev DB
+- datamart
+- a_registered_owner_detailed_report
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Dev DB
+  stages:
+  - aggregation:
+    - - count
+      - {}
+    - - sum
+      - {}
+      - - field
+        - base-type: type/Decimal
+          effective-type: type/Decimal
+        - - Dev DB
+          - datamart
+          - a_registered_owner_detailed_report
+          - quantity
+    breakout:
+    - - field
+      - base-type: type/Integer
+        effective-type: type/Integer
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holdings_range_order
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holdings_range
+    source-table:
+    - Dev DB
+    - datamart
+    - a_registered_owner_detailed_report
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings:
+    '["name","count"]':
+      column_title: Number Of Holdings
+    '["name","holdings_range_order"]':
+      pivot_table.column_sort_order: ascending
+    '["name","sum"]':
+      column_title: Total Quantity
+  pivot_table.collapsed_rows:
+    rows:
+    - holdings_range_order
+    - holdings_range
+    value:
+    - '2'
+  pivot_table.column_split:
+    columns: []
+    rows:
+    - holdings_range_order
+    - holdings_range
+    values:
+    - count
+    - sum
+  pivot_table.column_widths:
+    leftHeaderWidths:
+    - 166
+    - 131
+    - 240
+    totalLeftHeaderWidths: 537
+    valueHeaderWidths:
+      '0': 141
+      '1': 137
+  table.cell_column: count
+  table.columns:
+  - enabled: false
+    name: holdings_range_order
+  - enabled: true
+    name: holdings_range
+  - enabled: true
+    name: count
+  - enabled: true
+    name: sum
+  table.pivot_column: holdings_range
+  table.row_index: false
+card_schema: 23
+serdes/meta:
+- id: 2sz777LfNAlBrA91hcdpB
+  label: holdings_range_summary_report
+  model: Card
+dashboard_id: PYAJKnpZ-El9vq-14-TEC
+metabase_version: v1.58.1 (7fbf305)
+type: question

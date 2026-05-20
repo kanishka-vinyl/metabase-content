@@ -1,0 +1,128 @@
+name: Geographical Summary Report
+entity_id: ETfY5xvHd3yRtS37v0ohE
+created_at: '2026-03-03T12:19:09.93568Z'
+creator_id: rakeshb@sagasit.com
+collection_id: LI3V8tBVohcdBITjv6vTx
+parameters:
+- filteringParameters:
+  - db770f5b
+  - 8a66ad66
+  - c76e39f6
+  id: 788bacbb
+  name: Issue Name
+  position: 1
+  sectionId: string
+  slug: issue_name
+  type: string/=
+- filteringParameters:
+  - c76e39f6
+  - db770f5b
+  id: 8a66ad66
+  name: Issuer_Id
+  position: 3
+  sectionId: string
+  slug: issuer_id
+  type: string/=
+- id: c76e39f6
+  name: Tasp_Id
+  position: 4
+  sectionId: string
+  slug: tasp_id
+  type: string/=
+- filteringParameters:
+  - c76e39f6
+  - 8a66ad66
+  id: db770f5b
+  name: Issuer Name
+  position: 0
+  sectionId: string
+  slug: issuer_name
+  type: string/=
+- id: ddf0ad02
+  name: Date
+  position: 2
+  sectionId: date
+  slug: date
+  type: date/all-options
+serdes/meta:
+- id: ETfY5xvHd3yRtS37v0ohE
+  label: geographical_summary_report
+  model: Dashboard
+dashcards:
+- entity_id: 5toz6KthVwo1sZ585Rlqy
+  card_id: PDHX2in5nXaHITl8G44E9
+  created_at: '2026-03-03T12:23:16.781239Z'
+  row: 0
+  col: 0
+  size_x: 24
+  size_y: 9
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: PDHX2in5nXaHITl8G44E9
+    parameter_id: 788bacbb
+    target:
+    - dimension
+    - - template-tag
+      - Issue_Name
+    - stage-number: 0
+  - card_id: PDHX2in5nXaHITl8G44E9
+    parameter_id: 8a66ad66
+    target:
+    - dimension
+    - - template-tag
+      - Issuer_id
+    - stage-number: 0
+  - card_id: PDHX2in5nXaHITl8G44E9
+    parameter_id: c76e39f6
+    target:
+    - dimension
+    - - template-tag
+      - tasp_id
+    - stage-number: 0
+  - card_id: PDHX2in5nXaHITl8G44E9
+    parameter_id: db770f5b
+    target:
+    - dimension
+    - - template-tag
+      - Issuer_Name
+    - stage-number: 0
+  - card_id: PDHX2in5nXaHITl8G44E9
+    parameter_id: ddf0ad02
+    target:
+    - dimension
+    - - template-tag
+      - Date_Range
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    card.hide_empty: true
+    column_settings: null
+    table.cell_column: Total Securities Held
+    table.columns:
+    - enabled: true
+      name: Issue Name
+    - enabled: true
+      name: State/Country
+    - enabled: true
+      name: Total Securities Held
+    - enabled: true
+      name: Total Holders
+    - enabled: false
+      name: Issuer Issue
+    - enabled: false
+      name: Issuer Legal Name
+    - enabled: false
+      name: TASP Name
+    - enabled: false
+      name: CUSIP
+    - enabled: false
+      name: Ticker
+    table.pagination: false
+    table.pivot_column: TASP Name
+  serdes/meta:
+  - id: ETfY5xvHd3yRtS37v0ohE
+    model: Dashboard
+  - id: 5toz6KthVwo1sZ585Rlqy
+    model: DashboardCard
+tabs: []
+width: fixed

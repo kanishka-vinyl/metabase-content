@@ -1,0 +1,149 @@
+name: Total Issued and Outstanding
+entity_id: 7GUkgmEa57VKYWppu9Dz2
+created_at: '2026-03-02T10:50:52.691214Z'
+creator_id: rakeshb@sagasit.com
+display: scalar
+collection_id: LI3V8tBVohcdBITjv6vTx
+query_type: native
+database_id: Canned DB
+parameters:
+- id: 45bb0ccb-05a4-4a73-9fad-395b3645cd6c
+  isMultiSelect: true
+  name: Tasp ID
+  position: 4
+  slug: Tasp_Id
+  target:
+  - dimension
+  - - template-tag
+    - Tasp_Id
+  type: string/=
+- default: null
+  id: 5bdd9035-f51d-4509-89f9-8e8467f7f1b6
+  isMultiSelect: true
+  name: Date Range
+  position: 2
+  slug: Date_Range
+  target:
+  - dimension
+  - - template-tag
+    - Date_Range
+  type: date/range
+- id: 6e0f3947-279a-4fee-8b13-6dccaf29f81b
+  isMultiSelect: true
+  name: Issuer Name
+  position: 0
+  slug: Issuer_Name
+  target:
+  - dimension
+  - - template-tag
+    - Issuer_Name
+  type: string/=
+- id: a948084b-5a6f-4921-899d-f26d3b766698
+  isMultiSelect: true
+  name: Issue Name
+  position: 1
+  slug: Issue_Name
+  target:
+  - dimension
+  - - template-tag
+    - Issue_Name
+  type: string/=
+- id: e3d75a8e-4c52-435b-a7da-1a801465bde8
+  isMultiSelect: true
+  name: Issuer ID
+  position: 3
+  slug: Issuer_Id
+  target:
+  - dimension
+  - - template-tag
+    - Issuer_Id
+  type: string/=
+parameter_mappings: []
+dataset_query:
+  database: Canned DB
+  stages:
+  - native: "-- Question 1: Total Issued & Outstanding\n-- Display as: Number card on dashboard\n\nWITH as_of_date AS (\n  SELECT MAX(issue_date) AS selected_date\n  FROM datamart.a_certified_list_of_registered_holders t\n  WHERE 1=1\n  [[AND {{Date_Range}}]]\n),\nfiltered_holdings AS (\n  SELECT\n    t.quantity,\n    t.cancel_transaction_date,\n    t.issue_date,\n    t.issue_id,\n\tt.issuer_id,\n\tt.tasp_id\n  FROM\n    datamart.a_certified_list_of_registered_holders t\n  WHERE\n    1=1\n    AND t.reversed_at IS NULL\n    AND t.transaction_type <> 'CANCELLATION'\n    AND t.tax_lot_is_deleted IS NOT TRUE\n    [[AND {{Issuer_Name}}]]\n    [[AND {{Issue_Name}}]]\n    [[AND {{Date_Range}}]]\n\t[[AND {{Issuer_Id}}]]\n    [[AND {{Tasp_Id}}]]\n),\nactive_holdings AS (\n  SELECT fh.*\n  FROM filtered_holdings fh\n  CROSS JOIN as_of_date a\n  WHERE\n    fh.cancel_transaction_date IS NULL\n    OR NULLIF(fh.cancel_transaction_date, '')::date > a.selected_date\n)\nSELECT\n  SUM(quantity) AS \"Total Issued & Outstanding\"\nFROM active_holdings;"
+    template-tags:
+      Date_Range:
+        alias: t.issue_date
+        default: null
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_certified_list_of_registered_holders
+          - issue_date
+        display-name: Date Range
+        id: 5bdd9035-f51d-4509-89f9-8e8467f7f1b6
+        name: Date_Range
+        type: dimension
+        widget-type: date/range
+      Issue_Name:
+        alias: t.issuer_issue
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_certified_list_of_registered_holders
+          - issuer_issue
+        display-name: Issue Name
+        id: a948084b-5a6f-4921-899d-f26d3b766698
+        name: Issue_Name
+        type: dimension
+        widget-type: string/=
+      Issuer_Id:
+        alias: t.issuer_id
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_certified_list_of_registered_holders
+          - issuer_id
+        display-name: Issuer ID
+        id: e3d75a8e-4c52-435b-a7da-1a801465bde8
+        name: Issuer_Id
+        type: dimension
+        widget-type: string/=
+      Issuer_Name:
+        alias: t.issuer_legal_name
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_certified_list_of_registered_holders
+          - issuer_legal_name
+        display-name: Issuer Name
+        id: 6e0f3947-279a-4fee-8b13-6dccaf29f81b
+        name: Issuer_Name
+        type: dimension
+        widget-type: string/=
+      Tasp_Id:
+        alias: t.tasp_id
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_certified_list_of_registered_holders
+          - tasp_id
+        display-name: Tasp ID
+        id: 45bb0ccb-05a4-4a73-9fad-395b3645cd6c
+        name: Tasp_Id
+        type: dimension
+        widget-type: string/=
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+card_schema: 23
+serdes/meta:
+- id: 7GUkgmEa57VKYWppu9Dz2
+  label: total_issued_and_outstanding
+  model: Card
+dashboard_id: z60ZKvOS3ZSX0MbBLHxpR
+metabase_version: v1.58.7 (85988ba)
+type: question

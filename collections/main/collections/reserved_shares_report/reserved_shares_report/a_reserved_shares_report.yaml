@@ -1,0 +1,112 @@
+name: A Reserved Shares Report
+entity_id: Irn7jTztf1BVd3guG00bn
+created_at: '2026-01-22T05:35:12.133542Z'
+creator_id: rakeshb@sagasit.com
+display: table
+collection_id: 6XXlTdzYIYe6Al-2zHmJ6
+query_type: query
+database_id: Dev DB
+table_id:
+- Dev DB
+- datamart
+- a_reserved_shares_report
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Dev DB
+  stages:
+  - fields:
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - issuer_legal_name
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - issue_name
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - pool_name
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - transaction_type
+    - - field
+      - base-type: type/Decimal
+        effective-type: type/Decimal
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - quantity
+    - - field
+      - base-type: type/Decimal
+        effective-type: type/Decimal
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - reserved_total
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - reserved_created_date
+    - - field
+      - base-type: type/DateTime
+        effective-type: type/DateTime
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - effective_datetime
+    source-table:
+    - Dev DB
+    - datamart
+    - a_reserved_shares_report
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings:
+    '["name","effective_datetime"]':
+      date_separator: '-'
+      time_enabled: null
+  table.cell_column: quantity
+  table.columns:
+  - enabled: true
+    name: issuer_legal_name
+  - enabled: true
+    name: issue_name
+  - enabled: true
+    name: pool_name
+  - enabled: true
+    name: effective_datetime
+  - enabled: true
+    name: transaction_type
+  - enabled: true
+    name: quantity
+  - enabled: true
+    name: reserved_total
+  - enabled: true
+    name: reserved_created_date
+  table.pivot_column: transaction_type
+card_schema: 23
+serdes/meta:
+- id: Irn7jTztf1BVd3guG00bn
+  label: a_reserved_shares_report
+  model: Card
+dashboard_id: XllLrBG8SRIOhUll_tvv4
+metabase_version: v1.58.1 (7fbf305)
+type: question

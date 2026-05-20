@@ -1,0 +1,217 @@
+name: Ownership percentage report
+entity_id: aZauBGE2XEB33EMZSWgsC
+created_at: '2026-02-26T11:56:06.596263Z'
+creator_id: rakeshb@sagasit.com
+display: table
+collection_id: LI3V8tBVohcdBITjv6vTx
+query_type: native
+database_id: Canned DB
+parameters:
+- id: 34313ef4-8771-4799-8f14-c36d9507e81b
+  isMultiSelect: false
+  name: Percentage Filter
+  position: 0
+  slug: percentage_filter
+  target:
+  - variable
+  - - template-tag
+    - percentage_filter
+  type: number/=
+  values_query_type: search
+- default: null
+  id: 368f9bc3-9a8e-4d42-bb19-1e8928341e9c
+  isMultiSelect: true
+  name: Date Range
+  position: 3
+  slug: Date_Range
+  target:
+  - dimension
+  - - template-tag
+    - Date_Range
+  type: date/all-options
+- id: 379804fc-d485-4977-b920-4f9fa230e181
+  isMultiSelect: true
+  name: Tasp ID
+  position: 5
+  slug: tasp_id
+  target:
+  - dimension
+  - - template-tag
+    - tasp_id
+  type: string/=
+- default: null
+  id: 448817b9-a2b6-4537-9968-8fe38bc45227
+  isMultiSelect: true
+  name: Issuer Name
+  position: 1
+  slug: Issuer_Name
+  target:
+  - dimension
+  - - template-tag
+    - Issuer_Name
+  type: string/=
+  values_query_type: list
+  values_source_config: {}
+  values_source_type: null
+- id: 634570f5-588b-4dc2-a670-494b24d2f98b
+  isMultiSelect: true
+  name: Issue Name
+  position: 2
+  slug: Issue_Name
+  target:
+  - dimension
+  - - template-tag
+    - Issue_Name
+  type: string/=
+  values_source_config: {}
+  values_source_type: null
+- id: fafaede8-4fc3-4358-97a4-5763bed7a572
+  isMultiSelect: true
+  name: Issuer ID
+  position: 4
+  slug: Issuer_id
+  target:
+  - dimension
+  - - template-tag
+    - Issuer_id
+  type: string/=
+parameter_mappings: []
+dataset_query:
+  database: Canned DB
+  stages:
+  - native: "WITH filtered_holdings AS (\n  SELECT\n    t.tax_lot_id,\n    t.stakeholder_id,\n    t.issue_id,\n    t.issue_name,\n    t.issuer_legal_name,\n    t.legal_name,\n    t.holder_type,\n    t.registered_owner_tin,\n    t.quantity,\n    t.cancel_transaction_date,\n    t.issuer_issue,\n    t.issue_date,\n    t.tasp_name,\n\tt.cusip,\n\tt.ticker\n  FROM\n    datamart.a_ownership_percent_holders_report t\n  WHERE\n    1=1\n    AND t.reversed_at IS NULL\n    AND t.transaction_type <> 'CANCELLATION'\n\n\n[[AND {{Issuer_Name}}]]\n[[AND {{Issue_Name}}]]\n[[AND {{Date_Range}}]]\n[[AND {{Issuer_id}}]]\n[[AND {{tasp_id}}]]\n),\n-- Get the latest issue_date from filtered dataset (dynamic as of date)\nas_of_date AS (\n  SELECT MAX(issue_date) AS selected_date\n  FROM filtered_holdings\n),\n-- Only keep active lots as of the selected date\nactive_holdings AS (\n  SELECT\n    fh.*\n  FROM\n    filtered_holdings fh\n    CROSS JOIN as_of_date a\n  WHERE\n    fh.cancel_transaction_date IS NULL\n    OR NULLIF(fh.cancel_transaction_date, '')::date > a.selected_date\n),\n-- Aggregate quantity per stakeholder per issue\naggregated_holdings AS (\n  SELECT\n    ah.issue_id,\n    ah.issue_name,\n    ah.issuer_issue,\n    ah.issuer_legal_name,\n    ah.legal_name,\n    ah.holder_type,\n    ah.registered_owner_tin,\n    ah.tasp_name,\n\tah.cusip,\n\tah.ticker,\n    SUM(ah.quantity) AS qty\n  FROM active_holdings ah\n  GROUP BY\n    ah.issue_id,\n    ah.issue_name,\n    ah.issuer_issue,\n    ah.issuer_legal_name,\n    ah.legal_name,\n    ah.holder_type,\n    ah.registered_owner_tin,\n    ah.tasp_name,\n\tah.cusip,\n\tah.ticker\n),\n-- Calculate percentage using total issued and outstanding per issue\nwith_percentage AS (\n  SELECT\n    ah.*,\n    'Active' AS status,\n    ROUND(\n      (\n        ah.qty * 100.0 /\n        NULLIF(SUM(ah.qty) OVER (PARTITION BY ah.issue_id), 0)\n      ),\n      2\n    ) AS percentage\n  FROM aggregated_holdings ah\n),\n-- Get latest non-quantity details per stakeholder per issue\nlatest_details AS (\n  SELECT DISTINCT ON (\n      d.issue_id,\n      d.legal_name,\n      d.holder_type,\n      d.registered_owner_tin\n    )\n    d.issue_id,\n    d.legal_name,\n    d.holder_type,\n    d.registered_owner_tin,\n    d.mailing_address,\n    d.email_address,\n    d.phone,\n    d.lost_holder,\n    d.date_of_last_contact,\n    d.affiliate,\n    d.section_16_officer,\n    d.holder_stop\n  FROM datamart.a_ownership_percent_holders_report d\n  WHERE\n    d.reversed_at IS NULL\n    AND d.transaction_type <> 'CANCELLATION'\n  ORDER BY\n    d.issue_id,\n    d.legal_name,\n    d.holder_type,\n    d.registered_owner_tin,\n    d.issue_date DESC\n)\nSELECT\n  wp.legal_name                                               AS \"Registered Owner Name\",\n  wp.holder_type                                              AS \"Holder Type\",\n  wp.registered_owner_tin                                     AS \"Registered Owner TIN\",\n  wp.qty                                                      AS \"Total Quantity Held\",\n  wp.percentage                                               AS \"Percentage\",\n  wp.status                                                   AS \"Status\",\n  ld.mailing_address                                          AS \"Address\",\n  ld.email_address                                            AS \"Email Address\",\n  ld.phone                                                    AS \"Phone\",\n  ld.lost_holder                                              AS \"Lost Holder\",\n  TO_CHAR(ld.date_of_last_contact, 'YYYY-MM-DD')              AS \"Date of Last Contact\",\n  ld.affiliate                                                AS \"Affiliate\",\n  ld.section_16_officer                                       AS \"Section 16 Officer\",\n  ld.holder_stop                                              AS \"Holder Stop\",\n  wp.cusip                                                    AS \"Cusip\",\n  wp.ticker                                                   AS \"Ticker\",\n  wp.issue_name                                               AS \"Issue Name\",\n  wp.issuer_issue                                             AS \"Issuer Issue\",\n  wp.issuer_legal_name                                        AS \"Issuer Legal Name\",\n  wp.tasp_name                                                AS \"TASP Name\"\nFROM with_percentage wp\nLEFT JOIN latest_details ld\n  ON  ld.issue_id             = wp.issue_id\n  AND ld.legal_name           = wp.legal_name\n  AND ld.holder_type          = wp.holder_type\n  AND ld.registered_owner_tin = wp.registered_owner_tin\nWHERE\n  1=1\n  [[AND wp.percentage >= {{percentage_filter}}]]\nORDER BY\n  wp.legal_name ASC,\n  wp.holder_type ASC,\n  wp.registered_owner_tin ASC;"
+    template-tags:
+      Date_Range:
+        alias: t.issue_date
+        default: null
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_ownership_percent_holders_report
+          - issue_date
+        display-name: Date Range
+        id: 368f9bc3-9a8e-4d42-bb19-1e8928341e9c
+        name: Date_Range
+        type: dimension
+        widget-type: date/all-options
+      Issue_Name:
+        alias: t.issuer_issue
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_ownership_percent_holders_report
+          - issuer_issue
+        display-name: Issue Name
+        id: 634570f5-588b-4dc2-a670-494b24d2f98b
+        name: Issue_Name
+        type: dimension
+        widget-type: string/=
+      Issuer_Name:
+        alias: t.issuer_legal_name
+        default: null
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_ownership_percent_holders_report
+          - issuer_legal_name
+        display-name: Issuer Name
+        id: 448817b9-a2b6-4537-9968-8fe38bc45227
+        name: Issuer_Name
+        type: dimension
+        widget-type: string/=
+      Issuer_id:
+        alias: t.issuer_id
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_ownership_percent_holders_report
+          - issuer_id
+        display-name: Issuer ID
+        id: fafaede8-4fc3-4358-97a4-5763bed7a572
+        name: Issuer_id
+        type: dimension
+        widget-type: string/=
+      percentage_filter:
+        display-name: Percentage Filter
+        id: 34313ef4-8771-4799-8f14-c36d9507e81b
+        name: percentage_filter
+        type: number
+      tasp_id:
+        alias: t.tasp_id
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_ownership_percent_holders_report
+          - tasp_id
+        display-name: Tasp ID
+        id: 379804fc-d485-4977-b920-4f9fa230e181
+        name: tasp_id
+        type: dimension
+        widget-type: string/=
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+visualization_settings:
+  column_settings:
+    '["name","Percentage"]':
+      decimals: 2
+  table.cell_column: total_quantity
+  table.columns:
+  - enabled: true
+    name: Registered Owner Name
+  - enabled: true
+    name: Holder Type
+  - enabled: true
+    name: Registered Owner TIN
+  - enabled: true
+    name: Total Quantity Held
+  - enabled: true
+    name: Percentage
+  - enabled: true
+    name: Address
+  - enabled: true
+    name: Email Address
+  - enabled: true
+    name: Phone
+  - enabled: true
+    name: Lost Holder
+  - enabled: true
+    name: Date of Last Contact
+  - enabled: true
+    name: Affiliate
+  - enabled: true
+    name: Section 16 Officer
+  - enabled: true
+    name: Holder Stop
+  - enabled: true
+    name: Cusip
+  - enabled: true
+    name: Ticker
+  - enabled: false
+    name: Issuer Issue
+  - enabled: true
+    name: Issue Name
+  - enabled: false
+    name: Status
+  - enabled: true
+    name: Issuer Legal Name
+  - enabled: true
+    name: TASP Name
+  table.pivot_column: lost_holder
+card_schema: 23
+serdes/meta:
+- id: aZauBGE2XEB33EMZSWgsC
+  label: ownership_percentage_report
+  model: Card
+dashboard_id: 40nzMzJOmzpNSQLaXg5Qg
+metabase_version: v1.58.7 (85988ba)
+type: question

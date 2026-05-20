@@ -1,0 +1,95 @@
+name: Exercise Report
+entity_id: UO2bR3XwCxR2K9jzEg0GZ
+created_at: '2026-03-06T07:39:16.69476Z'
+creator_id: rakeshb@sagasit.com
+collection_id: LI3V8tBVohcdBITjv6vTx
+parameters:
+- id: 1d12aa42
+  name: Issuer Name
+  position: 0
+  sectionId: string
+  slug: issuer_name
+  type: string/=
+- id: '2253252'
+  name: Date
+  position: 2
+  sectionId: date
+  slug: date
+  type: date/all-options
+- id: 9d3b4d49
+  name: Issue Name
+  position: 1
+  sectionId: string
+  slug: issue_name
+  type: string/=
+serdes/meta:
+- id: UO2bR3XwCxR2K9jzEg0GZ
+  label: exercise_report
+  model: Dashboard
+dashcards:
+- entity_id: Y6HLSgBj1iH6Ub-4twcjl
+  card_id: OYhWjwY0lUkBHY5iSEnVL
+  created_at: '2026-03-06T07:57:39.230829Z'
+  row: 0
+  col: 0
+  size_x: 24
+  size_y: 10
+  dashboard_tab_id:
+  - UO2bR3XwCxR2K9jzEg0GZ
+  - nv2Fa-IQULDgiE0w1ezYR
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: OYhWjwY0lUkBHY5iSEnVL
+    parameter_id: 1d12aa42
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_exercise_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: OYhWjwY0lUkBHY5iSEnVL
+    parameter_id: '2253252'
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_exercise_report
+        - created_date
+      - base-type: type/Date
+    - stage-number: 0
+  - card_id: OYhWjwY0lUkBHY5iSEnVL
+    parameter_id: 9d3b4d49
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_exercise_report
+        - issuer_issue
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: UO2bR3XwCxR2K9jzEg0GZ
+    model: Dashboard
+  - id: nv2Fa-IQULDgiE0w1ezYR
+    model: DashboardTab
+  - id: Y6HLSgBj1iH6Ub-4twcjl
+    model: DashboardCard
+tabs:
+- created_at: '2026-03-06T07:58:57.537554Z'
+  entity_id: nv2Fa-IQULDgiE0w1ezYR
+  name: Tab 1
+  position: 0
+  serdes/meta:
+  - id: UO2bR3XwCxR2K9jzEg0GZ
+    model: Dashboard
+  - id: nv2Fa-IQULDgiE0w1ezYR
+    model: DashboardTab
+width: fixed

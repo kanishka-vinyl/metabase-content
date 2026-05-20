@@ -1,0 +1,398 @@
+name: Detailed list of registered holders
+entity_id: BFcIIpPhDvM_qVBR7qrp3
+created_at: '2026-03-09T11:33:44.307812Z'
+creator_id: rakeshb@sagasit.com
+display: table
+collection_id: LI3V8tBVohcdBITjv6vTx
+query_type: native
+database_id: Canned DB
+table_id:
+- Dev DB
+- datamart
+- a_registered_owner_canned_report
+parameters:
+- default: null
+  id: 451ac22b-76b2-4424-806f-d6bd5e8ef920
+  isMultiSelect: true
+  name: Date Range
+  position: 0
+  slug: Date_Range
+  target:
+  - dimension
+  - - template-tag
+    - Date_Range
+  type: date/all-options
+- id: 6d48c2b1-8618-4ed3-9b61-b4963101565f
+  isMultiSelect: true
+  name: Tasp ID
+  position: 4
+  slug: tasp_id
+  target:
+  - dimension
+  - - template-tag
+    - tasp_id
+  type: string/=
+- id: 7d47c2c7-fce3-43ca-8060-23fb2b60c0db
+  isMultiSelect: true
+  name: Issue Name
+  position: 2
+  slug: Issue_Name
+  target:
+  - dimension
+  - - template-tag
+    - Issue_Name
+  type: string/=
+- default: Active
+  id: 947adda2-bddc-4031-93a1-f2ca3ee28d20
+  isMultiSelect: false
+  name: Status
+  position: 5
+  slug: Status
+  target:
+  - variable
+  - - template-tag
+    - Status
+  type: string/=
+- id: 9567a5a1-01e6-4329-94ff-4b2aadf6b16d
+  isMultiSelect: true
+  name: Issuer ID
+  position: 3
+  slug: issuer_id
+  target:
+  - dimension
+  - - template-tag
+    - issuer_id
+  type: string/=
+- id: c9a799c4-0985-4a5d-a7d0-c01178ff6588
+  isMultiSelect: true
+  name: Issuer Name
+  position: 1
+  slug: Issuer_Name
+  target:
+  - dimension
+  - - template-tag
+    - Issuer_Name
+  type: string/=
+parameter_mappings: []
+dataset_query:
+  database: Canned DB
+  stages:
+  - native: |2
+       WITH as_of_date AS (
+        SELECT MAX(date) AS selected_date
+        FROM datamart.a_registered_owner_canned_report t
+        WHERE 1=1
+        [[AND {{Date_Range}}]]
+      ),
+      filtered_holdings AS (
+        SELECT *
+        FROM datamart.a_registered_owner_canned_report t
+        CROSS JOIN as_of_date a
+        WHERE
+          1=1
+          AND t.reversed_at IS NULL
+          AND t.date <= a.selected_date
+          [[AND {{Issuer_Name}}]]
+          [[AND {{Issue_Name}}]]
+          [[AND {{issuer_id}}]]
+          [[AND {{tasp_id}}]]
+          [[AND {{Date_Range}}]]
+
+      ),
+      active_holdings AS (
+        SELECT
+          fh.*,
+      CASE
+        WHEN fh.cancel_transaction_datetime IS NULL
+          OR fh.cancel_transaction_datetime::date > fh.selected_date
+        THEN 'Active'::text
+        ELSE 'Inactive'::text
+      END AS dynamic_status
+        FROM filtered_holdings fh
+      )
+
+
+
+      SELECT
+        ah.legal_name                             AS "Legal Name",
+        ah.holder_type                            AS "Holder Type",
+        ah.holder_subtype                         AS "Holder Subtype",
+        ah.registered_owner_tin                   AS "Registered Owner TIN",
+        ah.holding_type                           AS "Holding Type",
+        ah.drs_book_account_or_certificate_number AS "DRS/Book Certificate Number",
+        ah.issue_date                             AS "Issue Date",
+        ah.quantity                               AS "Quantity",
+        ah.position_stop                          AS "Position Stop",
+        ah.holder_stop                            AS "Holder Stop",
+        ah.legends_or_stops                       AS "Legends or Stops",
+        ah.acquisition_date                       AS "Acquisition Date",
+        ah.cost_basis                             AS "Cost Basis",
+        ah.gift_inheritance_indicator             AS "Gift/Inheritance Indicator",
+        ah.gift_fmv                               AS "Gift FMV",
+        ah.tax_country                            AS "Tax Country",
+        ah.street_address                         AS "Street Address",
+        ah.country                                AS "Country",
+        ah.state                                  AS "State",
+        ah.city                                   AS "City",
+        ah.postal_code                            AS "Postal Code",
+        ah.email_address                          AS "Email Address",
+        ah.phone_number                           AS "Phone Number",
+        ah.lost_holder                            AS "Lost Holder",
+        ah.date_of_last_contact                   AS "Date of Last Contact",
+        ah.affiliate                              AS "Affiliate",
+        ah.section_16_officer                     AS "Section 16 Officer",
+        ah.dynamic_status                         AS "Status",
+        ah.associated_user_name_1                 AS "Associated User Name 1",
+        ah.associated_user_tin_1                  AS "Associated User TIN 1",
+        ah.associated_user_name_2                 AS "Associated User Name 2",
+        ah.associated_user_tin_2                  AS "Associated User TIN 2",
+        ah.associated_user_name_3                 AS "Associated User Name 3",
+        ah.associated_user_tin_3                  AS "Associated User TIN 3",
+        ah.cancel_transaction_date                AS "Cancel Transaction Date",
+        ah.cancel_transaction_type                AS "Cancel Transaction Type",
+        ah.tax_lot_status                         AS "Tax Lot Status",
+        ah.holdings_range                         AS "Holdings Range",
+        ah.holdings_range_order                   AS "Holdings Range Order",
+        ah.corrected                              AS "Corrected",
+        ah.reported_to_irs                        AS "Reported to IRS",
+        ah.issue_name                             AS "Issue Name",
+        ah.cusip                                  AS "CUSIP",
+        ah.ticker                                 AS "Ticker",
+        ah.issuer_id                              AS "Issuer ID",
+        ah.issuer_legal_name                      AS "Issuer Legal Name",
+        ah.issuer_issue                           AS "Issuer Issue",
+        ah.tasp_name                              AS "TASP Name",
+        ah.tasp_id                                AS "TASP ID"
+      FROM active_holdings ah
+      WHERE
+        1=1
+        [[AND ah.dynamic_status = {{Status}}]]
+      ORDER BY
+        ah.legal_name ASC,
+        ah.issue_date ASC;
+    template-tags:
+      Date_Range:
+        alias: t.date
+        default: null
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_registered_owner_canned_report
+          - date
+        display-name: Date Range
+        id: 451ac22b-76b2-4424-806f-d6bd5e8ef920
+        name: Date_Range
+        type: dimension
+        widget-type: date/all-options
+      Issue_Name:
+        alias: t.issuer_issue
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_registered_owner_canned_report
+          - issuer_issue
+        display-name: Issue Name
+        id: 7d47c2c7-fce3-43ca-8060-23fb2b60c0db
+        name: Issue_Name
+        type: dimension
+        widget-type: string/=
+      Issuer_Name:
+        alias: t.issuer_legal_name
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_registered_owner_canned_report
+          - issuer_legal_name
+        display-name: Issuer Name
+        id: c9a799c4-0985-4a5d-a7d0-c01178ff6588
+        name: Issuer_Name
+        type: dimension
+        widget-type: string/=
+      Status:
+        default: Active
+        display-name: Status
+        id: 947adda2-bddc-4031-93a1-f2ca3ee28d20
+        name: Status
+        type: text
+      issuer_id:
+        alias: t.issuer_id
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_registered_owner_canned_report
+          - issuer_id
+        display-name: Issuer ID
+        id: 9567a5a1-01e6-4329-94ff-4b2aadf6b16d
+        name: issuer_id
+        type: dimension
+        widget-type: string/=
+      tasp_id:
+        alias: t.tasp_id
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_registered_owner_canned_report
+          - tasp_id
+        display-name: Tasp ID
+        id: 6d48c2b1-8618-4ed3-9b61-b4963101565f
+        name: tasp_id
+        type: dimension
+        widget-type: string/=
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+visualization_settings:
+  column_settings:
+    '["name","associated_user_name_1"]':
+      column_title: Associated User NAME 1
+    '["name","associated_user_name_2"]':
+      column_title: Associated User NAME 2
+    '["name","associated_user_name_3"]':
+      column_title: Associated User NAME 3
+    '["name","associated_user_tin_1"]':
+      column_title: Associated User TIN 1
+    '["name","associated_user_tin_2"]':
+      column_title: Associated User TIN 2
+    '["name","associated_user_tin_3"]':
+      column_title: Associated User TIN 3
+    '["name","drs_book_account_or_certificate_number"]':
+      column_title: DRS/Book Account/Certificate Number
+    '["name","gift_fmv"]':
+      column_title: Gift FMV
+    '["name","legends_or_stops"]':
+      column_title: Legends/Stops
+    '["name","registered_owner_tin"]':
+      column_title: Registered Owner TIN
+  table.cell_column: quantity
+  table.column_formatting:
+  - color: '#EF8C8C'
+    columns:
+    - Status
+    highlight_row: true
+    operator: '!='
+    type: single
+    value: Active
+  - color: '#88BF4D'
+    columns:
+    - Status
+    highlight_row: true
+    operator: =
+    type: single
+    value: Active
+  table.columns:
+  - enabled: true
+    name: Legal Name
+  - enabled: true
+    name: Holder Type
+  - enabled: true
+    name: Holder Subtype
+  - enabled: true
+    name: Registered Owner TIN
+  - enabled: true
+    name: Holding Type
+  - enabled: true
+    name: DRS/Book Certificate Number
+  - enabled: true
+    name: Issue Date
+  - enabled: true
+    name: Quantity
+  - enabled: true
+    name: Position Stop
+  - enabled: true
+    name: Holder Stop
+  - enabled: true
+    name: Legends or Stops
+  - enabled: true
+    name: Acquisition Date
+  - enabled: true
+    name: Cost Basis
+  - enabled: true
+    name: Gift/Inheritance Indicator
+  - enabled: true
+    name: Gift FMV
+  - enabled: true
+    name: Tax Country
+  - enabled: true
+    name: Street Address
+  - enabled: true
+    name: Country
+  - enabled: true
+    name: State
+  - enabled: true
+    name: City
+  - enabled: true
+    name: Postal Code
+  - enabled: true
+    name: Email Address
+  - enabled: true
+    name: Phone Number
+  - enabled: true
+    name: Lost Holder
+  - enabled: true
+    name: Date of Last Contact
+  - enabled: true
+    name: Affiliate
+  - enabled: true
+    name: Section 16 Officer
+  - enabled: false
+    name: Status
+  - enabled: true
+    name: Associated User Name 1
+  - enabled: true
+    name: Associated User TIN 1
+  - enabled: true
+    name: Associated User Name 2
+  - enabled: true
+    name: Associated User TIN 2
+  - enabled: true
+    name: Associated User Name 3
+  - enabled: true
+    name: Associated User TIN 3
+  - enabled: true
+    name: Cancel Transaction Date
+  - enabled: true
+    name: Cancel Transaction Type
+  - enabled: true
+    name: Tax Lot Status
+  - enabled: true
+    name: Holdings Range
+  - enabled: true
+    name: Holdings Range Order
+  - enabled: true
+    name: Corrected
+  - enabled: true
+    name: Reported to IRS
+  - enabled: true
+    name: CUSIP
+  - enabled: true
+    name: Ticker
+  - enabled: false
+    name: Issuer ID
+  - enabled: true
+    name: Issue Name
+  - enabled: true
+    name: Issuer Legal Name
+  - enabled: false
+    name: Issuer Issue
+  - enabled: true
+    name: TASP Name
+  - enabled: false
+    name: TASP ID
+  table.pivot_column: holding_type
+card_schema: 23
+serdes/meta:
+- id: BFcIIpPhDvM_qVBR7qrp3
+  label: detailed_list_of_registered_holders
+  model: Card
+dashboard_id: 1Y0p98bhhVWIviJpMTEap
+metabase_version: v1.58.7 (85988ba)
+type: question

@@ -1,0 +1,180 @@
+name: Mailing List Report
+entity_id: PIuB4mcYE50yq1HDVUD9B
+created_at: '2026-03-04T07:18:54.633527Z'
+creator_id: rakeshb@sagasit.com
+display: table
+collection_id: LI3V8tBVohcdBITjv6vTx
+query_type: native
+database_id: Canned DB
+parameters:
+- id: 17372d5f-9115-402e-b9a3-5db173e8da18
+  isMultiSelect: true
+  name: Issuer Name
+  position: 1
+  slug: Issuer_Name
+  target:
+  - dimension
+  - - template-tag
+    - Issuer_Name
+  type: string/=
+- id: 58a88ba5-5e8c-4857-99ff-20acbbcf10c3
+  isMultiSelect: true
+  name: Issue Name
+  position: 2
+  slug: Issue_Name
+  target:
+  - dimension
+  - - template-tag
+    - Issue_Name
+  type: string/=
+- id: 9583cd4a-ed97-420a-a1ec-1a748cbd6f26
+  isMultiSelect: true
+  name: Tasp ID
+  position: 4
+  slug: Tasp_id
+  target:
+  - dimension
+  - - template-tag
+    - Tasp_id
+  type: string/=
+- id: 9b458dd7-e7ef-4269-b081-96030d73ad7d
+  isMultiSelect: true
+  name: Issuer ID
+  position: 3
+  slug: Issuer_id
+  target:
+  - dimension
+  - - template-tag
+    - Issuer_id
+  type: string/=
+- default: null
+  id: cc369d26-72b6-4167-addf-711675c8342e
+  isMultiSelect: true
+  name: Date Range
+  position: 0
+  slug: Date_Range
+  target:
+  - dimension
+  - - template-tag
+    - Date_Range
+  type: date/all-options
+parameter_mappings: []
+dataset_query:
+  database: Canned DB
+  stages:
+  - native: "\nWITH as_of_date AS (\n  SELECT MAX(issue_date) AS selected_date\n  FROM datamart.a_mailing_list_report t\n  WHERE 1=1\n  [[AND {{Date_Range}}]]\n),\nfiltered_holdings AS (\n  SELECT\n    t.tax_lot_id,\n    t.stakeholder_id,\n    t.issue_id,\n    t.registered_owner_id,\n    t.legal_name,\n    t.shares_held,\n    t.cancel_transaction_date,\n    t.issue_date,\n    t.mailing_address,\n    t.state,\n    t.mailing_country,\n    t.tax_country,\n    t.email_address,\n    t.email_consent,\n    t.issue_name,\n    t.cusip,\n    t.ticker,\n    t.issuer_id,\n    t.issuer_legal_name,\n    t.tasp_id,\n    t.issuer_issue,\n    t.tasp_name\n  FROM\n    datamart.a_mailing_list_report t\n  WHERE\n    1=1\n    AND t.reversed_at IS NULL\n    AND t.transaction_type <> 'CANCELLATION'\n    AND t.tax_lot_is_deleted IS NOT TRUE\n    [[AND {{Issuer_Name}}]]\n    [[AND {{Issue_Name}}]]\n    [[AND {{Date_Range}}]]\n\t[[AND {{Issuer_id}}]]\n    [[AND {{Tasp_id}}]]\n\t\n),\n-- Only keep active lots as of the selected date\nactive_holdings AS (\n  SELECT fh.*\n  FROM filtered_holdings fh\n  CROSS JOIN as_of_date a\n  WHERE\n    fh.cancel_transaction_date IS NULL\n    OR NULLIF(fh.cancel_transaction_date, '')::date > a.selected_date\n),\n-- Aggregate shares per registered owner per issue\naggregated_holdings AS (\n  SELECT\n    ah.issue_id,\n    ah.registered_owner_id,\n    ah.issue_name,\n    ah.issuer_issue,\n\tah.issuer_id,\n    ah.issuer_legal_name,\n\tah.tasp_id,\n    ah.tasp_name,\n    ah.cusip,\n    ah.ticker,\n    SUM(ah.shares_held) AS total_shares_held\n  FROM active_holdings ah\n  GROUP BY\n    ah.issue_id,\n    ah.registered_owner_id,\n    ah.issue_name,\n    ah.issuer_issue,\n\tah.issuer_id,\n    ah.issuer_legal_name,\n\tah.tasp_id,\n    ah.tasp_name,\n    ah.cusip,\n    ah.ticker\n\n),\n-- Get latest non-quantity details per registered owner per issue\nlatest_details AS (\n  SELECT DISTINCT ON (\n      d.issue_id,\n      d.registered_owner_id\n    )\n    d.issue_id,\n    d.registered_owner_id,\n    d.legal_name,\n    d.mailing_address,\n    d.state,\n    d.mailing_country,\n    d.tax_country,\n    d.email_address,\n    d.email_consent\n  FROM datamart.a_mailing_list_report d\n  WHERE\n    d.reversed_at IS NULL\n    AND d.transaction_type <> 'CANCELLATION'\n    AND d.tax_lot_is_deleted IS NOT TRUE\n  ORDER BY\n    d.issue_id,\n    d.registered_owner_id,\n    d.issue_date DESC\n)\nSELECT\n  ld.legal_name                             AS \"Registered Owner Legal Name\",\n  ld.mailing_address                        AS \"Mailing Address\",\n  ld.state                                  AS \"State\",\n  ld.mailing_country                        AS \"Mailing Country\",\n  ld.tax_country                            AS \"Tax Country\",\n  ld.email_address                          AS \"Email Address\",\n  ld.email_consent                          AS \"Email Consent\",\n  ah.total_shares_held                      AS \"Shares Held\",\n  ah.cusip                                  AS \"CUSIP\",\n  ah.ticker                                 AS \"Ticker\",\n  ah.issue_name                             AS \"Issue Name\",\n  ah.issuer_issue                           AS \"Issuer Issue\",\n  ah.issuer_legal_name                      AS \"Issuer Legal Name\",\n  ah.tasp_name                              AS \"TASP Name\",\n  ah.issuer_id                              AS \"issuer_id\",\n  ah.tasp_id                                AS \"tasp_id\"\nFROM aggregated_holdings ah\nLEFT JOIN latest_details ld\n  ON  ld.issue_id            = ah.issue_id\n  AND ld.registered_owner_id = ah.registered_owner_id\nORDER BY\n  ld.legal_name ASC,\n  ah.issue_name ASC;"
+    template-tags:
+      Date_Range:
+        alias: t.issue_date
+        default: null
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_mailing_list_report
+          - issue_date
+        display-name: Date Range
+        id: cc369d26-72b6-4167-addf-711675c8342e
+        name: Date_Range
+        type: dimension
+        widget-type: date/all-options
+      Issue_Name:
+        alias: t.issuer_issue
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_mailing_list_report
+          - issuer_issue
+        display-name: Issue Name
+        id: 58a88ba5-5e8c-4857-99ff-20acbbcf10c3
+        name: Issue_Name
+        type: dimension
+        widget-type: string/=
+      Issuer_Name:
+        alias: t.issuer_legal_name
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_mailing_list_report
+          - issuer_legal_name
+        display-name: Issuer Name
+        id: 17372d5f-9115-402e-b9a3-5db173e8da18
+        name: Issuer_Name
+        type: dimension
+        widget-type: string/=
+      Issuer_id:
+        alias: t.issuer_id
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_mailing_list_report
+          - issuer_id
+        display-name: Issuer ID
+        id: 9b458dd7-e7ef-4269-b081-96030d73ad7d
+        name: Issuer_id
+        type: dimension
+        widget-type: string/=
+      Tasp_id:
+        alias: t.tasp_id
+        dimension:
+        - field
+        - {}
+        - - Canned DB
+          - datamart
+          - a_mailing_list_report
+          - tasp_id
+        display-name: Tasp ID
+        id: 9583cd4a-ed97-420a-a1ec-1a748cbd6f26
+        name: Tasp_id
+        type: dimension
+        widget-type: string/=
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  table.cell_column: Shares Held
+  table.columns:
+  - enabled: true
+    name: Registered Owner Legal Name
+  - enabled: true
+    name: Shares Held
+  - enabled: true
+    name: Issue Name
+  - enabled: true
+    name: Email Address
+  - enabled: true
+    name: Email Consent
+  - enabled: true
+    name: Mailing Address
+  - enabled: false
+    name: State
+  - enabled: false
+    name: Mailing Country
+  - enabled: false
+    name: Tax Country
+  - enabled: false
+    name: CUSIP
+  - enabled: false
+    name: Ticker
+  - enabled: false
+    name: Issuer Issue
+  - enabled: false
+    name: Issuer Legal Name
+  - enabled: false
+    name: TASP Name
+  table.pivot_column: Email Consent
+card_schema: 23
+serdes/meta:
+- id: PIuB4mcYE50yq1HDVUD9B
+  label: mailing_list_report
+  model: Card
+dashboard_id: BwFYIVnsEJLhXG4TLlF7o
+metabase_version: v1.58.7 (85988ba)
+type: question

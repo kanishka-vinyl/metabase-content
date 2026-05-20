@@ -1,0 +1,55 @@
+name: Holder Stop Report
+entity_id: HH7sJy1ASZTaln0pbFCCw
+created_at: '2026-01-22T05:11:42.130221Z'
+creator_id: rakeshb@sagasit.com
+display: table
+collection_id: -VKTLb5siVc_YRsoik1St
+query_type: query
+database_id: Dev DB
+table_id:
+- Dev DB
+- datamart
+- a_registered_owner_detailed_report
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Dev DB
+  stages:
+  - aggregation:
+    - - sum
+      - {}
+      - - field
+        - base-type: type/Decimal
+          effective-type: type/Decimal
+        - - Dev DB
+          - datamart
+          - a_registered_owner_detailed_report
+          - quantity
+    breakout:
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_stop
+    source-table:
+    - Dev DB
+    - datamart
+    - a_registered_owner_detailed_report
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings:
+    '["name","sum"]':
+      column_title: Total Quantity
+  table.cell_column: sum
+  table.pivot_column: holder_stop
+card_schema: 23
+serdes/meta:
+- id: HH7sJy1ASZTaln0pbFCCw
+  label: holder_stop_report
+  model: Card
+dashboard_id: PYAJKnpZ-El9vq-14-TEC
+metabase_version: v1.58.1 (7fbf305)
+type: question

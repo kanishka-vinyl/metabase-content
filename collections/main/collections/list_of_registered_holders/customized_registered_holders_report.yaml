@@ -1,0 +1,1622 @@
+name: Customized Registered Holders Report
+entity_id: PYAJKnpZ-El9vq-14-TEC
+created_at: '2026-01-22T05:11:42.130221Z'
+creator_id: rakeshb@sagasit.com
+collection_id: -VKTLb5siVc_YRsoik1St
+parameters:
+- id: 2dec5c63
+  name: Issue Date
+  position: 2
+  sectionId: date
+  slug: issue_date
+  type: date/all-options
+- id: 35e60a3b
+  name: Range
+  position: 9
+  sectionId: number
+  slug: range
+  type: number/between
+  values_query_type: list
+- id: 4fa677f9
+  name: Position Stop
+  position: 10
+  sectionId: string
+  slug: position_stop
+  type: string/=
+- id: 68bd8572
+  name: Registered Holder
+  position: 3
+  sectionId: string
+  slug: registered_holder
+  type: string/=
+- default:
+  - Active
+  id: 762c69d8
+  name: Status
+  position: 4
+  required: true
+  sectionId: string
+  slug: status
+  type: string/=
+- filteringParameters:
+  - a9b6f0a7
+  - f23a1815
+  - 2dec5c63
+  - 762c69d8
+  id: '96570234'
+  name: Tax Lot Status
+  position: 8
+  sectionId: string
+  slug: tax_lot_status
+  type: string/=
+- id: 9d78f67e
+  name: Country
+  position: 12
+  sectionId: location
+  slug: country
+  type: string/=
+- filteringParameters:
+  - a9b6f0a7
+  - f23a1815
+  - 2dec5c63
+  - 762c69d8
+  id: a102cbc8
+  name: Legends
+  position: 7
+  sectionId: string
+  slug: legends
+  type: string/contains
+  values_query_type: list
+- filteringParameters: []
+  id: a9b6f0a7
+  name: Issuer Name
+  position: 0
+  sectionId: string
+  slug: issuer_name
+  type: string/=
+- filteringParameters:
+  - a9b6f0a7
+  - f23a1815
+  - 2dec5c63
+  - 762c69d8
+  id: bdf24223
+  name: Holder Type
+  position: 5
+  sectionId: string
+  slug: holder_type
+  type: string/=
+- filteringParameters:
+  - a9b6f0a7
+  - f23a1815
+  - 2dec5c63
+  - 762c69d8
+  id: cbb6bdf0
+  name: Holding Type
+  position: 6
+  sectionId: string
+  slug: holding_type
+  type: string/=
+- filteringParameters:
+  - a9b6f0a7
+  id: f23a1815
+  name: Issue name
+  position: 1
+  sectionId: string
+  slug: issue_name
+  type: string/=
+- id: fcdf78ab
+  name: Holder Stop
+  position: 11
+  sectionId: string
+  slug: holder_stop
+  type: string/=
+serdes/meta:
+- id: PYAJKnpZ-El9vq-14-TEC
+  label: customized_registered_holders_report
+  model: Dashboard
+dashcards:
+- entity_id: w8yd7uvyNlVhw7_pqg4nw
+  created_at: '2026-01-22T05:11:42.130221Z'
+  row: 0
+  col: 0
+  size_x: 4
+  size_y: 2
+  dashboard_tab_id:
+  - PYAJKnpZ-El9vq-14-TEC
+  - JJBEkPd32N4u4QZ0ifCfe
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: |
+      ![logo](https://raw.githubusercontent.com/harshaf87/Images/main/ve.png)
+    virtual_card:
+      archived: false
+      display: text
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: JJBEkPd32N4u4QZ0ifCfe
+    model: DashboardTab
+  - id: w8yd7uvyNlVhw7_pqg4nw
+    model: DashboardCard
+- entity_id: BsDZA-LxXsFvF1QAL_f0A
+  created_at: '2026-01-22T05:11:42.130221Z'
+  row: 0
+  col: 4
+  size_x: 20
+  size_y: 1
+  dashboard_tab_id:
+  - PYAJKnpZ-El9vq-14-TEC
+  - JJBEkPd32N4u4QZ0ifCfe
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    dashcard.background: false
+    text: Customized List of Registered Holders Report
+    virtual_card:
+      archived: false
+      display: heading
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: JJBEkPd32N4u4QZ0ifCfe
+    model: DashboardTab
+  - id: BsDZA-LxXsFvF1QAL_f0A
+    model: DashboardCard
+- entity_id: K-RXe5dXQNGSfWHikyN0e
+  created_at: '2026-01-22T05:11:42.130221Z'
+  row: 1
+  col: 4
+  size_x: 20
+  size_y: 1
+  dashboard_tab_id:
+  - PYAJKnpZ-El9vq-14-TEC
+  - JJBEkPd32N4u4QZ0ifCfe
+  inline_parameters: []
+  parameter_mappings:
+  - parameter_id: a9b6f0a7
+    target:
+    - text-tag
+    - Issuer
+  - parameter_id: f23a1815
+    target:
+    - text-tag
+    - Issue
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: 'For Issuer - **{{Issuer}}**  |  For Issue - **{{Issue}}**  '
+    virtual_card:
+      archived: false
+      display: text
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: JJBEkPd32N4u4QZ0ifCfe
+    model: DashboardTab
+  - id: K-RXe5dXQNGSfWHikyN0e
+    model: DashboardCard
+- entity_id: O226F2OmVClEB7S2c7YLe
+  card_id: hOlqoBRtKJzddNjtPVEaR
+  created_at: '2026-03-20T10:11:39.791723Z'
+  row: 2
+  col: 0
+  size_x: 24
+  size_y: 9
+  dashboard_tab_id:
+  - PYAJKnpZ-El9vq-14-TEC
+  - JJBEkPd32N4u4QZ0ifCfe
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: 2dec5c63
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issue_date
+      - base-type: type/Date
+    - stage-number: 0
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: 35e60a3b
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - quantity
+      - base-type: type/Decimal
+    - stage-number: 0
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: 4fa677f9
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - position_stop
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: 68bd8572
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: 762c69d8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: '96570234'
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - tax_lot_status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: 9d78f67e
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - country
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: a102cbc8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legends
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: a9b6f0a7
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: bdf24223
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: cbb6bdf0
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holding_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: f23a1815
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_issue
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: hOlqoBRtKJzddNjtPVEaR
+    parameter_id: fcdf78ab
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_stop
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings:
+      '["name","legal_name"]':
+        click_behavior:
+          linkTemplate: https://en.wikipedia.org/wiki/{{registered_owner_id}}
+          linkTextTemplate: '{{legal_name}}'
+          linkType: url
+          type: link
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: JJBEkPd32N4u4QZ0ifCfe
+    model: DashboardTab
+  - id: O226F2OmVClEB7S2c7YLe
+    model: DashboardCard
+- entity_id: 2hF9sa6py5xc8n1M_jOtT
+  card_id: 2sz777LfNAlBrA91hcdpB
+  created_at: '2026-01-22T05:11:42.130221Z'
+  row: 11
+  col: 0
+  size_x: 12
+  size_y: 6
+  dashboard_tab_id:
+  - PYAJKnpZ-El9vq-14-TEC
+  - JJBEkPd32N4u4QZ0ifCfe
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 2sz777LfNAlBrA91hcdpB
+    parameter_id: 2dec5c63
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issue_date
+      - base-type: type/Date
+    - stage-number: 0
+  - card_id: 2sz777LfNAlBrA91hcdpB
+    parameter_id: 35e60a3b
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - quantity
+      - base-type: type/Decimal
+    - stage-number: 0
+  - card_id: 2sz777LfNAlBrA91hcdpB
+    parameter_id: 4fa677f9
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - position_stop
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 2sz777LfNAlBrA91hcdpB
+    parameter_id: 762c69d8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 2sz777LfNAlBrA91hcdpB
+    parameter_id: '96570234'
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - tax_lot_status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 2sz777LfNAlBrA91hcdpB
+    parameter_id: 9d78f67e
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - country
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 2sz777LfNAlBrA91hcdpB
+    parameter_id: a102cbc8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legends
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 2sz777LfNAlBrA91hcdpB
+    parameter_id: a9b6f0a7
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 2sz777LfNAlBrA91hcdpB
+    parameter_id: bdf24223
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 2sz777LfNAlBrA91hcdpB
+    parameter_id: cbb6bdf0
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holding_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 2sz777LfNAlBrA91hcdpB
+    parameter_id: f23a1815
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_issue
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 2sz777LfNAlBrA91hcdpB
+    parameter_id: fcdf78ab
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_stop
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    card.hide_empty: true
+    column_settings:
+      '["name","count"]':
+        column_title: Number of Holdings
+      '["name","holdings_range_order"]':
+        pivot_table.column_sort_order: ascending
+      '["name","sum"]':
+        column_title: Total Quantity
+    pivot_table.collapsed_rows:
+      rows:
+      - holdings_range
+      - legal_name
+      value:
+      - '1'
+    pivot_table.column_split:
+      columns: []
+      rows:
+      - holdings_range
+      - legal_name
+      values:
+      - count
+      - sum
+    pivot_table.column_widths:
+      leftHeaderWidths:
+      - 131
+      - 240
+      - 166
+      totalLeftHeaderWidths: 537
+      valueHeaderWidths:
+        '0': 141
+        '1': 137
+    table.cell_column: count
+    table.columns:
+    - enabled: false
+      name: holdings_range_order
+    - enabled: true
+      name: holdings_range
+    - enabled: true
+      name: count
+    - enabled: true
+      name: sum
+    table.pivot_column: holdings_range
+    table.row_index: false
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: JJBEkPd32N4u4QZ0ifCfe
+    model: DashboardTab
+  - id: 2hF9sa6py5xc8n1M_jOtT
+    model: DashboardCard
+- entity_id: DEC2nGglioCZSo--e54Ju
+  card_id: WkXqMX5uBqu_Od9vNGv6M
+  created_at: '2026-01-22T05:11:42.130221Z'
+  row: 11
+  col: 12
+  size_x: 12
+  size_y: 6
+  dashboard_tab_id:
+  - PYAJKnpZ-El9vq-14-TEC
+  - JJBEkPd32N4u4QZ0ifCfe
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: WkXqMX5uBqu_Od9vNGv6M
+    parameter_id: 2dec5c63
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issue_date
+      - base-type: type/Date
+    - stage-number: 0
+  - card_id: WkXqMX5uBqu_Od9vNGv6M
+    parameter_id: 35e60a3b
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - quantity
+      - base-type: type/Decimal
+    - stage-number: 0
+  - card_id: WkXqMX5uBqu_Od9vNGv6M
+    parameter_id: 4fa677f9
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - position_stop
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: WkXqMX5uBqu_Od9vNGv6M
+    parameter_id: 762c69d8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: WkXqMX5uBqu_Od9vNGv6M
+    parameter_id: '96570234'
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - tax_lot_status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: WkXqMX5uBqu_Od9vNGv6M
+    parameter_id: 9d78f67e
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - country
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: WkXqMX5uBqu_Od9vNGv6M
+    parameter_id: a102cbc8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legends
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: WkXqMX5uBqu_Od9vNGv6M
+    parameter_id: a9b6f0a7
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: WkXqMX5uBqu_Od9vNGv6M
+    parameter_id: bdf24223
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: WkXqMX5uBqu_Od9vNGv6M
+    parameter_id: cbb6bdf0
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holding_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: WkXqMX5uBqu_Od9vNGv6M
+    parameter_id: f23a1815
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_issue
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: WkXqMX5uBqu_Od9vNGv6M
+    parameter_id: fcdf78ab
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_stop
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    card.hide_empty: true
+    click_behavior:
+      parameterMapping:
+        9d78f67e:
+          id: 9d78f67e
+          source:
+            id: country
+            name: Country
+            type: column
+          target:
+            id: 9d78f67e
+            type: parameter
+      type: crossfilter
+    column_settings: null
+    map.region: world_countries
+    map.type: region
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: JJBEkPd32N4u4QZ0ifCfe
+    model: DashboardTab
+  - id: DEC2nGglioCZSo--e54Ju
+    model: DashboardCard
+- entity_id: mm0zCoWAEnvGKO0n8wE5x
+  created_at: '2026-01-22T05:11:42.130221Z'
+  row: 17
+  col: 0
+  size_x: 24
+  size_y: 1
+  dashboard_tab_id:
+  - PYAJKnpZ-El9vq-14-TEC
+  - JJBEkPd32N4u4QZ0ifCfe
+  inline_parameters: []
+  parameter_mappings:
+  - parameter_id: 68bd8572
+    target:
+    - text-tag
+    - Name
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: '## RO - **{{Name}}**'
+    virtual_card:
+      archived: false
+      display: text
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: JJBEkPd32N4u4QZ0ifCfe
+    model: DashboardTab
+  - id: mm0zCoWAEnvGKO0n8wE5x
+    model: DashboardCard
+- entity_id: 8P-JfOG752ObGPx17lYCG
+  card_id: 6bXx67kbST5WVEAr2LeLm
+  created_at: '2026-01-22T05:11:42.130221Z'
+  row: 0
+  col: 0
+  size_x: 24
+  size_y: 11
+  dashboard_tab_id:
+  - PYAJKnpZ-El9vq-14-TEC
+  - t4dOmeS0D21mjdreG3GmW
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: 2dec5c63
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - date
+      - base-type: type/Date
+    - stage-number: 0
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: 35e60a3b
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - quantity
+      - base-type: type/Decimal
+    - stage-number: 0
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: 4fa677f9
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - position_stop
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: 68bd8572
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - associated_user_name_1
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: 762c69d8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: '96570234'
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - tax_lot_status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: 9d78f67e
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - country
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: a102cbc8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legends
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: a9b6f0a7
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: bdf24223
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: cbb6bdf0
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holding_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: f23a1815
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_issue
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 6bXx67kbST5WVEAr2LeLm
+    parameter_id: fcdf78ab
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_stop
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings:
+      '["name","legal_name"]': {}
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: t4dOmeS0D21mjdreG3GmW
+    model: DashboardTab
+  - id: 8P-JfOG752ObGPx17lYCG
+    model: DashboardCard
+- entity_id: -RMP1kCooB-IhglRg74qg
+  card_id: yX6uBH2cPHEynrfx1OxpV
+  created_at: '2026-01-22T05:11:42.130221Z'
+  row: 11
+  col: 0
+  size_x: 13
+  size_y: 8
+  dashboard_tab_id:
+  - PYAJKnpZ-El9vq-14-TEC
+  - t4dOmeS0D21mjdreG3GmW
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: yX6uBH2cPHEynrfx1OxpV
+    parameter_id: 2dec5c63
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - date
+      - base-type: type/Date
+    - stage-number: 0
+  - card_id: yX6uBH2cPHEynrfx1OxpV
+    parameter_id: 35e60a3b
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - quantity
+      - base-type: type/Decimal
+    - stage-number: 0
+  - card_id: yX6uBH2cPHEynrfx1OxpV
+    parameter_id: 68bd8572
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - associated_user_name_1
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: yX6uBH2cPHEynrfx1OxpV
+    parameter_id: 762c69d8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: yX6uBH2cPHEynrfx1OxpV
+    parameter_id: '96570234'
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - tax_lot_status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: yX6uBH2cPHEynrfx1OxpV
+    parameter_id: 9d78f67e
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - country
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: yX6uBH2cPHEynrfx1OxpV
+    parameter_id: a102cbc8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legends
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: yX6uBH2cPHEynrfx1OxpV
+    parameter_id: a9b6f0a7
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: yX6uBH2cPHEynrfx1OxpV
+    parameter_id: bdf24223
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: yX6uBH2cPHEynrfx1OxpV
+    parameter_id: cbb6bdf0
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holding_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: yX6uBH2cPHEynrfx1OxpV
+    parameter_id: f23a1815
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_issue
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: yX6uBH2cPHEynrfx1OxpV
+    parameter_id: fcdf78ab
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_stop
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: t4dOmeS0D21mjdreG3GmW
+    model: DashboardTab
+  - id: -RMP1kCooB-IhglRg74qg
+    model: DashboardCard
+- entity_id: J78Me3cv9YKzGgG5zm_li
+  card_id: HH7sJy1ASZTaln0pbFCCw
+  created_at: '2026-01-22T05:11:42.130221Z'
+  row: 11
+  col: 13
+  size_x: 11
+  size_y: 4
+  dashboard_tab_id:
+  - PYAJKnpZ-El9vq-14-TEC
+  - t4dOmeS0D21mjdreG3GmW
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: HH7sJy1ASZTaln0pbFCCw
+    parameter_id: 2dec5c63
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - date
+      - base-type: type/Date
+    - stage-number: 0
+  - card_id: HH7sJy1ASZTaln0pbFCCw
+    parameter_id: 35e60a3b
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - quantity
+      - base-type: type/Decimal
+    - stage-number: 0
+  - card_id: HH7sJy1ASZTaln0pbFCCw
+    parameter_id: 68bd8572
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - associated_user_name_1
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: HH7sJy1ASZTaln0pbFCCw
+    parameter_id: 762c69d8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: HH7sJy1ASZTaln0pbFCCw
+    parameter_id: '96570234'
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - tax_lot_status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: HH7sJy1ASZTaln0pbFCCw
+    parameter_id: 9d78f67e
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - country
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: HH7sJy1ASZTaln0pbFCCw
+    parameter_id: a102cbc8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legends
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: HH7sJy1ASZTaln0pbFCCw
+    parameter_id: a9b6f0a7
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: HH7sJy1ASZTaln0pbFCCw
+    parameter_id: bdf24223
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: HH7sJy1ASZTaln0pbFCCw
+    parameter_id: cbb6bdf0
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holding_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: HH7sJy1ASZTaln0pbFCCw
+    parameter_id: f23a1815
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_issue
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: HH7sJy1ASZTaln0pbFCCw
+    parameter_id: fcdf78ab
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_stop
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: t4dOmeS0D21mjdreG3GmW
+    model: DashboardTab
+  - id: J78Me3cv9YKzGgG5zm_li
+    model: DashboardCard
+- entity_id: UFDXanVHTCu3a_neu9tON
+  card_id: n2r_awx9NDfHF9NvhYJmc
+  created_at: '2026-01-22T05:11:42.130221Z'
+  row: 15
+  col: 13
+  size_x: 11
+  size_y: 4
+  dashboard_tab_id:
+  - PYAJKnpZ-El9vq-14-TEC
+  - t4dOmeS0D21mjdreG3GmW
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: n2r_awx9NDfHF9NvhYJmc
+    parameter_id: 2dec5c63
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - date
+      - base-type: type/Date
+    - stage-number: 0
+  - card_id: n2r_awx9NDfHF9NvhYJmc
+    parameter_id: 35e60a3b
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - quantity
+      - base-type: type/Decimal
+    - stage-number: 0
+  - card_id: n2r_awx9NDfHF9NvhYJmc
+    parameter_id: 68bd8572
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - associated_user_name_1
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: n2r_awx9NDfHF9NvhYJmc
+    parameter_id: 762c69d8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: n2r_awx9NDfHF9NvhYJmc
+    parameter_id: '96570234'
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - tax_lot_status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: n2r_awx9NDfHF9NvhYJmc
+    parameter_id: 9d78f67e
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - country
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: n2r_awx9NDfHF9NvhYJmc
+    parameter_id: a102cbc8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legends
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: n2r_awx9NDfHF9NvhYJmc
+    parameter_id: a9b6f0a7
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: n2r_awx9NDfHF9NvhYJmc
+    parameter_id: bdf24223
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: n2r_awx9NDfHF9NvhYJmc
+    parameter_id: cbb6bdf0
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holding_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: n2r_awx9NDfHF9NvhYJmc
+    parameter_id: f23a1815
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_issue
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: n2r_awx9NDfHF9NvhYJmc
+    parameter_id: fcdf78ab
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_stop
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: t4dOmeS0D21mjdreG3GmW
+    model: DashboardTab
+  - id: UFDXanVHTCu3a_neu9tON
+    model: DashboardCard
+- entity_id: p-3EYshp5Dm_GNCrMpZ9r
+  card_id: IObfAdXQZpUg6IQWFusx0
+  created_at: '2026-01-22T05:11:42.130221Z'
+  row: 0
+  col: 0
+  size_x: 24
+  size_y: 24
+  dashboard_tab_id:
+  - PYAJKnpZ-El9vq-14-TEC
+  - v6tjH-B-h9DFMOQUQ8Q2c
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: 2dec5c63
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - date
+      - base-type: type/Date
+    - stage-number: 0
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: 35e60a3b
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - quantity
+      - base-type: type/Decimal
+    - stage-number: 0
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: 4fa677f9
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - position_stop
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: 68bd8572
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - associated_user_name_1
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: 762c69d8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: '96570234'
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - tax_lot_status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: 9d78f67e
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - country
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: a102cbc8
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legends
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: a9b6f0a7
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: bdf24223
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: cbb6bdf0
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holding_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: f23a1815
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - issuer_issue
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: IObfAdXQZpUg6IQWFusx0
+    parameter_id: fcdf78ab
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holder_stop
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    card.hide_empty: true
+    column_settings: null
+    pivot_table.column_split:
+      columns: []
+      rows:
+      - legal_name
+      - holder_type
+      - registered_owner_tin
+      - holding_type
+      - legends_or_stops
+      - email_address
+      values:
+      - sum
+      - sum_2
+    pivot_table.column_widths:
+      leftHeaderWidths:
+      - 167
+      - 111
+      - 164
+      - 118
+      - 139
+      - 240
+      totalLeftHeaderWidths: 939
+      valueHeaderWidths:
+        '0': 139
+        '1': 167
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: v6tjH-B-h9DFMOQUQ8Q2c
+    model: DashboardTab
+  - id: p-3EYshp5Dm_GNCrMpZ9r
+    model: DashboardCard
+tabs:
+- created_at: '2026-01-22T05:11:42.130221Z'
+  entity_id: JJBEkPd32N4u4QZ0ifCfe
+  name: Tax Lot Details
+  position: 0
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: JJBEkPd32N4u4QZ0ifCfe
+    model: DashboardTab
+- created_at: '2026-01-22T05:11:42.130221Z'
+  entity_id: t4dOmeS0D21mjdreG3GmW
+  name: Restricted Securities/Stops
+  position: 1
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: t4dOmeS0D21mjdreG3GmW
+    model: DashboardTab
+- created_at: '2026-01-22T05:11:42.130221Z'
+  entity_id: v6tjH-B-h9DFMOQUQ8Q2c
+  name: Position Summary
+  position: 2
+  serdes/meta:
+  - id: PYAJKnpZ-El9vq-14-TEC
+    model: Dashboard
+  - id: v6tjH-B-h9DFMOQUQ8Q2c
+    model: DashboardTab
+width: full

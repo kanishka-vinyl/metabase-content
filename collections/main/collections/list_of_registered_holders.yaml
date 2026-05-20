@@ -1,0 +1,10 @@
+name: List of Registered Holders
+entity_id: -VKTLb5siVc_YRsoik1St
+slug: list_of_registered_holders
+created_at: '2025-12-16T05:48:17.740256Z'
+parent_id: NVMSl-ynMzAMY9IGf8DOp
+serdes/meta:
+- id: -VKTLb5siVc_YRsoik1St
+  label: list_of_registered_holders
+  model: Collection
+is_remote_synced: true

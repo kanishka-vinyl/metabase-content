@@ -1,0 +1,10 @@
+name: Reserved Shares Report
+entity_id: 6XXlTdzYIYe6Al-2zHmJ6
+slug: reserved_shares_report
+created_at: '2026-01-22T05:33:58.628893Z'
+parent_id: NVMSl-ynMzAMY9IGf8DOp
+serdes/meta:
+- id: 6XXlTdzYIYe6Al-2zHmJ6
+  label: reserved_shares_report
+  model: Collection
+is_remote_synced: true

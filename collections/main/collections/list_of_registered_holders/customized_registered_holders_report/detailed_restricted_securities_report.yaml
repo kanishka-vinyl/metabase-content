@@ -1,0 +1,113 @@
+name: Detailed Restricted Securities Report
+entity_id: 6bXx67kbST5WVEAr2LeLm
+created_at: '2026-01-22T05:11:42.130221Z'
+creator_id: rakeshb@sagasit.com
+display: table
+collection_id: -VKTLb5siVc_YRsoik1St
+query_type: query
+database_id: Dev DB
+table_id:
+- Dev DB
+- datamart
+- a_registered_owner_detailed_report
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Dev DB
+  stages:
+  - fields:
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legal_name
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - holding_type
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - drs_book_account_or_certificate_number
+    - - field
+      - base-type: type/Decimal
+        effective-type: type/Decimal
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - quantity
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legends
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - street_address
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - country
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - state
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - city
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - postal_code
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - email_address
+    source-table:
+    - Dev DB
+    - datamart
+    - a_registered_owner_detailed_report
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  table.cell_column: quantity
+  table.pivot_column: holding_type
+card_schema: 23
+serdes/meta:
+- id: 6bXx67kbST5WVEAr2LeLm
+  label: detailed_restricted_securities_report
+  model: Card
+dashboard_id: PYAJKnpZ-El9vq-14-TEC
+metabase_version: v1.58.1 (7fbf305)
+type: question

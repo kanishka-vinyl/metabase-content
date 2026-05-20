@@ -1,0 +1,467 @@
+name: Customized Transaction Report
+entity_id: DA72qi7r8jXEJ6Ws3CX8P
+created_at: '2026-01-22T05:32:32.139978Z'
+creator_id: rakeshb@sagasit.com
+collection_id: A0yyQFxRX7Oq87bOoUmec
+parameters:
+- id: 1c9ebc5b
+  name: Holding Type Credit
+  position: 8
+  sectionId: string
+  slug: holding_type_credit
+  type: string/=
+- id: 2dbc44be
+  name: Issuer Name
+  position: 0
+  sectionId: string
+  slug: issuer_name
+  type: string/=
+- id: 3c760d55
+  name: Holding Type Debit
+  position: 6
+  sectionId: string
+  slug: holding_type_debit
+  type: string/=
+- id: 4b778eac
+  name: Reason Type
+  position: 5
+  sectionId: string
+  slug: reason_type
+  type: string/=
+- id: 6b0c0ff2
+  name: Type
+  position: 4
+  sectionId: string
+  slug: type
+  type: string/=
+- id: 6c658af6
+  name: Legends Credit
+  position: 9
+  sectionId: string
+  slug: legends_credit
+  type: string/=
+- filteringParameters:
+  - 2dbc44be
+  id: a63d52df
+  name: Issue Name
+  position: 1
+  sectionId: string
+  slug: issue_name
+  type: string/=
+- id: a90e1836
+  name: Legends Debit
+  position: 7
+  sectionId: string
+  slug: legends_debit
+  type: string/=
+- id: be39de4f
+  name: SEC Category
+  position: 3
+  sectionId: string
+  slug: sec_category
+  type: string/=
+- id: ca3829c7
+  name: Tax Lot Status
+  position: 10
+  sectionId: string
+  slug: tax_lot_status
+  type: string/=
+- id: e355a7fe
+  name: Date
+  position: 2
+  sectionId: date
+  slug: date
+  type: date/all-options
+serdes/meta:
+- id: DA72qi7r8jXEJ6Ws3CX8P
+  label: customized_transaction_report
+  model: Dashboard
+dashcards:
+- entity_id: Vby0YBduxjm9ZjLdh-wcF
+  created_at: '2026-01-22T05:32:32.139978Z'
+  row: 0
+  col: 0
+  size_x: 4
+  size_y: 2
+  dashboard_tab_id:
+  - DA72qi7r8jXEJ6Ws3CX8P
+  - hkjj0_zGSPdkxgIdMqWHz
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: |
+      ![logo](https://raw.githubusercontent.com/harshaf87/Images/main/ve.png)
+    virtual_card:
+      archived: false
+      display: text
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: DA72qi7r8jXEJ6Ws3CX8P
+    model: Dashboard
+  - id: hkjj0_zGSPdkxgIdMqWHz
+    model: DashboardTab
+  - id: Vby0YBduxjm9ZjLdh-wcF
+    model: DashboardCard
+- entity_id: BxD22ht7kS8NosuVkvZ7q
+  created_at: '2026-01-22T05:32:32.139978Z'
+  row: 0
+  col: 4
+  size_x: 20
+  size_y: 1
+  dashboard_tab_id:
+  - DA72qi7r8jXEJ6Ws3CX8P
+  - hkjj0_zGSPdkxgIdMqWHz
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    dashcard.background: false
+    text: Customized Transaction Report
+    virtual_card:
+      archived: false
+      display: heading
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: DA72qi7r8jXEJ6Ws3CX8P
+    model: Dashboard
+  - id: hkjj0_zGSPdkxgIdMqWHz
+    model: DashboardTab
+  - id: BxD22ht7kS8NosuVkvZ7q
+    model: DashboardCard
+- entity_id: 8_-k9oDl7P6cW27C8eROx
+  created_at: '2026-01-22T05:32:32.139978Z'
+  row: 1
+  col: 4
+  size_x: 20
+  size_y: 1
+  dashboard_tab_id:
+  - DA72qi7r8jXEJ6Ws3CX8P
+  - hkjj0_zGSPdkxgIdMqWHz
+  inline_parameters: []
+  parameter_mappings:
+  - parameter_id: 2dbc44be
+    target:
+    - text-tag
+    - Issuer_name
+  - parameter_id: a63d52df
+    target:
+    - text-tag
+    - Issue_Name
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: 'For Issuer - "**{{Issuer_name}}**"  |  For Issue - "**{{Issue_Name}}**"  '
+    virtual_card:
+      archived: false
+      display: text
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: DA72qi7r8jXEJ6Ws3CX8P
+    model: Dashboard
+  - id: hkjj0_zGSPdkxgIdMqWHz
+    model: DashboardTab
+  - id: 8_-k9oDl7P6cW27C8eROx
+    model: DashboardCard
+- entity_id: -r0L97c8go29e_YdZ4PGj
+  card_id: iwQLQa0x4sEquF_EzRfzQ
+  created_at: '2026-01-22T05:32:32.139978Z'
+  row: 2
+  col: 0
+  size_x: 24
+  size_y: 10
+  dashboard_tab_id:
+  - DA72qi7r8jXEJ6Ws3CX8P
+  - hkjj0_zGSPdkxgIdMqWHz
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: iwQLQa0x4sEquF_EzRfzQ
+    parameter_id: 1c9ebc5b
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - holding_type_credit
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: iwQLQa0x4sEquF_EzRfzQ
+    parameter_id: 2dbc44be
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: iwQLQa0x4sEquF_EzRfzQ
+    parameter_id: 3c760d55
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - holding_type_debit
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: iwQLQa0x4sEquF_EzRfzQ
+    parameter_id: 4b778eac
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - reason
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: iwQLQa0x4sEquF_EzRfzQ
+    parameter_id: 6b0c0ff2
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: iwQLQa0x4sEquF_EzRfzQ
+    parameter_id: 6c658af6
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - legends_credit
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: iwQLQa0x4sEquF_EzRfzQ
+    parameter_id: a63d52df
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - issue_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: iwQLQa0x4sEquF_EzRfzQ
+    parameter_id: a90e1836
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - legends_debit
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: iwQLQa0x4sEquF_EzRfzQ
+    parameter_id: be39de4f
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - sec_category
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: iwQLQa0x4sEquF_EzRfzQ
+    parameter_id: ca3829c7
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - tax_lot_status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: iwQLQa0x4sEquF_EzRfzQ
+    parameter_id: e355a7fe
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - issue_date
+      - base-type: type/Date
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: DA72qi7r8jXEJ6Ws3CX8P
+    model: Dashboard
+  - id: hkjj0_zGSPdkxgIdMqWHz
+    model: DashboardTab
+  - id: -r0L97c8go29e_YdZ4PGj
+    model: DashboardCard
+- entity_id: H_zOyOFG4cC3HZE-axxYo
+  card_id: SuJKmQKcHNITAfqmXSnZZ
+  created_at: '2026-01-22T05:32:32.139978Z'
+  row: 12
+  col: 0
+  size_x: 24
+  size_y: 8
+  dashboard_tab_id:
+  - DA72qi7r8jXEJ6Ws3CX8P
+  - hkjj0_zGSPdkxgIdMqWHz
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: SuJKmQKcHNITAfqmXSnZZ
+    parameter_id: 1c9ebc5b
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - holding_type_credit
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: SuJKmQKcHNITAfqmXSnZZ
+    parameter_id: 2dbc44be
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: SuJKmQKcHNITAfqmXSnZZ
+    parameter_id: 3c760d55
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - holding_type_debit
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: SuJKmQKcHNITAfqmXSnZZ
+    parameter_id: 4b778eac
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - reason
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: SuJKmQKcHNITAfqmXSnZZ
+    parameter_id: 6b0c0ff2
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: SuJKmQKcHNITAfqmXSnZZ
+    parameter_id: 6c658af6
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - legends_credit
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: SuJKmQKcHNITAfqmXSnZZ
+    parameter_id: a63d52df
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - issue_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: SuJKmQKcHNITAfqmXSnZZ
+    parameter_id: a90e1836
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - legends_debit
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: SuJKmQKcHNITAfqmXSnZZ
+    parameter_id: be39de4f
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - sec_category
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: SuJKmQKcHNITAfqmXSnZZ
+    parameter_id: ca3829c7
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - tax_lot_status
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: SuJKmQKcHNITAfqmXSnZZ
+    parameter_id: e355a7fe
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_transaction_report
+        - issue_date
+      - base-type: type/Date
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: DA72qi7r8jXEJ6Ws3CX8P
+    model: Dashboard
+  - id: hkjj0_zGSPdkxgIdMqWHz
+    model: DashboardTab
+  - id: H_zOyOFG4cC3HZE-axxYo
+    model: DashboardCard
+tabs:
+- created_at: '2026-01-22T05:32:32.139978Z'
+  entity_id: hkjj0_zGSPdkxgIdMqWHz
+  name: Transaction Details
+  position: 0
+  serdes/meta:
+  - id: DA72qi7r8jXEJ6Ws3CX8P
+    model: Dashboard
+  - id: hkjj0_zGSPdkxgIdMqWHz
+    model: DashboardTab
+width: full

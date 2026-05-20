@@ -1,0 +1,210 @@
+name: Certified List of Registered holders
+entity_id: z60ZKvOS3ZSX0MbBLHxpR
+created_at: '2026-03-02T05:13:54.035721Z'
+creator_id: rakeshb@sagasit.com
+collection_id: LI3V8tBVohcdBITjv6vTx
+parameters:
+- filteringParameters:
+  - 7409dc53
+  - b132bddf
+  - e9968e8a
+  id: 10446d8d
+  name: Issue Name
+  position: 1
+  sectionId: string
+  slug: issue_name
+  type: string/=
+- filteringParameters:
+  - b132bddf
+  - e9968e8a
+  id: 7409dc53
+  name: Issuer Name
+  position: 0
+  sectionId: string
+  slug: issuer_name
+  type: string/=
+  values_source_config: {}
+  values_source_type: null
+- filteringParameters:
+  - e9968e8a
+  id: b132bddf
+  name: Issuer Id
+  position: 3
+  sectionId: string
+  slug: issuer_id
+  type: string/=
+- id: e9968e8a
+  name: Tasp Id
+  position: 4
+  sectionId: string
+  slug: tasp_id
+  type: string/=
+- id: fc89659d
+  name: Date
+  position: 2
+  sectionId: date
+  slug: date
+  type: date/range
+serdes/meta:
+- id: z60ZKvOS3ZSX0MbBLHxpR
+  label: certified_list_of_registered_holders
+  model: Dashboard
+dashcards:
+- entity_id: NJJuILtUmQnHQdsT9z1AL
+  card_id: 7GUkgmEa57VKYWppu9Dz2
+  created_at: '2026-03-02T10:50:53.075435Z'
+  row: 0
+  col: 0
+  size_x: 13
+  size_y: 2
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 7GUkgmEa57VKYWppu9Dz2
+    parameter_id: 10446d8d
+    target:
+    - dimension
+    - - template-tag
+      - Issue_Name
+    - stage-number: 0
+  - card_id: 7GUkgmEa57VKYWppu9Dz2
+    parameter_id: 7409dc53
+    target:
+    - dimension
+    - - template-tag
+      - Issuer_Name
+    - stage-number: 0
+  - card_id: 7GUkgmEa57VKYWppu9Dz2
+    parameter_id: b132bddf
+    target:
+    - dimension
+    - - template-tag
+      - Issuer_Id
+    - stage-number: 0
+  - card_id: 7GUkgmEa57VKYWppu9Dz2
+    parameter_id: e9968e8a
+    target:
+    - dimension
+    - - template-tag
+      - Tasp_Id
+    - stage-number: 0
+  - card_id: 7GUkgmEa57VKYWppu9Dz2
+    parameter_id: fc89659d
+    target:
+    - dimension
+    - - template-tag
+      - Date_Range
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: z60ZKvOS3ZSX0MbBLHxpR
+    model: Dashboard
+  - id: NJJuILtUmQnHQdsT9z1AL
+    model: DashboardCard
+- entity_id: JiV597dMA78mfYBPdT41h
+  card_id: liCaAf7Yr-I7kLjyVCdc9
+  created_at: '2026-03-02T10:54:20.13455Z'
+  row: 0
+  col: 13
+  size_x: 11
+  size_y: 2
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: liCaAf7Yr-I7kLjyVCdc9
+    parameter_id: 10446d8d
+    target:
+    - dimension
+    - - template-tag
+      - Issue_Name
+    - stage-number: 0
+  - card_id: liCaAf7Yr-I7kLjyVCdc9
+    parameter_id: 7409dc53
+    target:
+    - dimension
+    - - template-tag
+      - Issuer_Name
+    - stage-number: 0
+  - card_id: liCaAf7Yr-I7kLjyVCdc9
+    parameter_id: b132bddf
+    target:
+    - dimension
+    - - template-tag
+      - Issuer_id
+    - stage-number: 0
+  - card_id: liCaAf7Yr-I7kLjyVCdc9
+    parameter_id: e9968e8a
+    target:
+    - dimension
+    - - template-tag
+      - tasp_id
+    - stage-number: 0
+  - card_id: liCaAf7Yr-I7kLjyVCdc9
+    parameter_id: fc89659d
+    target:
+    - dimension
+    - - template-tag
+      - Date_Range
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: z60ZKvOS3ZSX0MbBLHxpR
+    model: Dashboard
+  - id: JiV597dMA78mfYBPdT41h
+    model: DashboardCard
+- entity_id: oGQk0NaOYO57LI-zECtb9
+  card_id: Sm8A4AaN3rOM2mNtVIXco
+  created_at: '2026-03-02T09:31:35.406015Z'
+  row: 2
+  col: 0
+  size_x: 24
+  size_y: 11
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: Sm8A4AaN3rOM2mNtVIXco
+    parameter_id: 10446d8d
+    target:
+    - dimension
+    - - template-tag
+      - Issue_Name
+    - stage-number: 0
+  - card_id: Sm8A4AaN3rOM2mNtVIXco
+    parameter_id: 7409dc53
+    target:
+    - dimension
+    - - template-tag
+      - Issuer_Name
+    - stage-number: 0
+  - card_id: Sm8A4AaN3rOM2mNtVIXco
+    parameter_id: b132bddf
+    target:
+    - dimension
+    - - template-tag
+      - issuer_id
+    - stage-number: 0
+  - card_id: Sm8A4AaN3rOM2mNtVIXco
+    parameter_id: e9968e8a
+    target:
+    - dimension
+    - - template-tag
+      - tasp_id
+    - stage-number: 0
+  - card_id: Sm8A4AaN3rOM2mNtVIXco
+    parameter_id: fc89659d
+    target:
+    - dimension
+    - - template-tag
+      - Date_Range
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: z60ZKvOS3ZSX0MbBLHxpR
+    model: Dashboard
+  - id: oGQk0NaOYO57LI-zECtb9
+    model: DashboardCard
+tabs: []
+width: fixed

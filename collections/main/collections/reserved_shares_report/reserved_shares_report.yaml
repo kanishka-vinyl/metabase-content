@@ -1,0 +1,234 @@
+name: Reserved Shares Report
+entity_id: XllLrBG8SRIOhUll_tvv4
+created_at: '2026-01-22T05:35:12.133542Z'
+creator_id: rakeshb@sagasit.com
+collection_id: 6XXlTdzYIYe6Al-2zHmJ6
+parameters:
+- id: 3347af0a
+  name: Issuer Name
+  position: 0
+  sectionId: string
+  slug: issuer_name
+  type: string/=
+- filteringParameters:
+  - 3347af0a
+  id: 74db9a1b
+  name: Issue Name
+  position: 1
+  sectionId: string
+  slug: issue_name
+  type: string/=
+- id: 875f467
+  name: Reserved Pool
+  position: 3
+  sectionId: string
+  slug: reserved_pool
+  type: string/=
+- id: a2a7a7f4
+  name: Reserve Type
+  position: 4
+  sectionId: string
+  slug: reserve_type
+  type: string/=
+- id: b6f95ee2
+  name: Created Date
+  position: 2
+  sectionId: date
+  slug: created_date
+  type: date/all-options
+serdes/meta:
+- id: XllLrBG8SRIOhUll_tvv4
+  label: reserved_shares_report
+  model: Dashboard
+dashcards:
+- entity_id: -xpCi9HcM7CeXi8-nCHYu
+  created_at: '2026-01-22T05:35:12.133542Z'
+  row: 0
+  col: 0
+  size_x: 4
+  size_y: 2
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: '![logo](https://raw.githubusercontent.com/harshaf87/Images/main/ve.png)'
+    virtual_card:
+      archived: false
+      display: text
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: XllLrBG8SRIOhUll_tvv4
+    model: Dashboard
+  - id: -xpCi9HcM7CeXi8-nCHYu
+    model: DashboardCard
+- entity_id: 2S-FyKpSCAe-h-caqdtAB
+  created_at: '2026-01-22T05:35:12.133542Z'
+  row: 0
+  col: 4
+  size_x: 20
+  size_y: 2
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    dashcard.background: false
+    text: Reserved Shares Report
+    virtual_card:
+      archived: false
+      display: heading
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: XllLrBG8SRIOhUll_tvv4
+    model: Dashboard
+  - id: 2S-FyKpSCAe-h-caqdtAB
+    model: DashboardCard
+- entity_id: wK_WUQP2k08fbn34dLIYo
+  card_id: Irn7jTztf1BVd3guG00bn
+  created_at: '2026-01-22T05:35:12.133542Z'
+  row: 2
+  col: 0
+  size_x: 24
+  size_y: 17
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: Irn7jTztf1BVd3guG00bn
+    parameter_id: 3347af0a
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: Irn7jTztf1BVd3guG00bn
+    parameter_id: 74db9a1b
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - issuer_issue
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: Irn7jTztf1BVd3guG00bn
+    parameter_id: 875f467
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - pool_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: Irn7jTztf1BVd3guG00bn
+    parameter_id: a2a7a7f4
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - transaction_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: Irn7jTztf1BVd3guG00bn
+    parameter_id: b6f95ee2
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - reserved_created_at
+      - base-type: type/DateTimeWithLocalTZ
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: XllLrBG8SRIOhUll_tvv4
+    model: Dashboard
+  - id: wK_WUQP2k08fbn34dLIYo
+    model: DashboardCard
+- entity_id: IiNrD7z_j7etbKJ0HCkra
+  card_id: NP1bB8TS-yV1GGgvWx7mw
+  created_at: '2026-01-22T05:35:12.133542Z'
+  row: 19
+  col: 0
+  size_x: 24
+  size_y: 6
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: NP1bB8TS-yV1GGgvWx7mw
+    parameter_id: 3347af0a
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: NP1bB8TS-yV1GGgvWx7mw
+    parameter_id: 74db9a1b
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - issuer_issue
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: NP1bB8TS-yV1GGgvWx7mw
+    parameter_id: 875f467
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - pool_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: NP1bB8TS-yV1GGgvWx7mw
+    parameter_id: a2a7a7f4
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - transaction_type
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: NP1bB8TS-yV1GGgvWx7mw
+    parameter_id: b6f95ee2
+    target:
+    - dimension
+    - - field
+      - - Dev DB
+        - datamart
+        - a_reserved_shares_report
+        - reserved_created_at
+      - base-type: type/DateTimeWithLocalTZ
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: XllLrBG8SRIOhUll_tvv4
+    model: Dashboard
+  - id: IiNrD7z_j7etbKJ0HCkra
+    model: DashboardCard
+tabs: []
+width: full

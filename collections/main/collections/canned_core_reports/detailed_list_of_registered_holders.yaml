@@ -1,0 +1,105 @@
+name: Detailed list of registered holders
+entity_id: 1Y0p98bhhVWIviJpMTEap
+created_at: '2026-03-09T05:42:20.406714Z'
+creator_id: rakeshb@sagasit.com
+collection_id: LI3V8tBVohcdBITjv6vTx
+parameters:
+- filteringParameters:
+  - b4852efd
+  - 4f3c316f
+  - da133887
+  id: 3df9ff0b
+  name: Issue Name
+  position: 1
+  sectionId: string
+  slug: issue_name
+  type: string/=
+- filteringParameters:
+  - da133887
+  - b4852efd
+  id: 4f3c316f
+  name: Issuer Id
+  position: 3
+  sectionId: string
+  slug: issuer_id
+  type: string/=
+- filteringParameters:
+  - 4f3c316f
+  - da133887
+  id: b4852efd
+  name: Issuer Name
+  position: 0
+  sectionId: string
+  slug: issuer_name
+  type: string/=
+- id: da133887
+  name: Tasp Id
+  position: 4
+  sectionId: string
+  slug: tasp_id
+  type: string/=
+- id: ef9cb650
+  name: Date
+  position: 2
+  sectionId: date
+  slug: date
+  type: date/all-options
+serdes/meta:
+- id: 1Y0p98bhhVWIviJpMTEap
+  label: detailed_list_of_registered_holders
+  model: Dashboard
+dashcards:
+- entity_id: ssTHwmdhO4rk3fxPl8KN2
+  card_id: BFcIIpPhDvM_qVBR7qrp3
+  created_at: '2026-03-09T11:33:44.533401Z'
+  row: 0
+  col: 0
+  size_x: 24
+  size_y: 9
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: BFcIIpPhDvM_qVBR7qrp3
+    parameter_id: 3df9ff0b
+    target:
+    - dimension
+    - - template-tag
+      - Issue_Name
+    - stage-number: 0
+  - card_id: BFcIIpPhDvM_qVBR7qrp3
+    parameter_id: 4f3c316f
+    target:
+    - dimension
+    - - template-tag
+      - issuer_id
+    - stage-number: 0
+  - card_id: BFcIIpPhDvM_qVBR7qrp3
+    parameter_id: b4852efd
+    target:
+    - dimension
+    - - template-tag
+      - Issuer_Name
+    - stage-number: 0
+  - card_id: BFcIIpPhDvM_qVBR7qrp3
+    parameter_id: da133887
+    target:
+    - dimension
+    - - template-tag
+      - tasp_id
+    - stage-number: 0
+  - card_id: BFcIIpPhDvM_qVBR7qrp3
+    parameter_id: ef9cb650
+    target:
+    - dimension
+    - - template-tag
+      - Date_Range
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: 1Y0p98bhhVWIviJpMTEap
+    model: Dashboard
+  - id: ssTHwmdhO4rk3fxPl8KN2
+    model: DashboardCard
+tabs: []
+width: fixed

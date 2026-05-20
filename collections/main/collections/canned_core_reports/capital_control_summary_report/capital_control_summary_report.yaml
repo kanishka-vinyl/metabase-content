@@ -1,0 +1,96 @@
+name: Capital Control Summary Report
+entity_id: mCuKUEcMx-maU20dnbDgd
+created_at: '2026-03-09T05:51:32.624129Z'
+creator_id: rakeshb@sagasit.com
+display: object
+collection_id: LI3V8tBVohcdBITjv6vTx
+query_type: query
+database_id: Dev DB
+table_id:
+- Dev DB
+- datamart
+- a_capital_control_detail_report
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Dev DB
+  stages:
+  - fields:
+    - - field
+      - base-type: type/Decimal
+        effective-type: type/Decimal
+      - - Dev DB
+        - datamart
+        - a_capital_control_detail_report
+        - authorized_capital
+    - - field
+      - base-type: type/Decimal
+        effective-type: type/Decimal
+      - - Dev DB
+        - datamart
+        - a_capital_control_detail_report
+        - issued_and_outstanding
+    - - field
+      - base-type: type/Decimal
+        effective-type: type/Decimal
+      - - Dev DB
+        - datamart
+        - a_capital_control_detail_report
+        - available_for_issuance
+    - - field
+      - base-type: type/Decimal
+        effective-type: type/Decimal
+      - - Dev DB
+        - datamart
+        - a_capital_control_detail_report
+        - reserved_capital
+    limit: 1
+    order-by:
+    - - desc
+      - {}
+      - - field
+        - base-type: type/Text
+          effective-type: type/Text
+        - - Dev DB
+          - datamart
+          - a_capital_control_detail_report
+          - effective_date_time
+    - - desc
+      - {}
+      - - field
+        - base-type: type/DateTimeWithLocalTZ
+          effective-type: type/DateTimeWithLocalTZ
+        - - Dev DB
+          - datamart
+          - a_capital_control_detail_report
+          - created_date_time
+    source-table:
+    - Dev DB
+    - datamart
+    - a_capital_control_detail_report
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings:
+    '["name","authorized_capital"]':
+      column_title: 'Authorized '
+    '["name","reserved_capital"]':
+      column_title: Reserved for Issuance
+  progress.value: reserved_capital
+  table.columns:
+  - enabled: true
+    name: authorized_capital
+  - enabled: true
+    name: issued_and_outstanding
+  - enabled: true
+    name: reserved_capital
+  - enabled: true
+    name: available_for_issuance
+card_schema: 23
+serdes/meta:
+- id: mCuKUEcMx-maU20dnbDgd
+  label: capital_control_summary_report
+  model: Card
+dashboard_id: 6oSglPAmMZ4LUJMeCjw47
+metabase_version: v1.58.7 (85988ba)
+type: question

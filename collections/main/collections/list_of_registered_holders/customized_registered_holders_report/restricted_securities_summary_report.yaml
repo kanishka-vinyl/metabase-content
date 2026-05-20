@@ -1,0 +1,66 @@
+name: Restricted Securities Summary Report
+entity_id: yX6uBH2cPHEynrfx1OxpV
+created_at: '2026-01-22T05:11:42.130221Z'
+creator_id: rakeshb@sagasit.com
+display: table
+collection_id: -VKTLb5siVc_YRsoik1St
+query_type: query
+database_id: Dev DB
+table_id:
+- Dev DB
+- datamart
+- a_registered_owner_detailed_report
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Dev DB
+  stages:
+  - aggregation:
+    - - count
+      - {}
+    - - sum
+      - {}
+      - - field
+        - base-type: type/Decimal
+          effective-type: type/Decimal
+        - - Dev DB
+          - datamart
+          - a_registered_owner_detailed_report
+          - quantity
+    breakout:
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Dev DB
+        - datamart
+        - a_registered_owner_detailed_report
+        - legends
+    source-table:
+    - Dev DB
+    - datamart
+    - a_registered_owner_detailed_report
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings:
+    '["name","count"]':
+      column_title: Number of Holders
+    '["name","sum"]':
+      column_title: Total Shares
+  table.cell_column: count
+  table.columns:
+  - enabled: true
+    name: legends
+  - enabled: true
+    name: count
+  - enabled: true
+    name: sum
+  table.pivot_column: legends
+card_schema: 23
+serdes/meta:
+- id: yX6uBH2cPHEynrfx1OxpV
+  label: restricted_securities_summary_report
+  model: Card
+dashboard_id: PYAJKnpZ-El9vq-14-TEC
+metabase_version: v1.58.1 (7fbf305)
+type: question

@@ -1,0 +1,89 @@
+name: Detailed List of Registered holder based on As of date
+entity_id: ohCrsPyCeXaSOxmVwSlhO
+created_at: '2026-03-23T09:38:19.265519Z'
+creator_id: rakeshb@sagasit.com
+collection_id: -VKTLb5siVc_YRsoik1St
+parameters:
+- filteringParameters:
+  - b0b45448
+  id: afd8ec7d
+  name: Issue Name
+  position: 1
+  sectionId: string
+  slug: issue_name
+  type: string/=
+- filteringParameters:
+  - faf100a0
+  id: b0b45448
+  name: Issuer Name
+  position: 0
+  sectionId: string
+  slug: issuer_name
+  type: string/=
+- default:
+  - Active
+  id: c87dceda
+  isMultiSelect: true
+  name: Status
+  position: 2
+  sectionId: string
+  slug: status
+  type: string/=
+  values_query_type: list
+- id: faf100a0
+  name: Date
+  position: 3
+  sectionId: date
+  slug: date
+  type: date/all-options
+serdes/meta:
+- id: ohCrsPyCeXaSOxmVwSlhO
+  label: detailed_list_of_registered_holder_based_on_as_of_date
+  model: Dashboard
+dashcards:
+- entity_id: dapqk_eyY_JvriQre1Mth
+  card_id: 0U7_ZbEX7B_bvRb89O8f2
+  created_at: '2026-03-23T10:23:41.294995Z'
+  row: 0
+  col: 0
+  size_x: 24
+  size_y: 11
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 0U7_ZbEX7B_bvRb89O8f2
+    parameter_id: afd8ec7d
+    target:
+    - dimension
+    - - template-tag
+      - Issue_Name
+    - stage-number: 0
+  - card_id: 0U7_ZbEX7B_bvRb89O8f2
+    parameter_id: b0b45448
+    target:
+    - dimension
+    - - template-tag
+      - Issuer_Name
+    - stage-number: 0
+  - card_id: 0U7_ZbEX7B_bvRb89O8f2
+    parameter_id: c87dceda
+    target:
+    - variable
+    - - template-tag
+      - Status
+  - card_id: 0U7_ZbEX7B_bvRb89O8f2
+    parameter_id: faf100a0
+    target:
+    - dimension
+    - - template-tag
+      - Date_Range
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: ohCrsPyCeXaSOxmVwSlhO
+    model: Dashboard
+  - id: dapqk_eyY_JvriQre1Mth
+    model: DashboardCard
+tabs: []
+width: fixed
